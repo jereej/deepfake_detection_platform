@@ -12,7 +12,6 @@ if ! command -v uv &> /dev/null; then
     fi
 fi
 
-cd deftor
 echo "Running 'uv sync'"
 uv sync
 echo "Displaying the help page of the deftor application"

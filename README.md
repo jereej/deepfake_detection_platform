@@ -3,9 +3,10 @@
 Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on images to check whether they contain AI-generated elements or not.
 
 ## Quick-start
-All you need to do is run the `installation_linux.sh` script to get started:
+All you need to do is run the following command to get started:
 ```sh
-./installation_linux.sh
+# Linux system, other platforms to be added
+./installation_linux.sh && source .venv/bin/activate
 ```
 The script installs `uv` from the official website *(if not installed already)*, runs `uv sync` and displays the main help screen `deftor -h`.
 
