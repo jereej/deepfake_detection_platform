@@ -1,5 +1,7 @@
 # DEFTOR (DEepFake deTection platfORm)
 
+<img src="deftor_icon.png" width="256">
+
 Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on images to check whether they contain AI-generated elements or not.
 
 ## Quick-start
