@@ -2,7 +2,7 @@
 
 <img src="deftor_icon.png" width="256">
 
-Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on images to check whether they contain AI-generated elements or not.
+Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on user-given media (basically whatever the model-at-hand can handle) to check whether they contain AI-generated elements or not. Supports both ollama and huggingface models (either GGUF models through ollama or "normal" models through `transformers`)
 
 ## Quick-start
 All you need to do is run the following command to get started:
@@ -56,3 +56,5 @@ positional arguments:
 options:
   -h, --help          show this help message and exit
 ```
+
+> NOTE: Ironically the icon is generated with ChatGPT

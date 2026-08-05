@@ -5,6 +5,8 @@ import subprocess
 from importlib import resources
 from pathlib import Path
 from ollama import pull, delete, ResponseError
+from huggingface_hub import errors, snapshot_download, scan_cache_dir
+from huggingface_hub.utils.tqdm import disable_progress_bars
 
 
 # Misc functions
@@ -13,8 +15,13 @@ def load_data(file_name: str) -> dict:
     data = resources.files("deftor.utils").joinpath(file_name).read_text(encoding="utf-8")
     return json.loads(data)
 
+def detect_backend(model: str, backend_override: str | None = None) -> str:
+    """Checks if a model belongs to ollama or huggingface"""
+    if backend_override:
+        return backend_override
+    return "huggingface" if "/" in model else "ollama"
 
-def validate_input_argument(input: str) -> list[str] | None:
+def validate_input_argument(input: str, subfolders: bool = False) -> list[str] | None:
     """Checks that the input argument is correct and returns list[str] for ollama"""
     extensions = {".jpg", ".jpeg", ".png"}  # Can be extended if required
     path = Path(input)
@@ -30,7 +37,9 @@ def validate_input_argument(input: str) -> list[str] | None:
         return [str(path)]
 
     if path.is_dir():
-        files = [str(f) for f in sorted(path.iterdir()) if f.is_file() and f.suffix.lower() in extensions]
+        print(f"Subfolders is: {subfolders}")
+        iterator = path.rglob("*") if subfolders else path.iterdir()
+        files = [str(f) for f in sorted(iterator) if f.is_file() and f.suffix.lower() in extensions]
         if not files:
             print(f"No .jpg or .png files found for {input}")
             return None
@@ -66,12 +75,12 @@ def is_ollama_installed() -> bool:
     )
 
 
-def is_model_downloaded(model: str) -> bool:
-    """Checks if the model given as input is downloaded onto the machine"""
+def is_ollama_model_downloaded(model: str) -> bool:
+    """Checks if the model given as input is downloaded onto the machine (ollama)"""
     return model in str(subprocess.run(["ollama", "ls"], text=True, capture_output=True))
 
 
-def pull_model(model: str) -> bool:
+def pull_ollama_model(model: str) -> bool:
     """Attempts to pull the given ollama model"""
     pull_successful = False
     try:
@@ -106,3 +115,39 @@ def delete_model(model: str) -> bool:
 def list_models() -> None:
     """Lists all the models via 'ollama ls' instead of the python library equivalent"""
     print(subprocess.run(["ollama", "ls"], text=True, capture_output=True).stdout)
+
+
+# Huggingface-model related functions
+
+def is_hf_model_downloaded(model: str) -> bool:
+    """Checks if the model given as input is downloaded onto the machine (hf)"""
+    cache_info = scan_cache_dir()
+    return any(repo.repo_id == model for repo in cache_info.repos)
+
+def download_hf_model(model: str) -> bool:
+    download_successful = False
+    try:
+        with disable_progress_bars():
+            snapshot_download(model)
+        download_successful = True
+        print(f"Model '{model}' downloaded successfully")
+    except (ValueError, errors.RepositoryNotFoundError, errors.IncompleteSnapshotError) as e:
+        print(f"an error occurred: {e}")
+    return download_successful
+
+def list_local_hf_models() -> None:
+    """Lists locally available huggingface models"""
+    print(subprocess.run(["hf", "cache", "ls"], text=True, capture_output=True).stdout)
+
+def delete_hf_model(model: str) -> bool:
+    """Deletes huggingface model"""
+    cache_info = scan_cache_dir()
+    for repo in cache_info.repos:
+        if repo.repo_id == model:
+            rev_hashes = [rev.commit_hash for rev in repo.revisions]
+            strategy = cache_info.delete_revisions(*rev_hashes)
+            strategy.execute()
+            print(f"Deleted '{model}', freed {strategy.expected_freed_size_str}")
+            return True
+    print(f"Model '{model}' not found locally.")
+    return False

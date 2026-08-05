@@ -7,9 +7,13 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "ollama>=0.6.2",
+    "pillow>=12.3.0",
     "pydantic>=2.13.4",
     "pyyaml>=6.0.3",
     "ruff>=0.15.22",
+    "torch>=2.13.0",
+    "torchvision>=0.28.0",
+    "transformers[sentencepiece]>=5.14.1",
 ]
 
 [project.scripts]
