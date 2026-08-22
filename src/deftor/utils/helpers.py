@@ -1,19 +1,12 @@
-# Any function that is setup/system/file related
+# A collection of miscellaneous functions. Most functions are related to models or input validation.
 
-import json
 import subprocess
-from importlib import resources
 from pathlib import Path
 from ollama import pull, delete, ResponseError
 from huggingface_hub import errors, snapshot_download, scan_cache_dir
 from huggingface_hub.utils.tqdm import disable_progress_bars
+from ..utils.constants import MEDIA_EXTENSIONS
 
-
-# Misc functions
-def load_data(file_name: str) -> dict:
-    """Reads data from given .json file under src/deftor/utils"""
-    data = resources.files("deftor.utils").joinpath(file_name).read_text(encoding="utf-8")
-    return json.loads(data)
 
 def detect_backend(model: str, backend_override: str | None = None) -> str:
     """Checks if a model belongs to ollama or huggingface"""
@@ -21,9 +14,11 @@ def detect_backend(model: str, backend_override: str | None = None) -> str:
         return backend_override
     return "huggingface" if "/" in model else "ollama"
 
-def validate_input_argument(input: str, subfolders: bool = False) -> list[str] | None:
+
+def validate_input_argument(input: str, subfolders: bool = False, media_type: str = "image") -> list[str] | None:
     """Checks that the input argument is correct and returns list[str] for ollama"""
-    extensions = {".jpg", ".jpeg", ".png"}  # Can be extended if required
+    extensions = MEDIA_EXTENSIONS[media_type]
+    print(f"Extensions are: {extensions}")
     path = Path(input)
 
     if not path.exists():
@@ -41,7 +36,10 @@ def validate_input_argument(input: str, subfolders: bool = False) -> list[str] |
         iterator = path.rglob("*") if subfolders else path.iterdir()
         files = [str(f) for f in sorted(iterator) if f.is_file() and f.suffix.lower() in extensions]
         if not files:
-            print(f"No .jpg or .png files found for {input}")
+            print(
+                f"No {', '.join(extensions)} files were found, please check that "
+                f"the media type is correct and you have given the correct folder that the files should reside in."
+            )
             return None
         return files
     print(f"ERROR: {input} is not a valid file or folder")
@@ -60,7 +58,7 @@ def validate_output_argument(output: str) -> bool:
     return True
 
 
-# Ollama related functions
+# Ollama-related functions
 def is_ollama_installed() -> bool:
     """Checks if ollama is installed on the machine"""
     return (
@@ -112,17 +110,17 @@ def delete_model(model: str) -> bool:
     return delete_successful
 
 
-def list_models() -> None:
+def list_models() -> str:
     """Lists all the models via 'ollama ls' instead of the python library equivalent"""
-    print(subprocess.run(["ollama", "ls"], text=True, capture_output=True).stdout)
+    return subprocess.run(["ollama", "ls"], text=True, capture_output=True).stdout
 
 
-# Huggingface-model related functions
-
+# Huggingface-related functions
 def is_hf_model_downloaded(model: str) -> bool:
     """Checks if the model given as input is downloaded onto the machine (hf)"""
     cache_info = scan_cache_dir()
     return any(repo.repo_id == model for repo in cache_info.repos)
+
 
 def download_hf_model(model: str) -> bool:
     download_successful = False
@@ -135,9 +133,11 @@ def download_hf_model(model: str) -> bool:
         print(f"an error occurred: {e}")
     return download_successful
 
-def list_local_hf_models() -> None:
+
+def list_local_hf_models() -> str:
     """Lists locally available huggingface models"""
-    print(subprocess.run(["hf", "cache", "ls"], text=True, capture_output=True).stdout)
+    return subprocess.run(["hf", "cache", "ls"], text=True, capture_output=True).stdout
+
 
 def delete_hf_model(model: str) -> bool:
     """Deletes huggingface model"""

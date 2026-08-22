@@ -2,7 +2,7 @@
 
 import argparse
 from datetime import datetime
-from .lib.outputter import write_output_file, write_output_to_stdout
+from .lib.outputter import write_analysis_output, write_output_to_stdout
 from .utils.helpers import (
     is_ollama_installed,
     is_ollama_model_downloaded,
@@ -15,7 +15,7 @@ from .utils.helpers import (
     is_hf_model_downloaded,
     download_hf_model,
     list_local_hf_models,
-    delete_hf_model
+    delete_hf_model,
 )
 from .lib.prompter import prompt_model
 import json
@@ -62,7 +62,9 @@ def run_cli() -> None:
         choices=["json", "yaml", "yml", "csv", "txt"],
         help="Output format (default is txt)",
     )
-    analyze_parser.add_argument("-t", "--target", type=str.strip, required=False, help="Target folder of the analysis")
+    analyze_parser.add_argument(
+        "-d", "--destination", type=str.strip, required=False, help="Destination folder of the analysis"
+    )
 
     analyze_parser.add_argument(
         "--no-timestamp",
@@ -81,13 +83,13 @@ def run_cli() -> None:
         help="Give this argument if you want to analyze all images under given folder's subfolders "
         "(e.g. input=/path/images and images contains images/folder1 and images/folder2)",
     )
-    
+
     analyze_parser.add_argument(
         "--model-options",
         type=json.loads,
         required=False,
-        help="Options to give the model (ollama). Give them in the following format: '{\"option\": \"value\", \"option2\": 1}'."
-        " Options are typically model-specific so please look at Ollama's website for the supported values."
+        help='Options to give the model (ollama). Give them in the following format: \'{"option": "value", "option2": 1}\'.'
+        " Options are typically model-specific so please look at Ollama's website for the supported values.",
     )
 
     analyze_parser.add_argument(
@@ -96,14 +98,23 @@ def run_cli() -> None:
         choices=["ollama", "huggingface"],
         required=False,
         help="Force the model backend through this argument. Usually it is automatically detected"
-        " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'usr/model-name' -> huggingface)"
-        ". However, some HF models might not use / and that is when this argument should be given"
+        " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'user/model-name' -> huggingface)"
+        ". Some HF models might not use / and that is when this argument should be given",
+    )
+
+    analyze_parser.add_argument(
+        "--media-type",
+        type=str.strip,
+        choices=["text", "image", "audio", "video"],
+        required=False,
+        default="image",
+        help="Type of media to be analyzed, either text, image, audio or video. Image by default",
     )
 
     # Model subcommands
-    model_parser = subparsers.add_parser("model", help="Manage local Ollama models (pull, delete, list)")
+    model_parser = subparsers.add_parser("model", help="Manage local models (pull, delete, list)")
     model_subparsers = model_parser.add_subparsers(dest="model_command", required=True)
-    pull_parser = model_subparsers.add_parser("pull", help="Download a model from Ollama's library ")
+    pull_parser = model_subparsers.add_parser("pull", help="Download a model.")
     pull_parser.add_argument("name", type=str.strip, help="Name of the model to pull (e.g. llava)")
     delete_parser = model_subparsers.add_parser("delete", help="Delete a model from the local system")
     delete_parser.add_argument("name", type=str.strip, help="Name of the model to delete (e.g. llava)")
@@ -112,7 +123,8 @@ def run_cli() -> None:
     args = parser.parse_args()
     # Logic block for arguments
     if args.command == "analyze":
-        images = validate_input_argument(args.input, args.subfolders)
+        print(f"args mediatype is: {args.media_type}")
+        images = validate_input_argument(args.input, args.subfolders, args.media_type)
         print(f"images: {images}")
         if not images:
             return
@@ -136,7 +148,9 @@ def run_cli() -> None:
             if not validate_output_argument(args.output):
                 return
         # MAIN FUNCTION
-        ai_analysis_result = prompt_model(backend, model=args.model, image_paths=images, options=args.model_options)
+        ai_analysis_result, stats_result = prompt_model(
+            backend, model=args.model, image_paths=images, options=args.model_options
+        )
         # AFTER WHICH SPECIFY HOW TO OUTPUT RESULTS
         if ai_analysis_result:
             if args.output:
@@ -148,21 +162,22 @@ def run_cli() -> None:
                     timestamp = f"_{datetime.now().strftime('%Y%m%d%H%M%S')}"
                 output_filename = f"{args.output}{timestamp}.{args.format or fmt}"
                 # print(f"DEBUG: output_filename is: {output_filename}")
-                write_output_file(
+                write_analysis_output(
                     output_filename=output_filename,
+                    stats_result=stats_result,
                     analysis_result=ai_analysis_result,
                     extension=args.format,
-                    destination=args.target,
+                    destination=args.destination,
                 )
                 return
             else:
                 write_output_to_stdout(ai_analysis_result, args.raw)
     if args.command == "model":
         if args.model_command == "list":
-            print("Ollama models:")
-            list_models()
-            print("Huggingface models:")
-            list_local_hf_models()
+            ollama_models = list_models()
+            hf_models = list_local_hf_models()
+            print(f"Ollama models:\n{ollama_models}")
+            print(f"Huggingface models:\n{hf_models}")
             return
         backend = detect_backend(args.name)
         if args.model_command == "pull":
@@ -175,4 +190,3 @@ def run_cli() -> None:
                 delete_model(args.name)
             elif backend == "huggingface":
                 delete_hf_model(args.name)
-        
