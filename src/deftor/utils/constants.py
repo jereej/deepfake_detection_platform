@@ -2,17 +2,18 @@
 from typing import Literal
 
 # Media type extensions map
-MEDIA_EXTENSIONS: dict[Literal["image", "audio", "video"], set[str]] = {
+MEDIA_EXTENSIONS: dict[Literal["image", "audio", "video", "text"], set[str]] = {
     "image": {".jpg", ".jpeg", ".png", ".webp", ".bmp"},
     "audio": {".wav", ".mp3"},
-    "video": {".mp4", ".mov", ".avi"}
+    "video": {".mp4", ".mov", ".avi"},
+    "text": {".txt"},
 }
 
 # Task type map for Hugging Face pipeline
 TASK_TYPE: dict[Literal["image", "audio", "video"], str] = {
     "image": "image-classification",
     "audio": "audio-classification",
-    "video": "video-classification"
+    "video": "video-classification",
 }
 
 # Default prompt for Ollama models
@@ -29,8 +30,5 @@ Do not explain your reasoning outside these fields."""
 # Default options for Ollama models
 DEFAULT_OPTIONS = {"num_predict": 2048}
 
+# ... syntax allows >=1 items in a tuple
 FAKE_KEYWORDS: tuple[str, ...] = ("fake", "deepfake", "synthetic", "generated", "spoof", "ai")
-
-LABEL_OVERRIDES: dict[str, dict[str, str]] = {
-    # "org/model-name": {"spoof": "DEEPFAKE", "bonafide": "REAL"},
-}

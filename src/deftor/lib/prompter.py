@@ -3,6 +3,7 @@
 # are handled in this file.
 
 import time
+from datetime import datetime, timezone
 from ollama import chat, ResponseError
 from pydantic import BaseModel, Field, ValidationError
 from typing import Literal
@@ -17,6 +18,7 @@ class ResponseObject(BaseModel):
     )
     evidence: list[str] = Field(description="Found evidence supporting the result of the analysis")
 
+
 class HFResponseObject(BaseModel):
     media_name: str = Field(description="Filename of the media, e.g. video.mp4 or sound.mp3")
     media_type: Literal["image", "audio", "video"]
@@ -25,18 +27,35 @@ class HFResponseObject(BaseModel):
     raw_label: str = Field(description="Unmodified label returned by the model")
 
 
+class ItemStatistics(BaseModel):
+    file_name: str
+    file_size_in_bytes: int
+    execution_time: float
+    success: bool
+    error: str | None = None
+
+
+class RunStatistics(BaseModel):
+    timestamp: str
+    backend: Literal["ollama", "huggingface"]
+    model: str
+    media_type: str | None = None
+    number_of_items: int
+    total_execution_time: float
+    model_loading_time: float | None = None
+    items: list[ItemStatistics]
+
+
 def prompt_model(
-    backend: str,
-    model: str,
-    options: dict | None = None,
-    image_paths: list[str] | None = None
-) -> list[ResponseObject] | list[HFResponseObject] | None: # tähän se hf responseobject
+    backend: str, model: str, options: dict | None = None, image_paths: list[str] | None = None
+) -> tuple[list[ResponseObject], RunStatistics] | tuple[list[HFResponseObject], RunStatistics] | None:
     print(f"DEBUG: Backend is: {backend}")
     if backend == "ollama":
-        return image_prompt_ollama(model=model, image_paths=image_paths, options=options)
+        ollama_results, ollama_stats = image_prompt_ollama(model=model, image_paths=image_paths, options=options)
+        return ollama_results, ollama_stats
     elif backend == "huggingface":
         if not image_paths:
-            return []
+            return None
         ext = Path(image_paths[0]).suffix.lower()
         media_type = next(
             (mt for mt, exts in constants.MEDIA_EXTENSIONS.items() if ext in exts),
@@ -44,27 +63,32 @@ def prompt_model(
         )
         if media_type is None:
             print(f"Unsupported file extension: {ext}")
-            return []
-        return huggingface_prompt(media_type=media_type, model=model, media_paths=image_paths)
+            return None
+        hf_results, hf_stats = huggingface_prompt(media_type=media_type, model=model, media_paths=image_paths)
+        return hf_results, hf_stats
+    # palauttais kans performancetietoja TBD että mistä ne haetaan
 
-def normalize_label(label: str, model:str) -> Literal["DEEPFAKE", "REAL"]:
-    overrides = constants.LABEL_OVERRIDES.get(model)
-    if overrides and label in overrides:
-        return overrides[label]
+
+def normalize_label(label: str, model: str) -> Literal["DEEPFAKE", "REAL"]:
     return "DEEPFAKE" if any(k in label.lower() for k in constants.FAKE_KEYWORDS) else "REAL"
+
 
 def image_prompt_ollama(
     model: str,
     options: dict | None = None,
     image_paths: list[str] | None = None,
-) -> list[ResponseObject]:
+) -> tuple[list[ResponseObject], RunStatistics]:
+
     options = options or constants.DEFAULT_OPTIONS
     results: list[ResponseObject] = []
+    item_statistics: list[ItemStatistics] = []
     print(f"DEBUG: Given options: {options}")
+    start = time.perf_counter()
     try:
-        start = time.perf_counter()
         if image_paths:
             for image in image_paths:
+                file_size = Path(image).stat().st_size if Path(image).exists() else 0
+                item_start = time.perf_counter()
                 try:
                     response = chat(
                         model=model,
@@ -76,59 +100,114 @@ def image_prompt_ollama(
                             }
                         ],
                         format=ResponseObject.model_json_schema(),
-                        options=options
+                        options=options,
                     )
-                    # DEBUG PRINT
-                    # print(f"--- RAW RESPONSE: ---\n\n{response.message.content}")
+                    item_time = time.perf_counter() - item_start
                     res_obj = ResponseObject.model_validate_json(str(response.message.content))
                     res_obj.image_name = Path(image).name
                     results.append(res_obj)
-                except ValidationError:
+                    item_statistics.append(
+                        ItemStatistics(
+                            file_name=Path(image).name,
+                            file_size_in_bytes=file_size,
+                            execution_time=item_time,
+                            success=True,
+                        )
+                    )
+                except ValidationError as e:
+                    item_statistics.append(
+                        ItemStatistics(
+                            file_name=Path(image).name,
+                            file_size_in_bytes=file_size,
+                            execution_time=time.perf_counter() - item_start,
+                            success=False,
+                            error=str(e),
+                        )
+                    )
                     print(f"Image {Path(image).name} failed, skipping")
                     continue
-        end = time.perf_counter()
-        exec_time = end - start
-        print(f"Execution time: {exec_time}")
-        return results
     except ResponseError as e:
         if e.status_code == 400:
             print(f"Some of the given images were broken {', '.join(image_paths or [])}. Please check the files.")
-    return results
+    exec_time = time.perf_counter() - start
+    stats = RunStatistics(
+        timestamp=datetime.now(timezone.utc).isoformat(),
+        backend="ollama",
+        model=model,
+        media_type="image",
+        number_of_items=len(image_paths or []),
+        total_execution_time=exec_time,
+        model_loading_time=None,
+        items=item_statistics,
+    )
+    return results, stats
 
 
 def huggingface_prompt(
-    media_type: Literal["image", "audio", "video"],
-    model: str,
-    media_paths: list[str]
-) -> list[HFResponseObject]:
+    media_type: Literal["image", "audio", "video"], model: str, media_paths: list[str]
+) -> tuple[list[HFResponseObject], RunStatistics]:
     from transformers import pipeline
+
     # transformer import is kept here due to it making deftor laggy
     task = constants.TASK_TYPE.get(media_type)
     if task is None:
         raise ValueError(f"Unsupported media type: {media_type!r}")
+
+    loading_start = time.perf_counter()
     pipe = pipeline(task, model=model)
+    loading_time = time.perf_counter() - loading_start
+
     results: list[HFResponseObject] = []
-    
+    item_statistics: list[ItemStatistics] = []
+
     start = time.perf_counter()
     for media in media_paths:
+        file_size = Path(media).stat().st_size if Path(media).exists() else 0
+        item_start = time.perf_counter()
         try:
             output = pipe(media)
-            # Filters out the "losing" result
+            item_time = time.perf_counter() - item_start
+            # Capturing only the meaningful output
             # e.g. {"fake": 0.8, "real": 0.2} => {"fake": 0.8}
             top = max(output, key=lambda x: x["score"])
+            print(f"output is: {output}")
             results.append(
                 HFResponseObject(
                     media_name=Path(media).name,
                     media_type=media_type,
                     classification=normalize_label(top["label"], model),
                     confidence=top["score"],
-                    raw_label=top["label"]
+                    raw_label=top["label"],
+                )
+            )
+            item_statistics.append(
+                ItemStatistics(
+                    file_name=Path(media).name, file_size_in_bytes=file_size, execution_time=item_time, success=True
                 )
             )
         except Exception as e:
+            item_statistics.append(
+                ItemStatistics(
+                    file_name=Path(media).name,
+                    file_size_in_bytes=file_size,
+                    execution_time=time.perf_counter() - item_start,
+                    success=False,
+                    error=str(e),
+                )
+            )
             print(f"Media {Path(media).name} failed: {e}")
             continue
-    print(f"results are: {chr(10).join(r.model_dump_json() for r in results)}")
-    print(f"Exec time: {time.perf_counter() - start}")
-    return results
-    
+    total_execution_time = time.perf_counter() - start
+    stats = RunStatistics(
+        timestamp=datetime.now(timezone.utc).isoformat(),
+        backend="huggingface",
+        model=model,
+        media_type=media_type,
+        number_of_items=len(media_paths),
+        total_execution_time=total_execution_time,
+        model_loading_time=loading_time,
+        items=item_statistics,
+    )
+    # print(f"results are: {chr(10).join(r.model_dump_json() for r in results)}")
+    # print(f"Exec time: {time.perf_counter() - start}")
+    return results, stats
