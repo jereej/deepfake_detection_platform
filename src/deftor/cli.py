@@ -4,7 +4,6 @@ import argparse
 from datetime import datetime
 from .lib.outputter import write_analysis_output, write_output_to_stdout
 from .utils.helpers import (
-    is_ollama_installed,
     is_ollama_model_downloaded,
     pull_ollama_model,
     delete_model,
@@ -23,12 +22,13 @@ import json
 
 def run_cli() -> None:
     # Instantly return if ollama is not installed
-    if not is_ollama_installed():
-        print(
-            "Ollama is required but was not found on this system.\n"
-            "Please download it from https://ollama.com/download, and then re-run this command."
-        )
-        return
+    # EDIT: done in installation_linux.sh
+    # if not is_ollama_installed():
+    #     print(
+    #         "Ollama is required but was not found on this system.\n"
+    #         "Please download it from https://ollama.com/download, and then re-run this command."
+    #     )
+    #     return
 
     parser = argparse.ArgumentParser(prog="deftor")
 
