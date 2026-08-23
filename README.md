@@ -5,7 +5,7 @@
 Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on user-given media (basically whatever the model-at-hand can handle) to check whether they contain AI-generated elements or not. Supports both `ollama` and `huggingface` models (either GGUF models through ollama or "normal" models through `transformers`).
 
 ## Quick-start
-All you need to do is run the following command to get started:
+All you need to do is clone this repository locally and run the following command to get started:
 ```sh
 # Linux system, other platforms to be added
 ./installation_linux.sh && source .venv/bin/activate

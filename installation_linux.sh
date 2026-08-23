@@ -23,7 +23,7 @@ fi
 
 # Ollama installation did not work
 if ! command -v ollama &> /dev/null; then
-    echo "Ollama not found, installing it"
+    echo "Ollama installation failed. Please check https://ollama.com/download/linux on how to install Ollama by yourself."
     exit 1
 fi
 
