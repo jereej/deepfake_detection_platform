@@ -10,7 +10,17 @@ All you need to do is clone this repository locally and run the following comman
 # Linux system, other platforms to be added
 ./installation_linux.sh && source .venv/bin/activate
 ```
-The script installs `uv` and `ollama` from the official websites *(if not installed already)*, runs `uv sync` and displays the main help screen `deftor -h`.
+The script will prompt the user about downloading some default models if the user wishes so. Currently supported default models are:
+| Name | Type | Platform | Size | URL |
+| :-- | :--- | :------ | :--- | :-- |
+| llava | image | Ollama | 4.7GB | https://ollama.com/library/llava |
+| gemma4 | image | Ollama | 9.6GB | https://ollama.com/library/gemma4 |
+| qwen3.8 | image | Ollama | 18.0GB | https://ollama.com/library/qwen3.8 |
+| nemotron3:33b | image | Ollama | 28.0GB | https://ollama.com/library/nemotron3 |
+| muse-glimmer | image | Ollama | 18.0GB | https://ollama.com/library/muse-glimmer |
+| dima806/deepfake_vs_real_image_detection | image | HuggingFace | 3.78GB | https://huggingface.co/dima806/deepfake_vs_real_image_detection |
+| mo-thecreator/Deepfake-audio-detection | audio | HuggingFace | 0.379GB | https://huggingface.co/mo-thecreator/Deepfake-audio-detection |
+| Hemgg/Deepfake-audio-detection | audio | HuggingFace | 0.378GB | https://huggingface.co/Hemgg/Deepfake-audio-detection |
 
 ## Usage examples
 ### Analysis
