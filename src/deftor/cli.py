@@ -123,9 +123,9 @@ def run_cli() -> None:
     args = parser.parse_args()
     # Logic block for arguments
     if args.command == "analyze":
-        print(f"args mediatype is: {args.media_type}")
+        # print(f"args mediatype is: {args.media_type}")
         images = validate_input_argument(args.input, args.subfolders, args.media_type)
-        print(f"images: {images}")
+        # print(f"images: {images}")
         if not images:
             return
         # DEFTOR supports both ollama and huggingface equally, so both are handled here.

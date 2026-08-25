@@ -9,6 +9,7 @@ from pydantic import BaseModel, Field, ValidationError
 from typing import Literal
 from pathlib import Path
 from ..utils import constants
+from beaupy.spinners import Spinner
 
 
 class ResponseObject(BaseModel):
@@ -49,9 +50,12 @@ class RunStatistics(BaseModel):
 def prompt_model(
     backend: str, model: str, options: dict | None = None, image_paths: list[str] | None = None
 ) -> tuple[list[ResponseObject], RunStatistics] | tuple[list[HFResponseObject], RunStatistics] | None:
-    print(f"DEBUG: Backend is: {backend}")
+    # print(f"DEBUG: Backend is: {backend}")
+    spinner = Spinner(constants.ANALYSIS_SPINNER_ANIMATION, "Analyzing...")
     if backend == "ollama":
+        spinner.start()
         ollama_results, ollama_stats = image_prompt_ollama(model=model, image_paths=image_paths, options=options)
+        spinner.stop()
         return ollama_results, ollama_stats
     elif backend == "huggingface":
         if not image_paths:
@@ -64,7 +68,9 @@ def prompt_model(
         if media_type is None:
             print(f"Unsupported file extension: {ext}")
             return None
+        spinner.start()
         hf_results, hf_stats = huggingface_prompt(media_type=media_type, model=model, media_paths=image_paths)
+        spinner.stop()
         return hf_results, hf_stats
     # palauttais kans performancetietoja TBD että mistä ne haetaan
 
@@ -82,7 +88,7 @@ def image_prompt_ollama(
     options = options or constants.DEFAULT_OPTIONS
     results: list[ResponseObject] = []
     item_statistics: list[ItemStatistics] = []
-    print(f"DEBUG: Given options: {options}")
+    # print(f"DEBUG: Given options: {options}")
     start = time.perf_counter()
     try:
         if image_paths:

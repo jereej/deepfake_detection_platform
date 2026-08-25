@@ -18,7 +18,7 @@ def detect_backend(model: str, backend_override: str | None = None) -> str:
 def validate_input_argument(input: str, subfolders: bool = False, media_type: str = "image") -> list[str] | None:
     """Checks that the input argument is correct and returns list[str] for ollama"""
     extensions = MEDIA_EXTENSIONS[media_type]
-    print(f"Extensions are: {extensions}")
+    # print(f"Extensions are: {extensions}")
     path = Path(input)
 
     if not path.exists():
@@ -32,7 +32,7 @@ def validate_input_argument(input: str, subfolders: bool = False, media_type: st
         return [str(path)]
 
     if path.is_dir():
-        print(f"Subfolders is: {subfolders}")
+        # print(f"Subfolders is: {subfolders}")
         iterator = path.rglob("*") if subfolders else path.iterdir()
         files = [str(f) for f in sorted(iterator) if f.is_file() and f.suffix.lower() in extensions]
         if not files:
