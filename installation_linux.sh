@@ -26,7 +26,13 @@ if ! command -v ollama &> /dev/null; then
     echo "Ollama installation failed. Please check https://ollama.com/download/linux on how to install Ollama by yourself."
     exit 1
 fi
-
 echo "'uv' and 'Ollama' found from the system. Proceeding."
+# Starts the Ollama server if it does not exist, quickly errors if it does.
+# Piping the output to /dev/null and moving to the background so it does not block anything
+echo "Starting the local Ollama server if not running already."
+ollama serve &> /dev/null &
 uv sync
+# Asks whether the user wants to install
+uv run default_model_installation.py
 uv run deftor -h
+echo "Installation script finished."
