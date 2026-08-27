@@ -1,6 +1,7 @@
 # A collection of miscellaneous functions. Most functions are related to models or input validation.
 
 import subprocess
+import re
 from pathlib import Path
 from ollama import pull, delete, ResponseError
 from huggingface_hub import errors, snapshot_download, scan_cache_dir
@@ -15,19 +16,24 @@ def detect_backend(model: str, backend_override: str | None = None) -> str:
     return "huggingface" if "/" in model else "ollama"
 
 
-def validate_input_argument(input: str, subfolders: bool = False, media_type: str = "image") -> list[str] | None:
+def validate_input_argument(arg: str, subfolders: bool = False, media_type: str = "image") -> list[str] | None:
     """Checks that the input argument is correct and returns list[str] for ollama"""
     extensions = MEDIA_EXTENSIONS[media_type]
-    # print(f"Extensions are: {extensions}")
-    path = Path(input)
+    # If WSL in use and input file(s)/folder(s) reside under f.ex. C:/.../mnt/c/...
+    # This should help mutate the input path correctly
+    if re.match(r"^[a-zA-Z]:[/\\]", arg):
+        drive = arg[0].lower()
+        arg = arg[2:].replace("\\", "/")
+        arg = f"/mnt/{drive}{arg}"
+    path = Path(arg)
 
     if not path.exists():
-        print(f"ERROR: Could not find path for {input}")
+        print(f"ERROR: Could not find path for {arg}")
         return None
 
     if path.is_file():
         if path.suffix.lower() not in extensions:
-            print(f"ERROR: File type for '{input}' has to be .jpg, .jpeg or .png")
+            print(f"ERROR: File type for '{arg}' has to be .jpg, .jpeg or .png")
             return None
         return [str(path)]
 
@@ -42,7 +48,7 @@ def validate_input_argument(input: str, subfolders: bool = False, media_type: st
             )
             return None
         return files
-    print(f"ERROR: {input} is not a valid file or folder")
+    print(f"ERROR: {arg} is not a valid file or folder")
     return None
 
 

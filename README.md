@@ -2,15 +2,17 @@
 
 # DEFTOR (DEepFake deTection platfORm)
 
-Deepfake detection platform (`DEFTOR`) is a Command Line Interface (CLI) application that can be used to run analysis on user-given media (basically whatever the model-at-hand can handle) to check whether they contain AI-generated elements or not. Supports both `ollama` and `huggingface` models (either GGUF models through ollama or "normal" models through `transformers`).
+Deepfake detection platform (`DEFTOR`) is a Python Command-Line Interface (CLI) application that can be used to run analysis on user-given media (whatever the model-at-hand can handle, *i.e. text/images/videos/audio*) to check whether they contain AI-generated elements or not. DEFTOR supports both `ollama` and `huggingface` models (either GGUF models through ollama or "normal" models through `transformers`).
 
 ## Quick-start
 All you need to do is clone this repository locally and run the following command to get started:
 ```sh
-# Linux system, other platforms to be added
 ./installation_linux.sh && source .venv/bin/activate
 ```
-The script will prompt the user about downloading some default models if the user wishes so. Currently supported default models are:
+> Currently only supports Linux systems.
+
+DEFTOR supports downloading some arbitrarily selected Ollama/HF models during the installation process. All supported models are listed below.
+
 | Name | Type | Platform | Size | URL |
 | :-- | :--- | :------ | :--- | :-- |
 | llava | image | Ollama | 4.7GB | [website](https://ollama.com/library/llava) |
@@ -24,19 +26,19 @@ The script will prompt the user about downloading some default models if the use
 
 ## Usage examples
 ### Analysis
-Deftor will differentiate between Ollama and HuggingFace models by the model name. Typically, all HuggingFace models contain the `/` character and if the model name has that, it will treat it as a HuggingFace model. If you want to use a HuggingFace model that does not contain `/`, you need to use the `--backend <ollama|huggingface>` argument.
+DEFTOR will differentiate between Ollama and HuggingFace models by the model name. Typically, all HuggingFace models contain the `/` character and if the model name has that, it will treat it as a HuggingFace model. If you want to use a HuggingFace model that does not contain `/`, you need to use the `--backend <ollama|huggingface>` argument.
 
 #### Analyze and print output into CLI
 ```
 deftor analyze path/to/image_or_folder -m llava
 ```
-> Deftor will check whether the input path is a single image or a folder and will analyze every file with an appropriate file extension under that folder. If you have multiple folders under a folder and you wish to analyze those as well, use the `--subfolders` argument.
+> DEFTOR will check whether the input path is a single image or a folder and will analyze every file with an appropriate file extension under that folder. If you have multiple folders under a folder and you wish to analyze those as well, use the `--subfolders` argument.
 
 #### Analyze and save output into a file
 ```
 deftor analyze path/to/image_folder -m dima806/deepfake_vs_real_image_detection --subfolders -o filename -f json
 ```
-> Deftor will save the analysis into `/current/working/directory/analyses/filename.json`. To save the results into another folder, use the `-d/--destination` argument.
+> DEFTOR will save the analysis into `/current/working/directory/analyses/filename.json`. To save the results into another folder, use the `-d/--destination` argument.
 
 ### Model management
 #### List all models
@@ -53,3 +55,6 @@ deftor model pull <model_name>
 ```
 deftor model delete <model_name>
 ```
+
+---
+> NOTE: Ironically, the icon for DEFTOR is AI-Generated.
