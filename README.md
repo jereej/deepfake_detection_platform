@@ -28,7 +28,7 @@ DEFTOR supports downloading some arbitrarily selected Ollama/HF models during th
 
 ## Standard Usage examples
 ### Analysis
-DEFTOR will differentiate between Ollama and Hugging Face models by the model name. Typically, all Hugging Face models contain the `/` character and if the model name has that, it will treat it as a Hugging Face model. If you want to use a Hugging Face model that does not contain `/`, you need to use the `--backend <ollama|huggingface>` argument.
+DEFTOR will differentiate between Ollama and Hugging Face models by the model name. Typically, all Hugging Face models contain the `/` character and if the model name has that, it will treat it as a Hugging Face model. If you want to use a Hugging Face model that does not contain `/`, or an Ollama model that contains `/`, you need to use the `--backend <ollama|huggingface>` argument.
 
 #### Analyze and print output into CLI
 ```
