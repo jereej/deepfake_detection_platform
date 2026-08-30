@@ -32,7 +32,7 @@ echo "'uv' and 'Ollama' found from the system. Proceeding."
 echo "Starting the local Ollama server if not running already."
 ollama serve &> /dev/null &
 uv sync
-# Asks whether the user wants to install
+# Asks whether the user wants to install default models
 uv run default_model_installation.py
-uv run deftor -h
 echo "Installation script finished."
+uv run deftor -h
