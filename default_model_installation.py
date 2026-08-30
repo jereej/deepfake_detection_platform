@@ -1,3 +1,6 @@
+# The contents of this file deal with installing default models through DEFTOR
+# Used only in installation_linux.sh but can be run separately
+# f.ex. with 'uv run default_model_installation.py'
 from beaupy import select_multiple, confirm
 from beaupy.spinners import Spinner, DOTS
 from rich.console import Console
@@ -7,14 +10,16 @@ from src.deftor.utils.constants import DEFAULT_MODELS
 from src.deftor.utils.helpers import download_hf_model, pull_ollama_model
 
 
-def format_default_models():
+def format_default_models() -> list:
+    """Formats the DEFAULT_MODELS into a more usable format"""
     model_list = []
     for model in DEFAULT_MODELS:
         model_list.append(f"{model['name']} ({model['info']['input']}) {model['info']['size']:.2f}GB")
     return model_list
 
 
-def calculate_total_download_size(selection):
+def calculate_total_download_size(selection: list) -> float:
+    """Calculates the total size of the download after selecting the models"""
     total_size = 0.0
     for item in selection:
         for model in DEFAULT_MODELS:
@@ -23,7 +28,8 @@ def calculate_total_download_size(selection):
     return total_size
 
 
-def download_models(selection):
+def download_models(selection: list) -> None:
+    """Downloads selected models"""
     for item in selection:
         for model in DEFAULT_MODELS:
             if model["name"] in item:
@@ -33,7 +39,8 @@ def download_models(selection):
                     download_hf_model(model["name"])
 
 
-def main():
+def main() -> None:
+    """The place where previous methods are used"""
     console = Console()
     download_prompt = confirm("Would you like to download some default models?")
     if not download_prompt:
