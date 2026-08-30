@@ -50,7 +50,6 @@ class RunStatistics(BaseModel):
 def prompt_model(
     backend: str, model: str, options: dict | None = None, image_paths: list[str] | None = None
 ) -> tuple[list[ResponseObject], RunStatistics] | tuple[list[HFResponseObject], RunStatistics] | None:
-    # print(f"DEBUG: Backend is: {backend}")
     spinner = Spinner(constants.ANALYSIS_SPINNER_ANIMATION, "Analyzing...")
     if backend == "ollama":
         spinner.start()
@@ -72,7 +71,6 @@ def prompt_model(
         hf_results, hf_stats = huggingface_prompt(media_type=media_type, model=model, media_paths=image_paths)
         spinner.stop()
         return hf_results, hf_stats
-    # palauttais kans performancetietoja TBD että mistä ne haetaan
 
 
 def normalize_label(label: str, model: str) -> Literal["DEEPFAKE", "REAL"]:
@@ -88,7 +86,6 @@ def image_prompt_ollama(
     options = options or constants.DEFAULT_OPTIONS
     results: list[ResponseObject] = []
     item_statistics: list[ItemStatistics] = []
-    # print(f"DEBUG: Given options: {options}")
     start = time.perf_counter()
     try:
         if image_paths:
@@ -214,6 +211,4 @@ def huggingface_prompt(
         model_loading_time=loading_time,
         items=item_statistics,
     )
-    # print(f"results are: {chr(10).join(r.model_dump_json() for r in results)}")
-    # print(f"Exec time: {time.perf_counter() - start}")
     return results, stats

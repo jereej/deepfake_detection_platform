@@ -38,7 +38,6 @@ def validate_input_argument(arg: str, subfolders: bool = False, media_type: str 
         return [str(path)]
 
     if path.is_dir():
-        # print(f"Subfolders is: {subfolders}")
         iterator = path.rglob("*") if subfolders else path.iterdir()
         files = [str(f) for f in sorted(iterator) if f.is_file() and f.suffix.lower() in extensions]
         if not files:

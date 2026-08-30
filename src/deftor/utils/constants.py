@@ -1,5 +1,6 @@
 # Constants that are used in various parts of DEFTOR
 from typing import Literal
+from pathlib import Path
 
 # Media type extensions map
 MEDIA_EXTENSIONS: dict[Literal["image", "audio", "video", "text"], set[str]] = {
@@ -32,6 +33,26 @@ DEFAULT_OPTIONS = {"num_predict": 2048}
 
 # ... syntax allows >=1 items in a tuple
 FAKE_KEYWORDS: tuple[str, ...] = ("fake", "deepfake", "synthetic", "generated", "spoof", "ai")
+
+DEFAULT_OUTPUT_DIR = Path.cwd() / "analyses"
+STATISTIC_LOG_PATH = Path.cwd() / "statistics.csv"
+
+STATISTIC_LOG_FIELDS = [
+    # Run statistic fields
+    "timestamp",
+    "backend",
+    "model",
+    "media_type",
+    "number_of_items",
+    "total_execution_time",
+    "model_loading_time",
+    # Item statistic fields
+    "file_name",
+    "file_size_in_bytes",
+    "execution_time",
+    "success",
+    "error",
+]
 
 # Spinner animation sequence
 ANALYSIS_SPINNER_ANIMATION: list[str] = [

@@ -4,26 +4,7 @@ import csv
 import yaml
 from pathlib import Path
 from .prompter import ResponseObject, HFResponseObject, RunStatistics
-
-DEFAULT_OUTPUT_DIR = Path.cwd() / "analyses"
-STATISTIC_LOG_PATH = Path.cwd() / "statistics.csv"
-
-STATISTIC_LOG_FIELDS = [
-    # Run statistic fields
-    "timestamp",
-    "backend",
-    "model",
-    "media_type",
-    "number_of_items",
-    "total_execution_time",
-    "model_loading_time",
-    # Item statistic fields
-    "file_name",
-    "file_size_in_bytes",
-    "execution_time",
-    "success",
-    "error",
-]
+from ..utils.constants import DEFAULT_OUTPUT_DIR, STATISTIC_LOG_PATH, STATISTIC_LOG_FIELDS
 
 
 def write_analysis_output(
