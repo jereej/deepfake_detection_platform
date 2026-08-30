@@ -17,18 +17,11 @@ from .utils.helpers import (
     delete_hf_model,
 )
 from .lib.prompter import prompt_model
+from .lib.reporter import create_report
 import json
 
 
 def run_cli() -> None:
-    # Instantly return if ollama is not installed
-    # EDIT: done in installation_linux.sh
-    # if not is_ollama_installed():
-    #     print(
-    #         "Ollama is required but was not found on this system.\n"
-    #         "Please download it from https://ollama.com/download, and then re-run this command."
-    #     )
-    #     return
 
     parser = argparse.ArgumentParser(prog="deftor")
 
@@ -68,7 +61,7 @@ def run_cli() -> None:
 
     analyze_parser.add_argument(
         "--no-timestamp",
-        action="store_false",
+        action="store_true",
         help="Used with -o, if you want to write the file name without the timestamp",
     )
     analyze_parser.add_argument(
@@ -99,7 +92,8 @@ def run_cli() -> None:
         required=False,
         help="Force the model backend through this argument. Usually it is automatically detected"
         " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'user/model-name' -> huggingface)"
-        ". Some HF models might not use / and that is when this argument should be given",
+        ". Some HF models might not use / and that is when this argument should be given. Some Ollama "
+        "models also support / in the name so it works there as well.",
     )
 
     analyze_parser.add_argument(
@@ -120,12 +114,39 @@ def run_cli() -> None:
     delete_parser.add_argument("name", type=str.strip, help="Name of the model to delete (e.g. llava)")
     model_subparsers.add_parser("list", help="List all locally available models")
 
+    # Ollama also supports users to upload their own models so these overrides are required here as well.
+    pull_parser.add_argument(
+        "--backend",
+        type=str.strip,
+        choices=["ollama", "huggingface"],
+        required=False,
+        help="Force the model backend through this argument. Usually it is automatically detected"
+        " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'user/model-name' -> huggingface)"
+        ". Some HF models might not use / and that is when this argument should be givenSome Ollama "
+        "models also support / in the name so it works there as well.",
+    )
+
+    delete_parser.add_argument(
+        "--backend",
+        type=str.strip,
+        choices=["ollama", "huggingface"],
+        required=False,
+        help="Force the model backend through this argument. Usually it is automatically detected"
+        " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'user/model-name' -> huggingface)"
+        ". Some HF models might not use / and that is when this argument should be given. Some Ollama "
+        "models also support / in the name so it works there as well.",
+    )
+
+    # Reporter stuff
+    subparsers.add_parser(
+        "report",
+        help="Create a report based on statistics.csv",
+    )
+
     args = parser.parse_args()
     # Logic block for arguments
     if args.command == "analyze":
-        # print(f"args mediatype is: {args.media_type}")
         images = validate_input_argument(args.input, args.subfolders, args.media_type)
-        # print(f"images: {images}")
         if not images:
             return
         # DEFTOR supports both ollama and huggingface equally, so both are handled here.
@@ -157,11 +178,10 @@ def run_cli() -> None:
                 fmt = ""
                 if not args.format:
                     fmt = "txt"
-                timestamp = ""
+                timestamp = f"_{datetime.now().strftime('%Y%m%d%H%M%S')}"
                 if args.no_timestamp:
-                    timestamp = f"_{datetime.now().strftime('%Y%m%d%H%M%S')}"
+                    timestamp = ""
                 output_filename = f"{args.output}{timestamp}.{args.format or fmt}"
-                # print(f"DEBUG: output_filename is: {output_filename}")
                 write_analysis_output(
                     output_filename=output_filename,
                     stats_result=stats_result,
@@ -179,7 +199,7 @@ def run_cli() -> None:
             print(f"Ollama models:\n{ollama_models}")
             print(f"Huggingface models:\n{hf_models}")
             return
-        backend = detect_backend(args.name)
+        backend = detect_backend(args.name, args.backend)
         if args.model_command == "pull":
             if backend == "ollama":
                 pull_ollama_model(args.name)
@@ -190,3 +210,5 @@ def run_cli() -> None:
                 delete_model(args.name)
             elif backend == "huggingface":
                 delete_hf_model(args.name)
+    if args.command == "report":
+        create_report()
