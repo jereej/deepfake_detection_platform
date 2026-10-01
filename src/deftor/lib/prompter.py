@@ -131,7 +131,7 @@ def image_prompt_ollama(
                     continue
     except ResponseError as e:
         if e.status_code == 400:
-            print(f"Some of the given images were broken {', '.join(image_paths or [])}. Please check the files.")
+            print(f"Some of the given files were broken {', '.join(image_paths or [])}. Please check the files.")
     exec_time = time.perf_counter() - start
     stats = RunStatistics(
         timestamp=datetime.now(timezone.utc).isoformat(),
@@ -149,9 +149,9 @@ def image_prompt_ollama(
 def huggingface_prompt(
     media_type: Literal["image", "audio", "video"], model: str, media_paths: list[str]
 ) -> tuple[list[HFResponseObject], RunStatistics]:
+    # transformer import is kept here due to it making deftor laggy
     from transformers import pipeline
 
-    # transformer import is kept here due to it making deftor laggy
     task = constants.TASK_TYPE.get(media_type)
     if task is None:
         raise ValueError(f"Unsupported media type: {media_type!r}")
@@ -173,7 +173,7 @@ def huggingface_prompt(
             # Capturing only the meaningful output
             # e.g. {"fake": 0.8, "real": 0.2} => {"fake": 0.8}
             top = max(output, key=lambda x: x["score"])
-            print(f"output is: {output}")
+            # print(f"output is: {output}")
             results.append(
                 HFResponseObject(
                     media_name=Path(media).name,

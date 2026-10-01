@@ -17,7 +17,8 @@ from .utils.helpers import (
     delete_hf_model,
 )
 from .lib.prompter import prompt_model
-from .lib.reporter import create_report
+
+# from .lib.reporter import create_report, simple_report
 import json
 
 
@@ -138,14 +139,18 @@ def run_cli() -> None:
     )
 
     # Reporter stuff
-    subparsers.add_parser(
+    report_parser = subparsers.add_parser(
         "report",
         help="Create a report based on statistics.csv",
     )
+    report_parser.add_argument("analysis_file", type=str.strip, help="Name of the analysis file to be given")
+    report_parser.add_argument("label_file", type=str.strip, help="Name of the label file to be given")
 
     args = parser.parse_args()
     # Logic block for arguments
     if args.command == "analyze":
+        # get_dataset("Hemg/Deepfakeaudio", name_prefix="audio", split="train")
+        # return
         images = validate_input_argument(args.input, args.subfolders, args.media_type)
         if not images:
             return
@@ -210,5 +215,6 @@ def run_cli() -> None:
                 delete_model(args.name)
             elif backend == "huggingface":
                 delete_hf_model(args.name)
-    if args.command == "report":
-        create_report()
+    # if args.command == "report":
+    # create_report()
+    # simple_report(args.analysis_file, args.label_file)

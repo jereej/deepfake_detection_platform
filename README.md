@@ -13,18 +13,25 @@ All you need to do is clone this repository locally and run the following comman
 ```
 > Currently only supports Linux systems.
 
-DEFTOR supports downloading some arbitrarily selected Ollama/HF models during the installation process. All supported models are listed below.
+During the installation, DEFTOR asks the user whether they want to install some models that are supported by default. The available default models are listed below:
 
 | Name | Type | Platform | Size | URL |
 | :-- | :--- | :------ | :--- | :-- |
 | llava | image | Ollama | 4.7GB | [website](https://ollama.com/library/llava) |
-| gemma4 | image | Ollama | 9.6GB | [website](https://ollama.com/library/gemma4) |
-| qwen3.8 | image | Ollama | 18.0GB | [website](https://ollama.com/library/qwen3.8) |
-| nemotron3:33b | image | Ollama | 28.0GB | [website](https://ollama.com/library/nemotron3) |
-| muse-glimmer | image | Ollama | 18.0GB | [website](https://ollama.com/library/muse-glimmer) |
+| gemma3:12b | image | Ollama | 8.1GB | [website](https://ollama.com/library/gemma3:12b) |
+| qwen3.6 | image | Ollama | 22.0GB | [website](https://ollama.com/library/qwen3.6) |
+| minicpm-v4.6 | image | Ollama | 1.6GB | [website](https://ollama.com/library/minicpm-v4.6) |
+| llama3.2-vision:11b | image | Ollama | 7.8GB | [website](https://ollama.com/library/llama3.2-vision:11b) |
+| moondream | image | Ollama | 1.7GB | [website](https://ollama.com/library/moondream)
 | dima806/deepfake_vs_real_image_detection | image | Hugging Face | 3.78GB | [website](https://huggingface.co/dima806/deepfake_vs_real_image_detection) |
+| prithibMLmods/Deep-Fake-Detector-v2-Model | image | Hugging Face | 1.37GB | [website](https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model) |
+| Organika/sdxl-detector | image | Hugging Face | 1.74GB | [website](https://huggingface.co/Organika/sdxl-detector) |
 | mo-thecreator/Deepfake-audio-detection | audio | Hugging Face | 0.379GB | [website](https://huggingface.co/mo-thecreator/Deepfake-audio-detection) |
 | Hemgg/Deepfake-audio-detection | audio | Hugging Face | 0.378GB | [website](https://huggingface.co/Hemgg/Deepfake-audio-detection) |
+| MelodyMachine/Deepfake-audio-detection-V2| audio | Hugging Face | 0.378GB | [website](https://huggingface.co/MelodyMachine/Deepfake-audio-detection-V2) |
+| Vansh180/VideoMae-ffc23-deepfake-detector | video | Hugging Face | 0.378GB | [website](https://huggingface.co/Vansh180/VideoMae-ffc23-deepfake-detector) |
+
+> NOTE: You can use any available Ollama/HF models with DEFTOR, the ones above are the "default" ones the user can choose from to get started quickly. These models are also the ones that were used in the thesis.
 
 ## Standard Usage examples
 ### Analysis
@@ -64,6 +71,24 @@ Generates a report based on the information found in `statistics.csv` with furth
 deftor report
 ```
 > NOTE: `statistics.csv` is saved into `current/working/directory/statistics.csv` so you need to run this command from the same directory
+
+## Thesis data
+The DEFTOR repository also contains a `thesis_data` folder, which contains the following subfolders and files:
+- `analyses`
+  - Contains the analysis results in JSON format that are used in the thesis
+  - These files are used to check how many of the media were analyzed correctly against the labels
+- `audio`
+  - Audio datasets that were analyzed in the thesis (`deepfake-audio-detection` and `hemg-deepfakeaudio`) and their labels
+- `image`
+  - Image datasets that were analyzed in the thesis and their labels
+- `video`
+  - Video dataset that was analyzed in the thesis and its labels
+- `statistics.csv`
+  - `.csv` file of all the runs under `analyses`
+
+<!--**Tähän jotain tuosta thesis data osiosta, miten data on hankittu, mistä lähteistä ymstms** + miten voi zipata ja unzipata ymstms-->
+[dataset53](https://huggingface.co/datasets/saakshigupta/deepfake-detection-dataset-v3)
+[dataset100](https://huggingface.co/datasets/itsLeen/deepfake_vs_real_image_detection)
 
 ## AI-usage disclosure
 AI has been used during the development of DEFTOR.

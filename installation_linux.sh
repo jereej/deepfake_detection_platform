@@ -27,9 +27,9 @@ if ! command -v ollama &> /dev/null; then
     exit 1
 fi
 echo "'uv' and 'Ollama' found from the system. Proceeding."
+echo "Starting the local Ollama server if it is not running already."
 # Starts the Ollama server if it does not exist, quickly errors if it does.
 # Piping the output to /dev/null and moving to the background so it does not block anything
-echo "Starting the local Ollama server if not running already."
 ollama serve &> /dev/null &
 uv sync
 # Asks whether the user wants to install default models

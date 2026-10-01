@@ -68,7 +68,7 @@ def main() -> None:
         elif download_size > free:
             console.print(
                 f"Not enough space left in the device for the download."
-                f"(download size: {download_size:.2f}GB, free space on disk: {free / 1024**3:2f}GB)"
+                f"(download size: {download_size:.2f}GB, free space on disk: {free:2f}GB)"
             )
     console.print("Did not choose any models to download.")
     return

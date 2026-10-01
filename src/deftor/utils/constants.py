@@ -3,6 +3,9 @@ from typing import Literal
 from pathlib import Path
 
 # Media type extensions map
+# NOTE: Some models might not be able to support specified types of media.
+# For example Ollama models do not support .mp4 video files and are only able to
+# sample videos frame-by-frame (i.e. image analysis)
 MEDIA_EXTENSIONS: dict[Literal["image", "audio", "video", "text"], set[str]] = {
     "image": {".jpg", ".jpeg", ".png", ".webp", ".bmp"},
     "audio": {".wav", ".mp3"},
@@ -18,9 +21,9 @@ TASK_TYPE: dict[Literal["image", "audio", "video"], str] = {
 }
 
 # Default prompt for Ollama models
-DEFAULT_PROMPT = """DEEPFAKE / AI-GENERATED IMAGE DETECTION
+DEFAULT_PROMPT = """DEEPFAKE / AI-GENERATED MEDIA DETECTION
 
-Analyze the given image for evidence of AI generation.
+Analyze the given media for evidence of AI generation.
 
 Provide:
 - classification
@@ -29,7 +32,7 @@ Provide:
 Do not explain your reasoning outside these fields."""
 
 # Default options for Ollama models
-DEFAULT_OPTIONS = {"num_predict": 2048}
+DEFAULT_OPTIONS = {"num_predict": 8192}
 
 # ... syntax allows >=1 items in a tuple
 FAKE_KEYWORDS: tuple[str, ...] = ("fake", "deepfake", "synthetic", "generated", "spoof", "ai")
@@ -72,7 +75,6 @@ ANALYSIS_SPINNER_ANIMATION: list[str] = [
 ]
 
 # Specific default models that the user can download when running installation_linux.sh
-# The model sizes are taken from the websites below
 DEFAULT_MODELS: list[dict] = [
     {
         "name": "llava",
@@ -84,39 +86,48 @@ DEFAULT_MODELS: list[dict] = [
         },
     },
     {
-        "name": "gemma4",
+        "name": "gemma3:12b",
         "info": {
-            "size": 9.6,  # GB
+            "size": 8.1,  # GB
             "input": "image",
             "backend": "ollama",
-            "link": "https://ollama.com/library/gemma4",
+            "link": "https://ollama.com/library/gemma3:12b",
         },
     },
     {
-        "name": "qwen3.8",
+        "name": "qwen3.6",
         "info": {
-            "size": 18.0,  # GB
+            "size": 22.0,  # GB
             "input": "image",
             "backend": "ollama",
-            "link": "https://ollama.com/library/qwen3.8",
+            "link": "https://ollama.com/library/qwen3.6",
         },
     },
     {
-        "name": "nemotron3:33b",
+        "name": "minicpm-v4.6",
         "info": {
-            "size": 28.0,  # GB
+            "size": 1.6,  # GB
             "input": "image",
             "backend": "ollama",
-            "link": "https://ollama.com/library/nemotron3",
+            "link": "https://ollama.com/library/minicpm-v4.6",
         },
     },
     {
-        "name": "muse-glimmer",
+        "name": "llama3.2-vision:11b",
         "info": {
-            "size": 18.0,  # GB
+            "size": 7.8,  # GB
             "input": "image",
             "backend": "ollama",
-            "link": "https://ollama.com/library/muse-glimmer",
+            "link": "https://ollama.com/library/llama3.2-vision:11b",
+        },
+    },
+    {
+        "name": "moondream",
+        "info": {
+            "size": 1.7,  # GB
+            "input": "image",
+            "backend": "ollama",
+            "link": "https://ollama.com/library/moondream",
         },
     },
     {
@@ -144,6 +155,42 @@ DEFAULT_MODELS: list[dict] = [
             "input": "audio",
             "backend": "huggingface",
             "link": "https://huggingface.co/Hemgg/Deepfake-audio-detection",
+        },
+    },
+    {
+        "name": "MelodyMachine/Deepfake-audio-detection-V2",
+        "info": {
+            "size": 0.378,  # GB
+            "input": "audio",
+            "backend": "huggingface",
+            "link": "https://huggingface.co/MelodyMachine/Deepfake-audio-detection-V2",
+        },
+    },
+    {
+        "name": "Organika/sdxl-detector",
+        "info": {
+            "size": 1.74,  # GB
+            "input": "image",
+            "backend": "huggingface",
+            "link": "https://huggingface.co/Organika/sdxl-detector",
+        },
+    },
+    {
+        "name": "Vansh180/VideoMae-ffc23-deepfake-detector",
+        "info": {
+            "size": 0.345,  # GB
+            "input": "video",
+            "backend": "huggingface",
+            "link": "https://huggingface.co/Vansh180/VideoMae-ffc23-deepfake-detector",
+        },
+    },
+    {
+        "name": "prithivMLmods/Deep-Fake-Detector-v2-Model",
+        "info": {
+            "size": 1.37,  # GB
+            "input": "image",
+            "backend": "huggingface",
+            "link": "https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model",
         },
     },
 ]
