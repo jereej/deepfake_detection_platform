@@ -1,0 +1,2018 @@
+{
+  "run": {
+    "run_id": "ff194d734b7941acb54cc3eb3416def4",
+    "timestamp": "2026-10-02T11:20:00.126155+00:00",
+    "backend": "ollama",
+    "model": "gemma3:12b",
+    "media_type": "image",
+    "dataset": "cifake",
+    "labels_file": "image/cifake/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 100,
+    "number_failed": 0,
+    "total_execution_time": 304.8228694069994,
+    "model_loading_time": null,
+    "total_duration_ns": 3020048603,
+    "load_duration_ns": 409743075,
+    "prompt_eval_count": 331,
+    "eval_count": 86,
+    "eval_duration_ns": 1807788000
+  },
+  "result": [
+    {
+      "name": "image_001.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry background with inconsistent depth of field.",
+        "Unnatural skin/fur texture and lighting.",
+        "Lack of fine details (e.g., fur strands, eye reflections).",
+        "Slightly distorted or warped shapes."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2470,
+      "execution_time": 15.991500180000003,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_002.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent focus across the image.",
+        "Unnatural color shifts and saturation variations.",
+        "Lack of fine details, especially in edges/textures.",
+        "Geometric distortions or warping noticeable upon closer inspection."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2541,
+      "execution_time": 3.034139249999498,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_003.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Extremely low resolution/blurriness throughout the image.",
+        "Lack of realistic detail in vehicle features (e.g., lights, ladders).",
+        "Color inconsistencies and blending across different areas.",
+        "Unnatural depth perception."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2542,
+      "execution_time": 3.123226116999831,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_004.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry details and lack of sharpness across the image.",
+        "Unnatural blending between rider and horse, suggesting compositing.",
+        "Inconsistent lighting or shadow patterns.",
+        "Overall visual 'flatness' lacking depth cues."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2537,
+      "execution_time": 3.058888952000416,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_005.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/Lack of Sharpness: Image lacks detail and appears overly blurred.",
+        "Unnatural Colors: Color saturation seems inconsistent, with a yellowish tint.",
+        "Artifacts: Subtle pixelation and distortions are visible upon close inspection."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2313,
+      "execution_time": 3.0353942370002187,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_006.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent image quality.",
+        "Lack of fine detail in textures.",
+        "Unnatural color grading/tonality.",
+        "Potential artifacts suggesting digital manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1803,
+      "execution_time": 2.64378385100008,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_007.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry, indistinct features.",
+        "Lack of consistent lighting across the scene.",
+        "Unnatural depth-of-field/focus anomalies.",
+        "General visual artifacts suggestive of AI upscaling/generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2299,
+      "execution_time": 3.1527305709996654,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_008.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/imprecise background detail",
+        "Unnatural eye reflections/highlights",
+        "Lack of micro-details in fur texture",
+        "Inconsistent lighting across the face"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2269,
+      "execution_time": 2.837503445999573,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_009.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent image resolution.",
+        "Lack of fine detail in the subject's features (e.g., skin texture).",
+        "Unnatural lighting and shadows.",
+        "Anomalous reflections or distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2321,
+      "execution_time": 2.984511809999276,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_010.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry details / lack of sharp focus.",
+        "Unnatural lighting/shadows.",
+        "Inconsistent textures.",
+        "Artifacting - color distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2253,
+      "execution_time": 2.7210595960004866,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_011.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Lack of digital artifacts or blending inconsistencies.",
+        "Consistent lighting and shadow patterns.",
+        "Realistic texture and material detail.",
+        "No unusual distortions or repetitive patterns."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2357,
+      "execution_time": 2.6078466839999237,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_012.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and indistinct features across the entire image.",
+        "Lack of fine detail (e.g., texture on surfaces).",
+        "Unnatural appearance in overall composition.",
+        "Inconsistent lighting & shadows."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1933,
+      "execution_time": 2.9664426930003174,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_013.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural grass texture and lighting.",
+        "Realistic fur detail and variation in color.",
+        "Normal eye reflections.",
+        "Lack of obvious digital artifacts."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2682,
+      "execution_time": 2.6591564250002193,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_014.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures throughout the image.",
+        "Lack of consistent lighting/shadows.",
+        "Unnatural geometry in the airplane's structure.",
+        "Simplified details suggesting AI-generated features."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1914,
+      "execution_time": 3.000544581000213,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_015.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures throughout the image.",
+        "Unnatural skin/fur smoothness and lack of fine detail.",
+        "Asymmetry in facial features (e.g., eye spacing).",
+        "Inconsistent lighting on different areas of the face."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2685,
+      "execution_time": 3.318211777000215,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_016.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/Unnatural textures",
+        "Lack of fine detail",
+        "Inconsistent lighting",
+        "Geometric anomalies (slight distortions)"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1596,
+      "execution_time": 3.01384226799928,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_017.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and inconsistent image quality.",
+        "Unnatural skin textures/reflections on fur.",
+        "Lack of consistent light direction.",
+        "Asymmetry in facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2419,
+      "execution_time": 3.0176633399996717,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_018.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality overall.",
+        "Lack of fine detail in fur texture.",
+        "Unnatural lighting and highlights.",
+        "Discrepancies in background rendering."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2564,
+      "execution_time": 3.2230011450001257,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_019.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural color palette and textures (purple/blue on fur)",
+        "Blurry, inconsistent background details",
+        "Lack of fine detail in facial features",
+        "Overall surreal, dreamlike quality"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2662,
+      "execution_time": 3.0918592369998805,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_020.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures/details.",
+        "Unnatural lighting inconsistencies.",
+        "Lack of fine-grained detail in specular highlights.",
+        "Distorted or inconsistent background elements."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2526,
+      "execution_time": 2.7960176800006593,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_021.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry facial features and lack of sharp detail.",
+        "Unnatural skin texture and lighting inconsistencies.",
+        "Asymmetry or distortion around the eyes/mouth.",
+        "Lack of micro-movements or subtle human expressions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2166,
+      "execution_time": 3.049163010000484,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_022.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/lack of fine detail",
+        "Unnatural color palette",
+        "Distorted reflections",
+        "Lack of realistic lighting"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2403,
+      "execution_time": 2.7047018249995745,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_023.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent textures (especially on the vehicle)",
+        "Lack of fine detail and sharpness in the image overall",
+        "Unnatural blending/integration with the background",
+        "Geometric inconsistencies, possible evidence of warping during generation"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2693,
+      "execution_time": 2.950727888000074,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_024.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry Details: Image lacks sharpness and fine detail.",
+        "Color inconsistencies: Noticeable shifts in color saturation across the image.",
+        "Unnatural texture: Skin appears overly smooth or plastic-like.",
+        "Artifacts/Noise: Presence of unusual digital noise patterns."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2621,
+      "execution_time": 3.345717287000298,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_025.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality and inconsistent focus.",
+        "Unnatural, repetitive patterns in the grass texture.",
+        "Lack of detail in animal features (e.g., antlers).",
+        "A general lack of depth and realism within the scene."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2069,
+      "execution_time": 3.305601877999834,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_026.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of fine detail.",
+        "Unnatural lighting and shadows.",
+        "Inconsistent background depth.",
+        "Overall appearance is overly smooth and artificial."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2684,
+      "execution_time": 2.8353603410005235,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_027.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry detail and lack of sharp edges",
+        "Unnatural rendering in background elements",
+        "Inconsistent lighting across the image",
+        "Limited textural variation, appearing 'flat' overall"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1931,
+      "execution_time": 2.938099751999289,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_028.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and inconsistent lighting.",
+        "Unnatural or distorted perspective.",
+        "Lack of fine detail, particularly on the fuselage.",
+        "Geometric anomalies in wing structure."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2582,
+      "execution_time": 2.6849653129993385,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_029.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and indistinct edges.",
+        "Lack of consistent lighting and shadows.",
+        "Unnatural color palette & saturation.",
+        "Absence of fine details in the foliage."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2365,
+      "execution_time": 2.97782950599958,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_030.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures, particularly in shadowed areas.",
+        "Inconsistent lighting and reflections.",
+        "Lack of fine detail on surfaces (e.g., leaves).",
+        "Unnatural color gradients."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2656,
+      "execution_time": 2.974240934999216,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_031.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural texture on skin.",
+        "Lack of detail in hair strands.",
+        "Inconsistent lighting and shadows.",
+        "Color bleeding or artifacting around edges."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2205,
+      "execution_time": 2.802819322999312,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_032.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry overall image quality.",
+        "Lack of fine detail in vehicle's body panels and reflections.",
+        "Inconsistent lighting and shadows.",
+        "Unnatural smoothness/lack of texture."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2365,
+      "execution_time": 2.753698905999954,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_033.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/soft edges and textures overall.",
+        "Lack of fine detail in reflections (e.g., on the car's surface).",
+        "Inconsistent lighting or shadows across the image.",
+        "Unnatural blending between foreground and background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2528,
+      "execution_time": 3.150323603000288,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_034.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality overall.",
+        "Lack of detail in vehicle features.",
+        "Unnatural lighting and shadows.",
+        "Repetitive texture patterns."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2247,
+      "execution_time": 2.7415724800002863,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_035.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry facial features with inconsistent detail levels.",
+        "Unnatural symmetry in the face.",
+        "Lack of fine texture and pores on skin/fur.",
+        "Slightly distorted or 'smoothed' appearance overall."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2475,
+      "execution_time": 3.0162831959996765,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_036.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent facial details.",
+        "Unnatural skin texture and lighting.",
+        "Lack of micro-expressions.",
+        "Background inconsistencies."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2544,
+      "execution_time": 2.6426339890003874,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_037.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and inconsistent image focus.",
+        "Unnatural color gradients across the sky and water.",
+        "Lack of fine details in textures (e.g., aircraft surface).",
+        "Repetitive patterns evident upon closer inspection."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2226,
+      "execution_time": 3.4018312979997063,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_038.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry Details: Lack of fine detail and overall soft focus.",
+        "Inconsistent Lighting: Uneven or unrealistic light distribution.",
+        "Artifacts: Visible digital artifacts suggesting manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2421,
+      "execution_time": 3.0191106129996115,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_039.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of fine detail.",
+        "Unnatural color palette with an overly saturated red hue.",
+        "Geometric inconsistencies in the boat's form.",
+        "Absence of realistic water reflections or surface distortion."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2094,
+      "execution_time": 3.2691173499997603,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_040.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality.",
+        "Lack of fine detail in fur texture.",
+        "Unnatural lighting and shadows.",
+        "General lack of sharpness."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2310,
+      "execution_time": 2.5671055980001256,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_041.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent background details",
+        "Lack of fine texture on skin",
+        "Unnatural lighting and shadows",
+        "Overall softness/lack of crispness across the image"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2553,
+      "execution_time": 2.7612340659998154,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_042.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and edges.",
+        "Unnatural color grading/lighting inconsistencies.",
+        "Lack of fine detail in the foreground.",
+        "Overall composition appears artificial."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2449,
+      "execution_time": 2.7554103259999465,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_043.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality",
+        "Lack of fine detail in textures",
+        "Unnatural lighting and shadows",
+        "Inconsistent object rendering"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2594,
+      "execution_time": 2.6238347549997343,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_044.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality overall.",
+        "Lack of sharp detail in the truck's features.",
+        "Unnatural color blending and inconsistencies.",
+        "Geometric distortions visible upon closer inspection."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2636,
+      "execution_time": 3.049333162000039,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_045.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture inconsistencies.",
+        "Unnatural skin tone and lighting.",
+        "Lack of fine detail in facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2447,
+      "execution_time": 2.50948474300003,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_046.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality/low resolution.",
+        "Lack of realistic feather detail.",
+        "Unnatural wing position and posture.",
+        "Background appears flat and uniform."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1291,
+      "execution_time": 2.8035863900004188,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_047.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture and lack of fine detail across the image.",
+        "Unnatural color grading, especially in highlights.",
+        "Geometric inconsistencies or distortions upon close inspection.",
+        "Absence of realistic depth cues."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2264,
+      "execution_time": 3.0767097689995353,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_048.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry, undefined details across the image.",
+        "Unnatural color blending and saturation.",
+        "Lack of consistent depth-of-field rendering.",
+        "Distorted or repetitive patterns in foliage."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2295,
+      "execution_time": 3.665271587999996,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_049.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/Unnatural textures",
+        "Inconsistent lighting",
+        "Lack of fine detail in shadows",
+        "Artifacting, specifically along edges."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1936,
+      "execution_time": 2.8268924630001493,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_050.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent textures",
+        "Lack of fine detail (e.g., skin pores)",
+        "Unnatural lighting/shadowing",
+        "Artifacts / distortions in the image"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2492,
+      "execution_time": 3.000831055999697,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_051.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent focus across the image.",
+        "Lack of fine detail in fur texture.",
+        "Unnatural lighting and shadows.",
+        "Anomalous color distortion."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2392,
+      "execution_time": 2.8545542339998065,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_052.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and indistinct features.",
+        "Lack of consistent lighting across the scene.",
+        "Unnatural color palette and gradients.",
+        "Overall low resolution and poor image quality."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1870,
+      "execution_time": 2.975094715000523,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_053.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and inconsistencies in detail.",
+        "Unnatural skin tone and lighting variations.",
+        "Lack of micro-expressions or subtle movements.",
+        "Distorted or 'melting' edges around the subject."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2383,
+      "execution_time": 2.94846207899991,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_054.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Lack of fine detail/texture.",
+        "Blurry and inconsistent focus throughout the image.",
+        "Color gradients appear artificial and smooth.",
+        "Absence of natural imperfections or noise."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1493,
+      "execution_time": 2.755999408000207,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_055.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural skin texture.",
+        "Lack of fine detail in facial features.",
+        "Inconsistent lighting and shadows.",
+        "Unnatural eye reflections."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2068,
+      "execution_time": 2.926797193999846,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_056.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural foliage texture",
+        "Inconsistent lighting across elements",
+        "Repetitive patterns in background details",
+        "Lack of fine-grained detail consistent with photography"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2439,
+      "execution_time": 2.829840504999993,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_057.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture and lack of fine detail across the image.",
+        "Unnatural color palette; deer's fur appears overly saturated/artificial.",
+        "Inconsistent background depth-of-field suggesting a composite image.",
+        "Slight warping or distortions in the animal\u2019s form."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2309,
+      "execution_time": 3.3404774549999274,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_058.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and inconsistent focus.",
+        "Unnatural horse anatomy (e.g., leg proportions).",
+        "Lack of fine details in the mane and tail.",
+        "Repetitive patterns within the background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2368,
+      "execution_time": 2.858597522999844,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_059.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of fine detail.",
+        "Unnatural lighting and shadows.",
+        "Inconsistent depth of field.",
+        "General sense of artificiality."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2332,
+      "execution_time": 2.8100898489992687,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_060.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Inconsistent lighting across face/body.",
+        "Blurry background with loss of detail.",
+        "Subtle warping or distortions around facial features."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2649,
+      "execution_time": 2.8964951190000647,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_061.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Lack of consistent lighting.",
+        "Blurry or indistinct textures.",
+        "Unnatural depth-of-field effects.",
+        "Inconsistent background details."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2588,
+      "execution_time": 2.7253885309992256,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_062.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry Details: Lack of sharpness in facial features.",
+        "Inconsistent Lighting: Uneven and unnatural shadows.",
+        "Texture Anomalies: Strange or plastic-like appearance to skin."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2419,
+      "execution_time": 2.845596082999691,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_063.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/lack of fine detail especially around edges.",
+        "Unnatural reflections or lighting inconsistencies.",
+        "Simplified or repetitive patterns (e.g., in textures).",
+        "Limited depth and perspective distortion."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2139,
+      "execution_time": 2.9243701730001703,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_064.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/inconsistent detail across the image.",
+        "Unnatural color palette and shading.",
+        "Lack of fine texture on body panels.",
+        "Geometric distortions visible in edges."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2309,
+      "execution_time": 2.751722381000036,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_065.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture across the entire image.",
+        "Lack of fine detail in the vehicle's surfaces.",
+        "Unnatural lighting and shadows.",
+        "Low overall contrast and dynamic range."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2508,
+      "execution_time": 2.9030464429997664,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_066.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture and inconsistent detail levels across the image.",
+        "Unnatural color grading/palette; lacks natural variation.",
+        "Geometric anomalies, specifically in the boat's structure - potential warping or distortion.",
+        "Lack of fine details (e.g., water ripples, reflections) suggest a simplified rendering."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2284,
+      "execution_time": 3.1578164309994463,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_067.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurred edges and lack of sharp detail throughout the image.",
+        "Unnatural lighting and shadows; inconsistent with natural light sources.",
+        "Low resolution suggestive of upscaling or generation from a limited dataset.",
+        "Distorted texture, particularly around the animal's form."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1816,
+      "execution_time": 3.238074939999933,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_068.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Lack of detail in fur texture.",
+        "Unnatural posture and proportions.",
+        "Blurriness especially around edges.",
+        "Repetitive patterns/artifacts in the background."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2354,
+      "execution_time": 2.8063039460002983,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_069.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of sharp detail overall",
+        "Inconsistent lighting across the image",
+        "Unnatural bird posture/anatomy",
+        "Digital artifacts visible on edges."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2224,
+      "execution_time": 2.7588482889996158,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_070.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture artifacts throughout the image.",
+        "Unnatural lighting and shadows.",
+        "Lack of fine detail in the helicopter's surface.",
+        "Simplified background with low complexity."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1895,
+      "execution_time": 2.7107822389998546,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_071.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/Low Resolution Artifacts",
+        "Inconsistent Lighting",
+        "Lack of Fine Detail (e.g., fur texture)",
+        "Unnatural Movement"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2436,
+      "execution_time": 2.576118494000184,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_072.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture inconsistencies.",
+        "Unnatural color distribution.",
+        "Lack of fine detail.",
+        "Depth-of-field anomalies."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2578,
+      "execution_time": 2.545949190999636,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_073.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry facial features",
+        "Lack of fine detail in hair",
+        "Unnatural lighting inconsistencies",
+        "Overall low resolution and softness"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2310,
+      "execution_time": 2.8751197209994643,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_074.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural blur and motion.",
+        "Realistic grass texture.",
+        "Consistent lighting conditions.",
+        "Absence of obvious artifacts."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2402,
+      "execution_time": 2.5444672819994594,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_075.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and indistinct features.",
+        "Lack of sharp detail across the image.",
+        "Unnatural color palette."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2177,
+      "execution_time": 2.5310489580006106,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_076.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural texture and color variation",
+        "Consistent lighting and shadows",
+        "Realistic detail in the subject's features",
+        "Absence of digital artifacts or distortions"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2517,
+      "execution_time": 2.6387868360006905,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_077.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural textures on vehicle surfaces",
+        "Lack of consistent lighting and shadows",
+        "Repetitive pattern in foliage background",
+        "Unrealistic level of detail compared to overall image quality"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2449,
+      "execution_time": 2.905999802000224,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_078.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and inconsistent detail levels.",
+        "Lack of realistic specular highlights in the eyes.",
+        "Unnatural, smooth skin appearance (lacking fine pores or imperfections).",
+        "Slightly distorted background creating a sense of artificiality."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2427,
+      "execution_time": 3.1523482680004236,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_079.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and indistinct features.",
+        "Lack of consistent perspective across the image.",
+        "Unnatural color palette/lighting.",
+        "Repetitive patterns in water texture."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2009,
+      "execution_time": 2.9765658899996197,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_080.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent textures.",
+        "Lack of fine detail, particularly in edges.",
+        "Unnatural lighting/shadows.",
+        "Artifacts and distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2594,
+      "execution_time": 3.011314632999529,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_081.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/imprecise edges on the animal's form.",
+        "Unnatural color palette and gradients in background.",
+        "Lack of fine detail (e.g., fur texture) on subject.",
+        "Spatial inconsistencies suggesting compositing."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2278,
+      "execution_time": 3.3106351850001374,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_082.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry or inconsistent detail across the image.",
+        "Unnatural proportions and perspective of the horse's legs.",
+        "Background appears generic/lack specific details consistent with a real scene.",
+        "Lack of realistic texture on the horse's coat."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2628,
+      "execution_time": 3.194021813999825,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_083.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality overall.",
+        "Lack of sharp detail in architectural features.",
+        "Unnatural color palette and lighting.",
+        "Repetitive patterns suggestive of AI texture generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2624,
+      "execution_time": 2.903377663000356,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_084.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and inconsistent detail across the image.",
+        "Unnatural lighting and shadows.",
+        "Lack of fine texture on horse's coat.",
+        "Background appears overly smooth and artificial."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2454,
+      "execution_time": 2.864292059000036,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_085.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry, indistinct features.",
+        "Unnatural color rendering (red)",
+        "Lack of fine detail in background vegetation.",
+        "Inconsistent perspective/depth."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2054,
+      "execution_time": 2.710631106000619,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_086.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry overall image quality.",
+        "Lack of detail in architectural features.",
+        "Absence of fine texture variation.",
+        "Unnatural contrast and shading."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1512,
+      "execution_time": 2.7854876719993626,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_087.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Significant blurring and lack of fine detail across the entire image.",
+        "Unnatural color saturation, particularly in the blue areas.",
+        "Inconsistent lighting and shadows, suggesting compositing.",
+        "Absence of realistic texture on surfaces (metal, pavement)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2493,
+      "execution_time": 3.215516199999911,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_088.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/washed out appearance overall.",
+        "Lack of fine detail in the background.",
+        "Unnatural color gradients.",
+        "Subject appears detached and lacks consistent shading."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2085,
+      "execution_time": 2.7161479150008745,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_089.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and inconsistent textures.",
+        "Unnatural lighting or shadows.",
+        "Lack of fine detail in the background.",
+        "Inconsistent reflections."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2461,
+      "execution_time": 2.6481796389998635,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_090.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry texture and lack of fine detail in the central object.",
+        "Inconsistent lighting across different areas of the image.",
+        "Unnatural depth of field, with foreground elements appearing overly sharp while background is too smooth.",
+        "Signs of warping or distortion around edges."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2327,
+      "execution_time": 3.1871293849999347,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_091.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural wing motion",
+        "Lack of sharp detail on bird's body.",
+        "Inconsistent lighting across image."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2180,
+      "execution_time": 2.6973383430004105,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_092.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of fine detail.",
+        "Unnatural lighting/shadowing inconsistencies.",
+        "Low resolution overall, suggesting upscaling or compression artifacts.",
+        "Asymmetrical or distorted facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2551,
+      "execution_time": 3.0197336849996645,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_093.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/imprecise detail overall.",
+        "Unnatural reflections on boat surface.",
+        "Lack of sharp definition in background elements.",
+        "Limited color variation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2378,
+      "execution_time": 2.883861156000421,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_094.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality, lack of sharp detail.",
+        "Unnatural color palette and lighting.",
+        "Inconsistent or illogical composition.",
+        "Artifacts suggestive of generative AI models."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2239,
+      "execution_time": 2.951621647000138,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_095.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/soft textures",
+        "Inconsistent lighting",
+        "Lack of fine details (e.g., hair, skin pores)",
+        "Unnatural image artifacts"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2232,
+      "execution_time": 2.7823744839997744,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_096.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry and inconsistent focus across the image.",
+        "Lack of fine detail in the car's body and surrounding environment.",
+        "Unnatural reflections or distortions on surfaces.",
+        "Repetitive patterns suggesting a generated texture."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2549,
+      "execution_time": 2.8994625870000164,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_097.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures and lack of fine detail.",
+        "Inconsistent lighting/shadows across the image.",
+        "Unnatural or smoothed facial features (if applicable).",
+        "Overall composition appears generic and lacks specific photographic cues."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2142,
+      "execution_time": 3.0318638449998616,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_098.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry textures across the vehicle surface.",
+        "Unnatural blurring of foliage in the background, lacking depth.",
+        "Lack of crisp details on figures within the car. ",
+        "Color inconsistencies and bleeding between red paint and surrounding elements."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2497,
+      "execution_time": 3.0285945989999163,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_099.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry/unnatural background",
+        "Lack of detail in the focal area",
+        "Unrealistic color saturation",
+        "Inconsistent lighting"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2374,
+      "execution_time": 2.7036797350001507,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_100.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Naturalistic wing motion despite blur",
+        "Consistent light and shadow patterns on feathers",
+        "Lack of obvious digital artifacts (e.g., pixelation, warping)",
+        "Plausible sky background with subtle cloud variations"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1803,
+      "execution_time": 3.0220362840000234,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    }
+  ]
+}

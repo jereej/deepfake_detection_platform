@@ -1,0 +1,2023 @@
+{
+  "run": {
+    "run_id": "36a3808419f347358c27ca4b3aaf5046",
+    "timestamp": "2026-10-02T11:11:07.999458+00:00",
+    "backend": "ollama",
+    "model": "gemma3:12b",
+    "media_type": "image",
+    "dataset": "dataset_100",
+    "labels_file": "image/dataset_100/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 100,
+    "number_failed": 0,
+    "total_execution_time": 361.72904618600023,
+    "model_loading_time": null,
+    "total_duration_ns": 4187569277,
+    "load_duration_ns": 747751428,
+    "prompt_eval_count": 331,
+    "eval_count": 70,
+    "eval_duration_ns": 1490181000
+  },
+  "result": [
+    {
+      "name": "image_001.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the vehicle.",
+        "Fine detail in textures (tire treads, brickwork).",
+        "Realistic reflections on the car's body panels.",
+        "Natural-looking imperfections like subtle paint variations."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1501093,
+      "execution_time": 17.459859669000252,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_002.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in leaf color and density.",
+        "Realistic tree bark texture with imperfections.",
+        "Consistent lighting across the scene, suggesting natural sunlight.",
+        "Grass and ground details appear organic and not uniformly generated."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2084723,
+      "execution_time": 3.044450891999986,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_003.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural symmetry in tree placement and foliage.",
+        "Texture inconsistencies within the bark of the birch trees.",
+        "Overly uniform color distribution across leaves, lacking natural variation.",
+        "Lack of fine details (e.g., individual leaf veins) consistent with realistic photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1829738,
+      "execution_time": 3.4792905619997327,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_004.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows appear consistent with a real scene.",
+        "Texture of fur appears realistic and not overly smooth or uniform.",
+        "Background exhibits subtle variations in color and detail characteristic of photography.",
+        "Cat's anatomy is plausible."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 73995,
+      "execution_time": 3.418290030999742,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_005.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural feather texture/rendering.",
+        "Irregular color blending and shading on plumage.",
+        "Oversaturated colors, particularly in the turquoise feathers.",
+        "Background appears generic and lacks realistic detail."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 11265225,
+      "execution_time": 3.8582791460003136,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_006.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural symmetry in tree placement.",
+        "Repetitive texture on bark segments.",
+        "Lack of depth and atmospheric perspective.",
+        "Absence of natural imperfections (e.g., broken branches)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 47626621,
+      "execution_time": 6.592126635999193,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_007.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on the bag and jeans.",
+        "Natural texture of denim fabric visible.",
+        "Realistic detail in the dog's fur and eyes.",
+        "Lack of typical AI artifacts like warping or repetitive patterns."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 409513,
+      "execution_time": 3.1047394329998497,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_008.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural smoothness of petals and textures.",
+        "Lack of fine detail on the stamen/center of the flower.",
+        "Slightly uniform lighting across the flower\u2019s surface.",
+        "Leaves appear overly symmetrical/idealized."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 944182,
+      "execution_time": 3.109223670000574,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_009.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural shading and highlights on the orca's skin.",
+        "Repetitive, blurry texture in the background water.",
+        "Lack of fine detail on the pectoral fins.",
+        "Anomalous, uniform color distribution across the seafloor."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 237990,
+      "execution_time": 3.1412703639998654,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_010.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Inconsistent lighting across tulips.",
+        "Repetitive texture in tulip petals.",
+        "Lack of natural variation in flower size/shape.",
+        "Unnatural color blending between flowers and background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 81316,
+      "execution_time": 2.904911725000602,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_011.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows on the pavement.",
+        "Consistent textures for fur across both dogs.",
+        "Realistic depth of field with background slightly blurred.",
+        "Dogs' movements appear coordinated and natural."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 80690,
+      "execution_time": 2.763714030999836,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_012.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across surfaces",
+        "Realistic texture detail in the dust cloud",
+        "Fine details visible on the helicopter's surface (rivets, panel lines)",
+        "Natural-looking blurriness due to motion"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1980637,
+      "execution_time": 3.1220556429998396,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_013.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural fur texture - repetitive and uniform brushstrokes.",
+        "Lack of realistic eye detail \u2013 appears flat and lacks subtle reflections.",
+        "Inconsistent lighting across the face, hinting at composite elements.",
+        "Slightly softened or blurred edges around the facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1503540,
+      "execution_time": 3.2586730480006736,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_014.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and water distortion are present.",
+        "Subtle variations in stone color and texture indicate genuine photographic detail.",
+        "Squid movement appears organic and non-repetitive.",
+        "Reflections suggest complex surface interaction, typical of a physical environment."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 643954,
+      "execution_time": 3.2182230080006775,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_015.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic feather texture and detail.",
+        "Natural lighting with subtle gradients.",
+        "Consistent perspective and depth of field.",
+        "Absence of obvious artifacts or distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2503699,
+      "execution_time": 3.139688178000142,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_016.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural reflections on the hull.",
+        "Repetitive and uniform detailing along deck.",
+        "Lack of realistic wave interaction with ship's bow.",
+        "Perfectly clean ship, lacking weathering or grime."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 273444,
+      "execution_time": 3.004667563000112,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_017.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows",
+        "Natural texture of leaves",
+        "Realistic depiction of bamboo stalks",
+        "Lack of typical AI artifacts (e.g., blurriness, repetition)"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 35666587,
+      "execution_time": 6.040730405999966,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_018.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and reflections on the jellyfish's surface.",
+        "Natural variation in color and texture within the organisms.",
+        "Subtle imperfections and irregularities visible on tentacle structure.",
+        "Realistic water distortion and particulate matter visible in background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 392023,
+      "execution_time": 3.190177870000298,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_019.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural texture on the bird's feathers.",
+        "Inconsistent lighting across surfaces.",
+        "Lack of fine details in the background rocks.",
+        "Slightly blurry, dreamlike appearance overall."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 27316222,
+      "execution_time": 5.530063823000091,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_020.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and color variation in leaves.",
+        "Realistic tree bark texture with imperfections.",
+        "Complex leaf arrangement suggesting organic growth patterns.",
+        "Absence of repetitive or symmetrical anomalies common in AI imagery."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 41309274,
+      "execution_time": 6.28254435800045,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_021.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting consistency across foliage.",
+        "Repetitive tree patterns, lacking organic variation.",
+        "Oversmooth textures with a lack of fine surface detail.",
+        "Absence of natural shadow complexity."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 14508080,
+      "execution_time": 4.181110002000423,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_022.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural texture and variation in skin coloration.",
+        "Consistent lighting and shadow patterns across the surface.",
+        "Realistic depiction of biological structures (eyes, tentacles).",
+        "Lack of common digital artifacts like blurring or tiling."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 440557,
+      "execution_time": 2.9036088129996642,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_023.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the plane and landscape.",
+        "Natural variation in foliage texture and color.",
+        "Realistic depiction of atmospheric perspective (blurring in distant trees).",
+        "Fine details visible on the aircraft's surface (rivets, panel lines)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 622596,
+      "execution_time": 3.292351217999567,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_024.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Repetitive patterns and lack of natural variation in orchid placement.",
+        "Unnatural texture and shading on the flower petals, appearing digitally rendered.",
+        "Stiff and unrealistic depiction of plant stems and leaves.",
+        "Lack of depth and perspective cues common in photographic images."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1907306,
+      "execution_time": 3.427717298999596,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_025.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows.",
+        "Realistic reflections on the car's body panels.",
+        "Texture detail in brick building and road surface.",
+        "Natural color gradations across surfaces."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1338815,
+      "execution_time": 2.9670855079994,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_026.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Realistic fur texture detail.",
+        "Consistent perspective depth of field.",
+        "No obvious pixelation or digital artifacts."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 449661,
+      "execution_time": 2.6806871870003306,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_027.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural foliage density and uniformity.",
+        "Water reflection lacks realistic distortion or detail.",
+        "Tree roots appear geometrically perfect/repetitive rather than organic.",
+        "Sky texture is overly smooth and devoid of fine details."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1741572,
+      "execution_time": 3.2310926709997148,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_028.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Realistic water surface texture with natural wave patterns.",
+        "Visible details on the ferry (e.g., signage, structural elements).",
+        "Natural cloud formations exhibiting realistic variation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 513448,
+      "execution_time": 3.1217928669993853,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_029.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in lavender plant heights and density.",
+        "Realistic lighting and shadow transitions across the field.",
+        "Texture detail in foliage, indicating organic growth patterns.",
+        "Subtle imperfections visible within the landscape."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2041801,
+      "execution_time": 3.1395610039999156,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_030.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural color grading and lighting inconsistencies.",
+        "Repetitive foliage patterns indicating procedural generation.",
+        "Lack of fine detail in background elements suggests a composite image.",
+        "Anomalous blurring artifacts or soft focus inconsistent with natural photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 20132815,
+      "execution_time": 4.623232276999261,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_031.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural reflections on water surface.",
+        "Inconsistent lighting and shadows across the hull.",
+        "Repetitive, generic textures on surfaces.",
+        "Lack of fine details/blurriness in distant icebergs."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1385427,
+      "execution_time": 3.439821666000171,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_032.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows.",
+        "Natural texture of the cat's fur.",
+        "Realistic eye reflections.",
+        "Lack of obvious digital artifacts."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 506288,
+      "execution_time": 2.7672572149995176,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_033.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural texture and lighting on the jellyfish bell.",
+        "Blurry, inconsistent details in the trailing tentacles.",
+        "Surrounding water appears overly uniform and lacking natural variation.",
+        "The central body exhibits a symmetrical, almost 'too perfect' form."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 4230607,
+      "execution_time": 3.618004648000351,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_034.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows consistent with a real environment.",
+        "Variations in grass texture suggest organic growth pattern.",
+        "Cloud formations display natural complexity and diffusion.",
+        "Tree foliage exhibits realistic color variation and density."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 8588548,
+      "execution_time": 3.756917312999576,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_035.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural fur texture and detail.",
+        "Consistent lighting across the subject's face.",
+        "Realistic eye reflections and depth.",
+        "Absence of common AI artifacts like warping or blurring."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 429130,
+      "execution_time": 3.3757910980002634,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_036.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows on the ship's hull.",
+        "Consistent texture of the ship's paint and metalwork.",
+        "Realistic water reflection with subtle ripples.",
+        "Visible details in clouds suggest natural atmospheric conditions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 668014,
+      "execution_time": 3.4948573339997893,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_037.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural symmetry in tree and reflection.",
+        "Water surface lacks realistic ripples or detail.",
+        "Clouds exhibit overly smooth, uniform texture.",
+        "Lack of fine details in distant foliage."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1618514,
+      "execution_time": 3.4048490280001715,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_038.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Realistic water reflections with detail.",
+        "Visible texture and wear on the ship's hull.",
+        "Natural-looking sky with cloud formations."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 591863,
+      "execution_time": 3.23603034900043,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_039.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadow direction.",
+        "Presence of natural sediment/particles in the water.",
+        "Texture detail on the squid's skin.",
+        "Realistic depiction of aquatic equipment."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 840196,
+      "execution_time": 2.9572381269999823,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_040.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic lighting and shadow patterns on the grass.",
+        "Consistent texture and detail in palm tree fronds.",
+        "Natural-looking variation in grass blade heights.",
+        "Presence of architectural details suggesting real buildings."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 28999697,
+      "execution_time": 5.524638628000503,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_041.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural texture variations in bark and foliage (despite lack of leaves).",
+        "Realistic depth of field with blurred background elements.",
+        "Absence of common AI-generated artifacts (e.g., tiling, distorted features)."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2074392,
+      "execution_time": 3.324855751000541,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_042.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural fur texture: lacks fine detail and appears overly smooth.",
+        "Inconsistent lighting on sand vs dog: shadows and highlights do not align realistically.",
+        "Background blur is excessive & uniform: Lacks depth of field variation typical of photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 57624,
+      "execution_time": 3.418209053999817,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_043.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural texture of fur and fabric are present.",
+        "No visible artifacts or distortions indicative of AI generation.",
+        "Realistic depth of field with a blurred background."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 513331,
+      "execution_time": 3.4356672529993375,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_044.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and shadows across the ship\u2019s hull.",
+        "Lack of detail in distant shoreline details.",
+        "Repetitive textures on containers suggest AI upscaling/generation.",
+        "Overall image appears overly smooth and lacking micro-detail characteristic of real photographs."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1675748,
+      "execution_time": 3.4638884569994843,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_045.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the aircraft and hangar.",
+        "Realistic reflections on the airplane's surface.",
+        "Visible wear and textures on the hangar floor.",
+        "Fine detail in the propeller blades and engine components."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 680314,
+      "execution_time": 3.2513157760004106,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_046.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural fur texture and variation in lighting.",
+        "Realistic eye detail with visible pupil dilation.",
+        "Consistent whisker placement and shading.",
+        "Background appears naturally blurred."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 498042,
+      "execution_time": 2.7457375240001056,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_047.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in leaf color and shape.",
+        "Consistent lighting across the foliage.",
+        "Realistic texture of tree bark.",
+        "Gradual blurring in the background indicating depth."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 21988162,
+      "execution_time": 5.093591827000637,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_048.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Repetitive patterns in tree placement and structure.",
+        "Unnatural uniformity of foliage density and color.",
+        "Lack of depth variation or realistic perspective distortion.",
+        "Simplified, stylized rendering suggests algorithmic creation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1446186,
+      "execution_time": 3.324913961000675,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_049.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent reflections on windows and surfaces.",
+        "Natural lighting and shadow patterns.",
+        "Visible weathering and minor imperfections on hull.",
+        "Realistic water texture and interaction with the ship."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2448629,
+      "execution_time": 3.0112336999991385,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_050.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on the ship's hull.",
+        "Realistic water texture with visible ripples.",
+        "Authentic details of maritime equipment (antennae, navigational lights).",
+        "Presence of background scenery including hills/mountains and port infrastructure."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 966716,
+      "execution_time": 3.203445804999319,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_051.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural symmetry in branching patterns.",
+        "Overly sharp detail and uniform lighting across the tree bark.",
+        "Background trees lack realistic depth of field or variation.",
+        "Grass texture appears repetitive/digitally generated."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2164864,
+      "execution_time": 3.3190397420003137,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_052.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows",
+        "Consistent texture of sand and water",
+        "Realistic dog anatomy and posture",
+        "Absence of common AI artifacts (e.g., distortions, repetition)"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1233751,
+      "execution_time": 3.111455986000692,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_053.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and shadows on birch bark.",
+        "Repetitive texture patterns in the foliage of distant trees.",
+        "Lack of consistent depth cues across the scene.",
+        "Slightly artificial appearance of grass texture."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1742524,
+      "execution_time": 3.1202297760000874,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_054.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Realistic reflections on car surfaces.",
+        "Naturalistic texture of pavement and building materials.",
+        "Presence of fine details like individual leaves on trees."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1308548,
+      "execution_time": 3.299824924999484,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_055.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural symmetry in tree branches.",
+        "Repetitive foliage patterns and textures.",
+        "Lack of natural variation in ground detail.",
+        "Overly smooth transitions between foreground and background."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1965002,
+      "execution_time": 3.1192358440002863,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_056.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural texture/brushstroke style across the entire image.",
+        "Lack of realistic fur detail and depth.",
+        "Symmetrical, stylized features appearing artificial.",
+        "Eyes lack convincing iris structure or natural reflections."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1323115,
+      "execution_time": 3.0000401049992433,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_057.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural reflections in the headlights.",
+        "Inconsistent brick texture and patterns on the street.",
+        "Lack of fine detail on the car's emblem.",
+        "Slightly distorted perspective lines."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1363322,
+      "execution_time": 3.2159705610001765,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_058.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural reflections on the car's surface.",
+        "Inconsistent brick texture and lighting across the building facade.",
+        "Slightly blurred or distorted details in the background (e.g., window frames).",
+        "Anomalous color banding in shadows."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1293692,
+      "execution_time": 3.5239177070006917,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_059.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnaturally smooth texture across the jellyfish bell.",
+        "Lack of consistent light reflection on the tentacles, appearing flat and digitally rendered.",
+        "Slight blurring/softness around the edges of the form which deviates from natural photographic qualities.",
+        "Color palette too saturated & idealized compared to likely natural appearance."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2791097,
+      "execution_time": 3.6372032170002058,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_060.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural water reflections and wave patterns.",
+        "Realistic skin texture and lighting variations on the whale's body.",
+        "Presence of ice floes with natural imperfections.",
+        "Consistent depth of field suggesting a single camera shot."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2593762,
+      "execution_time": 3.1192036500005997,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_061.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural feather texture and detail.",
+        "Consistent lighting across the bird's body.",
+        "Realistic branch appearance with subtle imperfections.",
+        "Believable eye reflection and clarity."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 14347434,
+      "execution_time": 3.9605148300006476,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_062.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural color distribution and saturation.",
+        "Lack of fine detail in sand texture.",
+        "Repetitive patterns in crab shell coloration.",
+        "Blurry/inconsistent lighting across the scene."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 3891228,
+      "execution_time": 3.1703029689997493,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_063.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Visible brushstrokes and texture.",
+        "Variations in color saturation indicating manual painting.",
+        "Slight inconsistencies in wave depiction, typical of artistic interpretation.",
+        "Lack of digital artifacts or repetitive patterns."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 3464537,
+      "execution_time": 3.0315697839996574,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_064.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows on the bird's feathers.",
+        "Realistic texture of the tree branch.",
+        "Consistent perspective and depth cues.",
+        "Subtle imperfections in feather detail."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 15166698,
+      "execution_time": 3.862793027000407,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_065.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the helicopter body.",
+        "Natural variation in tree foliage texture.",
+        "Realistic mountain range depth of field and atmospheric perspective.",
+        "Visible, plausible rotor blade blur indicating motion."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2455686,
+      "execution_time": 3.0957793689995015,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_066.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and reflections on the water surface.",
+        "Naturalistic texture of the dolphin's skin and markings.",
+        "Realistic spray pattern around the dolphin during its leap.",
+        "Lack of tell-tale AI artifacts like blur or distorted details."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 532906,
+      "execution_time": 3.081460194999636,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_067.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Mud texture appears natural and complex.",
+        "Crab coloration exhibits variation and subtle gradients.",
+        "Lighting appears consistent with a real-world scenario.",
+        "Details of the crab's anatomy appear realistic."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 730485,
+      "execution_time": 2.8646096319998833,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_068.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural texture of grass and leaves.",
+        "Realistic water reflections.",
+        "Lack of obvious digital artifacts or distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 21181197,
+      "execution_time": 4.322274354000001,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_069.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural variation in leaf color and tree size.",
+        "Realistic bark texture on trees.",
+        "Presence of organic debris (fallen logs, leaves) indicates natural processes."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 6070032,
+      "execution_time": 3.1857377160004035,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_070.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting/color palette.",
+        "Lack of fine detail in tentacles.",
+        "Repetitive patterns on bell surface.",
+        "Blurry, indistinct background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 392336,
+      "execution_time": 2.789998186000048,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_071.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and shadows.",
+        "Repetitive foliage texture.",
+        "Lack of fine detail in distant landscape.",
+        "Slightly blurred, dreamlike aesthetic."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1822743,
+      "execution_time": 2.8380012689995056,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_072.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural fur texture and lighting variations.",
+        "Realistic tongue detail with subtle moisture.",
+        "Consistent paw anatomy and proportions.",
+        "Absence of common AI artifacts (e.g., blurring, repetition)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 92180,
+      "execution_time": 2.9604499879997093,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_073.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in branch thickness.",
+        "Realistic distribution of blossoms.",
+        "Lack of repetitive patterns or artifacts.",
+        "Consistent lighting across the scene."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 34774871,
+      "execution_time": 5.944321513000432,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_074.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on the palm fronds",
+        "Naturalistic texture of bark and leaves",
+        "Realistic distribution of coconuts on the tree",
+        "Absence of typical AI-generated artifacts (e.g., tiling, blur)"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 32976966,
+      "execution_time": 5.891140990999702,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_075.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural water surface reflection - lacks realistic distortion and detail.",
+        "Irregularities in shark skin texture - inconsistent scale rendering.",
+        "Anatomical anomalies around the mouth \u2013 overly-perfect teeth alignment, unnatural gum color.",
+        "Lack of natural light scattering within the water volume - appears uniformly lit."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1041306,
+      "execution_time": 3.485780977000104,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_076.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural reflections and shadows on the aircraft's surface.",
+        "Repetitive textures across the runway pavement.",
+        "Slightly distorted perspective in background mountains.",
+        "Lack of fine details or imperfections typical of real-world photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1106209,
+      "execution_time": 3.220351741999366,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_077.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in petal color and shape.",
+        "Realistic textural detail on the branches.",
+        "Subtle blurring/depth of field indicative of a photographic lens.",
+        "Presence of small imperfections (e.g., pollen) consistent with natural phenomena."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 76970,
+      "execution_time": 3.267366098000821,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_078.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural water refraction/lighting.",
+        "Asymmetrical skin texture and detail.",
+        "Lack of consistent anatomical accuracy (e.g., flipper proportions).",
+        "Overly smooth, digitally rendered appearance."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 872588,
+      "execution_time": 2.96274913400066,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_079.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and reflections on water surface.",
+        "Repetitive texture in narwhal skin, suggesting procedural generation.",
+        "Lack of detail/softness in the smaller fish surrounding the whales.",
+        "Stylized, painterly aesthetic inconsistent with photographic realism."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 3388765,
+      "execution_time": 3.451335894999829,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_080.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on bird and railing.",
+        "Natural texture of wood grain.",
+        "Realistic feather detail and shading.",
+        "Background bokeh appears organic, not overly uniform."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 26442903,
+      "execution_time": 5.1342031879994465,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_081.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Visible texture variations in the fur.",
+        "Subtle inconsistencies in light reflection on the nose.",
+        "Naturalistic eye structure and pupil details.",
+        "Presence of individual whiskers with varying thickness."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1538451,
+      "execution_time": 2.8370168640003612,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_082.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural feather texture - overly sharp and uniform.",
+        "Specular highlights appear inconsistent across the bird's body.",
+        "Background exhibits a lack of depth and detail, appearing blurred but also digitally smoothed.",
+        "Anatomical inconsistencies (e.g., beak positioning relative to head) suggesting artificial construction."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 16209179,
+      "execution_time": 4.771103423000568,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_083.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent water reflections and ripple patterns.",
+        "Natural feather textures and detail.",
+        "Realistic lighting and shadows on the swan's plumage.",
+        "Absence of common AI-generated artifacts (e.g., distorted features, repetitive patterns)."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1104228,
+      "execution_time": 3.172384299999976,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_084.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and reflections on the dolphin's skin.",
+        "Natural water surface texture and ripples.",
+        "Realistic eye detail and pupil dilation.",
+        "Absence of common AI artifacts such as distorted features or repetitive patterns."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 224982,
+      "execution_time": 2.879899587000182,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_085.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the aircraft.",
+        "Realistic rotor blade detail with visible aerodynamic features.",
+        "Textured surface details on the helicopter body suggesting natural material.",
+        "Natural cloud formations in the background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 425471,
+      "execution_time": 2.914608321999367,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_086.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across both aircraft.",
+        "Natural texture and weathering on the aircraft surfaces, indicative of real-world conditions.",
+        "Visible details in engine exhausts and panel lines that are complex to replicate with AI.",
+        "Realistic depiction of atmospheric perspective."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 317445,
+      "execution_time": 3.443739672999982,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_087.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and shadow inconsistencies.",
+        "Book edges appear digitally constructed with repetitive patterns.",
+        "Cat fur texture exhibits a lack of fine detail and variation.",
+        "Background color is flat and lacks natural gradients."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 69804,
+      "execution_time": 3.254980617000001,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_088.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural fur texture and rendering.",
+        "Asymmetry in facial features, particularly around the eyes.",
+        "Background lacks consistent detail/realistic lighting.",
+        "Irregularities in light reflection on surface of dog's nose."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 83549,
+      "execution_time": 3.351134626000203,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_089.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent water refraction and reflections.",
+        "Realistic texture detail on the orca's skin.",
+        "Natural variation in ice floe shapes and sizes.",
+        "Subtle atmospheric perspective with mountain haze."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 3381625,
+      "execution_time": 3.3121375209993857,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_090.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the bird's body.",
+        "Natural texture detail in the feathers, showing variation and imperfections.",
+        "Realistic rendering of the eye with subtle reflections and iris details.",
+        "Consistent perspective and depth of field."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 4497493,
+      "execution_time": 3.3542038149998916,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_091.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnaturally smooth fur texture.",
+        "Asymmetrical whisker distribution.",
+        "Lack of fine detail in the background/surface.",
+        "Slightly 'plastic' appearance to eyes."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1173901,
+      "execution_time": 3.0684272120006426,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_092.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Realistic fur texture detail.",
+        "Consistent background blur suggesting depth of field.",
+        "No obvious, repeating patterns or distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 364134,
+      "execution_time": 2.732435828999769,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_093.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural cloud formations and lighting.",
+        "Repetitive texture patterns in the water.",
+        "Lack of fine details or consistent wear on the ship's hull.",
+        "Artificial-looking people visible on deck."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2660598,
+      "execution_time": 2.978990900000099,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_094.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural variation in flower petal color and shape.",
+        "Subtle imperfections/irregularities in leaf texture.",
+        "Realistic depth of field with blurred background elements.",
+        "Presence of a natural stem structure."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 104533,
+      "execution_time": 2.8263262430000395,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_095.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural variation in sheep fleece texture and color.",
+        "Realistic dog anatomy with fur detail and natural posture.",
+        "Depth of field appears authentic, blurring background sheep realistically."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1476703,
+      "execution_time": 3.0668078329999844,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_096.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Fine detail in feathers and beak texture",
+        "Natural variation in bark texture and lighting",
+        "Consistent perspective and depth of field",
+        "Realistic eye reflection and pupil details"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1422233,
+      "execution_time": 2.7050298879994443,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_097.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and shadows.",
+        "Blurry or inconsistent textures on aircraft surfaces.",
+        "Repetitive patterns in cloud formations.",
+        "Lack of fine detail characteristic of real-world photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 235531,
+      "execution_time": 2.771854670000721,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_098.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural lighting and reflections on the aircraft.",
+        "Blurry or inconsistent cloud textures.",
+        "Slightly distorted perspective and depth cues.",
+        "Repetitive patterns in the city skyline below."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 813313,
+      "execution_time": 2.8410527080004613,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_099.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the subject and background.",
+        "Natural textures on the tree bark and feathers suggest organic origin.",
+        "Realistic eye detail with subtle reflections and imperfections.",
+        "Fine details in the beak and claws are convincingly rendered."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1450610,
+      "execution_time": 3.0464331989996936,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_100.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the scene.",
+        "Natural variation in leaf color and texture.",
+        "Realistic depiction of grass and wildflowers.",
+        "Absence of obvious digital artifacts or distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 21191883,
+      "execution_time": 4.322871606999797,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    }
+  ]
+}

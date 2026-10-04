@@ -2,7 +2,9 @@
 # As DEFTOR supports both ollama and huggingface models, both cases
 # are handled in this file.
 
+import re
 import time
+import uuid
 from datetime import datetime, timezone
 from ollama import chat, ResponseError
 from pydantic import BaseModel, Field, ValidationError
@@ -26,6 +28,11 @@ class HFResponseObject(BaseModel):
     classification: Literal["DEEPFAKE", "REAL"]
     confidence: float = Field(description="Model's confidence score")
     raw_label: str = Field(description="Unmodified label returned by the model")
+    fake_score: float | None = Field(
+        default=None,
+        description="P(DEEPFAKE) summed over every label the model maps to a fake class. "
+        "Required for threshold-free metrics (AUROC/AUPRC/TPR@FPR).",
+    )
 
 
 class ItemStatistics(BaseModel):
@@ -34,26 +41,43 @@ class ItemStatistics(BaseModel):
     execution_time: float
     success: bool
     error: str | None = None
+    # Ollama reports "length" when generation hit num_predict, which truncates the JSON
+    finish_reason: str | None = None
 
 
 class RunStatistics(BaseModel):
+    run_id: str = Field(default_factory=lambda: uuid.uuid4().hex)
     timestamp: str
     backend: Literal["ollama", "huggingface"]
     model: str
     media_type: str | None = None
+    dataset: str | None = None
+    labels_file: str | None = None
+    positive_label: str | None = None
     number_of_items: int
     total_execution_time: float
     model_loading_time: float | None = None
+    total_duration_ns: int | None = None
+    load_duration_ns: int | None = None
+    prompt_eval_count: int | None = None
+    eval_count: int | None = None
+    eval_duration_ns: int | None = None
     items: list[ItemStatistics]
 
 
 def prompt_model(
-    backend: str, model: str, options: dict | None = None, image_paths: list[str] | None = None
+    backend: str,
+    model: str,
+    options: dict | None = None,
+    image_paths: list[str] | None = None,
+    run_context: dict | None = None,
 ) -> tuple[list[ResponseObject], RunStatistics] | tuple[list[HFResponseObject], RunStatistics] | None:
     spinner = Spinner(constants.ANALYSIS_SPINNER_ANIMATION, "Analyzing...")
     if backend == "ollama":
         spinner.start()
-        ollama_results, ollama_stats = image_prompt_ollama(model=model, image_paths=image_paths, options=options)
+        ollama_results, ollama_stats = image_prompt_ollama(
+            model=model, image_paths=image_paths, options=options, run_context=run_context
+        )
         spinner.stop()
         return ollama_results, ollama_stats
     elif backend == "huggingface":
@@ -68,43 +92,100 @@ def prompt_model(
             print(f"Unsupported file extension: {ext}")
             return None
         spinner.start()
-        hf_results, hf_stats = huggingface_prompt(media_type=media_type, model=model, media_paths=image_paths)
+        hf_results, hf_stats = huggingface_prompt(
+            media_type=media_type, model=model, media_paths=image_paths, run_context=run_context
+        )
         spinner.stop()
         return hf_results, hf_stats
 
 
+def label_words(label: str) -> set[str]:
+    """Splits a model label into lowercase words, also breaking camelCase/acronyms.
+
+    "AIVoice" -> {"ai", "voice"}, "HumanVoice" -> {"human", "voice"}, "Blizzard" -> {"blizzard"}
+    """
+    spaced = re.sub(r"(?<=[a-z0-9])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])", " ", label)
+    return set(re.findall(r"[a-z0-9]+", spaced.lower()))
+
+
 def normalize_label(label: str, model: str) -> Literal["DEEPFAKE", "REAL"]:
-    return "DEEPFAKE" if any(k in label.lower() for k in constants.FAKE_KEYWORDS) else "REAL"
+    """Maps a raw model label onto DEEPFAKE/REAL by whole-word keyword matching.
+
+    Whole-word matching matters: a naive substring check maps "Blizzard" to DEEPFAKE
+    because "ai" appears inside it.
+    """
+    return "DEEPFAKE" if label_words(label) & set(constants.FAKE_KEYWORDS) else "REAL"
+
+
+def fake_probability(output: list[dict], model: str) -> float | None:
+    """P(DEEPFAKE) for a transformers classification output.
+
+    `pipe(...)` returns every label with its score, so the fake-class probability is the
+    sum over the fake labels. Returns None when the output cannot discriminate (no fake
+    label, or every label being fake), because such a score is not usable for ranking.
+    """
+    if not output:
+        return None
+    fake_flags = [normalize_label(entry["label"], model) == "DEEPFAKE" for entry in output]
+    if all(fake_flags) or not any(fake_flags):
+        return None
+    return float(sum(entry["score"] for entry, is_fake in zip(output, fake_flags) if is_fake))
 
 
 def image_prompt_ollama(
     model: str,
     options: dict | None = None,
     image_paths: list[str] | None = None,
+    run_context: dict | None = None,
 ) -> tuple[list[ResponseObject], RunStatistics]:
 
     options = options or constants.DEFAULT_OPTIONS
     results: list[ResponseObject] = []
     item_statistics: list[ItemStatistics] = []
+    # Server-reported timings/tokens, in nanoseconds. Free, and unlike the wall clock they
+    # exclude client-side overhead. None for Hugging Face, which exposes no equivalent.
+    ollama_timings: dict[str, int | None] = {
+        "total_duration_ns": None,
+        "load_duration_ns": None,
+        "prompt_eval_count": None,
+        "eval_count": None,
+        "eval_duration_ns": None,
+    }
     start = time.perf_counter()
     try:
         if image_paths:
             for image in image_paths:
                 file_size = Path(image).stat().st_size if Path(image).exists() else 0
                 item_start = time.perf_counter()
+                response = None
                 try:
-                    response = chat(
-                        model=model,
-                        messages=[
-                            {
-                                "role": "user",
-                                "content": constants.DEFAULT_PROMPT,
-                                "images": [image],
-                            }
-                        ],
-                        format=ResponseObject.model_json_schema(),
-                        options=options,
-                    )
+                    if not image.endswith(".txt"):
+                        response = chat(
+                            model=model,
+                            messages=[
+                                {
+                                    "role": "user",
+                                    "content": constants.DEFAULT_PROMPT,
+                                    "images": [image],
+                                }
+                            ],
+                            format=ResponseObject.model_json_schema(),
+                            options=options,
+                        )
+                    elif image.endswith(".txt"):
+                        with open(image, "r") as f:
+                            text = f.read()
+                        response = chat(
+                            model=model,
+                            messages=[
+                                {
+                                    "role": "user",
+                                    "content": constants.DEFAULT_TEXT_PROMPT + f"\n{text}",
+                                }
+                            ],
+                            format=ResponseObject.model_json_schema(),
+                            options=options,
+                        )
                     item_time = time.perf_counter() - item_start
                     res_obj = ResponseObject.model_validate_json(str(response.message.content))
                     res_obj.image_name = Path(image).name
@@ -115,8 +196,16 @@ def image_prompt_ollama(
                             file_size_in_bytes=file_size,
                             execution_time=item_time,
                             success=True,
+                            finish_reason=getattr(response, "done_reason", None),
                         )
                     )
+                    ollama_timings = {
+                        "total_duration_ns": getattr(response, "total_duration", None),
+                        "load_duration_ns": getattr(response, "load_duration", None),
+                        "prompt_eval_count": getattr(response, "prompt_eval_count", None),
+                        "eval_count": getattr(response, "eval_count", None),
+                        "eval_duration_ns": getattr(response, "eval_duration", None),
+                    }
                 except ValidationError as e:
                     item_statistics.append(
                         ItemStatistics(
@@ -142,12 +231,17 @@ def image_prompt_ollama(
         total_execution_time=exec_time,
         model_loading_time=None,
         items=item_statistics,
+        **(run_context or {}),
+        **ollama_timings,
     )
     return results, stats
 
 
 def huggingface_prompt(
-    media_type: Literal["image", "audio", "video"], model: str, media_paths: list[str]
+    media_type: Literal["image", "audio", "video"],
+    model: str,
+    media_paths: list[str],
+    run_context: dict | None = None,
 ) -> tuple[list[HFResponseObject], RunStatistics]:
     # transformer import is kept here due to it making deftor laggy
     from transformers import pipeline
@@ -168,7 +262,10 @@ def huggingface_prompt(
         file_size = Path(media).stat().st_size if Path(media).exists() else 0
         item_start = time.perf_counter()
         try:
-            output = pipe(media)
+            # top_k=None keeps every label. The image/video pipelines default to top_k=5,
+            # which would silently drop the fake class on a model with more classes and
+            # corrupt the fake-class probability below.
+            output = pipe(media, top_k=None)
             item_time = time.perf_counter() - item_start
             # Capturing only the meaningful output
             # e.g. {"fake": 0.8, "real": 0.2} => {"fake": 0.8}
@@ -181,6 +278,7 @@ def huggingface_prompt(
                     classification=normalize_label(top["label"], model),
                     confidence=top["score"],
                     raw_label=top["label"],
+                    fake_score=fake_probability(output, model),
                 )
             )
             item_statistics.append(
@@ -210,5 +308,6 @@ def huggingface_prompt(
         total_execution_time=total_execution_time,
         model_loading_time=loading_time,
         items=item_statistics,
+        **(run_context or {}),
     )
     return results, stats

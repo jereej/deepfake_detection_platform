@@ -1,0 +1,1008 @@
+{
+  "run": {
+    "run_id": "ccab03e347c24f268818b7545144af6d",
+    "timestamp": "2026-10-02T10:58:44.094116+00:00",
+    "backend": "ollama",
+    "model": "llava",
+    "media_type": "image",
+    "dataset": "dataset_53",
+    "labels_file": "image/dataset_53/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 53,
+    "number_succeeded": 53,
+    "number_failed": 0,
+    "total_execution_time": 75.89534019799976,
+    "model_loading_time": null,
+    "total_duration_ns": 1080353155,
+    "load_duration_ns": 26089933,
+    "prompt_eval_count": 649,
+    "eval_count": 87,
+    "eval_duration_ns": 925462000
+  },
+  "result": [
+    {
+      "name": "image_01.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The person's facial features and expressions appear to be digitally manipulated, with a level of realism that is often associated with AI-generated media.",
+        "There are subtle inconsistencies in the skin texture and lighting across different parts of the face, which can be indicative of AI alteration.",
+        "The background appears to be a news studio, but there are no clear markers or logos that would normally identify a specific news organization, possibly due to digital manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 77826,
+      "execution_time": 10.220602666999639,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_02.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The texture and quality of the skin are uniform and lack natural variations typically seen in human faces.",
+        "The facial features, such as the eyes, nose, mouth, and cheek contours, show an unnatural symmetry that is not commonly found in real human faces.",
+        "There is a slight sheen on the man's face that may indicate a digital texture or overlay rather than the natural appearance of skin."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 56884,
+      "execution_time": 1.496525157999713,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_03.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The man appears to be a public figure or news reporter, given his attire and setting.",
+        "His facial features are consistent with how he typically looks in media, suggesting authenticity rather than AI manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.1332925589999832,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_04.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Textured skin with visible pores and fine lines",
+        "Facial features such as wrinkles, shadows under the eyes, and hair that may appear unnatural",
+        "The lips have an unnaturally smooth texture"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.038490150999678,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_05.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "1. Natural skin texture variations across the face.",
+        "2. The eyes are a bit blurred, which could suggest a real person rather than a digital creation.",
+        "3. There's a slight asymmetry in the facial features, like one eyebrow being slightly higher than the other, which is common in humans but not consistent in AI-generated images."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.4724809040003493,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_06.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features that appear too perfect or smooth, possibly indicating the use of AI to create the image.",
+        "Texture and skin imperfections are often less realistic in deepfakes than in real people.",
+        "The eyes might have a subtle unnaturalness or lack of depth."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 77826,
+      "execution_time": 1.2207380800000465,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_07.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image has a very realistic and lifelike appearance, which is characteristic of deepfakes.",
+        "Facial features are manipulated to look like the original person, but the details are off, suggesting alteration.",
+        "The background appears slightly blurred and less realistic than the face itself, hinting at digital manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.4921631119996164,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_08.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There are no visual cues or inconsistencies in the image that suggest it is AI-generated, such as anomalies in lighting, distortion, or features that seem out of place. The quality and resolution of the image appear normal.",
+        "The individual in the image looks natural with typical human facial features and expressions, which would be expected for a real photo rather than an AI creation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.425484527000208,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_09.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a person sitting in front of a background that appears to be a news set with a backdrop and lighting consistent with standard television production. The person's makeup, hairstyle, and expression are natural and not obviously artificial.",
+        "There is no visible text in the image that could indicate manipulation or AI generation.",
+        "The woman's appearance, clothing, and posture are consistent with human behavior and do not exhibit any unusual patterns or characteristics often associated with deepfake or AI-generated media."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.6913913039998079,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_10.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 0.5318043270003727,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_11.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is of a real person.",
+        "Facial features are consistent with human variation.",
+        "Quality and lighting appear natural, not artificial or overly processed."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.1095585840002968,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_12.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Hair quality and style appear natural and consistent with typical human hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 0.713783974999842,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_13.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is a standard photograph with no visible signs of AI manipulation.",
+        "The person's features, such as the texture of skin, the details on her face, and the nuances in her hair, are consistent and natural-looking.",
+        "The quality of the image is high with no artifacts commonly associated with deepfakes or digital alterations."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.3286298930001976,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_14.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The face appears to have normal skin texture and imperfections, consistent with real human skin.",
+        "There are no obvious artifacts such as pixelation or an unnatural pattern of light and shadow that could indicate digital manipulation.",
+        "The eyes, mouth, and facial structure exhibit natural variations and proportions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 77826,
+      "execution_time": 1.2870818809997218,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_15.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The eyes and nose have an unnatural symmetry, which is often a sign of digital manipulation.",
+        "The texture of the skin appears slightly smooth and too perfect to be naturally occurring."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 56884,
+      "execution_time": 0.9016374709999582,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_16.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features that are unnatural and have a digital look to them.",
+        "Texture and wrinkles on the skin that appear smooth and overly even."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 0.7937067150000985,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_17.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image quality does not match the typical characteristics of a photograph taken with standard camera equipment.",
+        "The facial features appear overly smooth and lack natural skin imperfections and variations that are common in real human faces.",
+        "The hair appears to be artificially rendered, rather than a realistic representation of actual hair strands."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.2671208169999773,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_18.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features that seem too smooth or uniform, which can be a sign of digital alteration.",
+        "High level of detail in facial features and skin texture that might not typically occur naturally, especially when considering factors like age and ethnicity.",
+        "The person's eyes appear to have an uncanny stillness, which is often an indication of AI-generated images."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.5133407510002144,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_19.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is captured from an interview or a news segment, as indicated by the presence of a microphone and a background that resembles a news studio setup.",
+        "There are no overt visual cues such as pixelation, watermarking, or unnatural facial features suggesting AI generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.1983835460000591,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_20.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The face of the individual appears to have a slight artificial quality, possibly due to smoother skin or unnatural facial expressions.",
+        "The eyes are less detailed than human faces, which can sometimes be an indication of AI generation. However, this could also be a characteristic of some natural faces.",
+        "The hair and wrinkles do not appear to have the same level of detail as in real people."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.5078709379999964,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_21.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The facial features are too smooth and lack imperfections often found in human skin.",
+        "There is an unnatural symmetry to the face, such as perfectly straight lines and perfect proportions which are not common in real humans.",
+        "The lighting on the face appears even, without casting shadows or highlights that might suggest a real environment."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.2932956190002187,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_22.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Skin Texture: The man's skin appears unnaturally smooth and even, which is common for deepfake images. There may be visible differences in the texture of his face compared to natural human skin.",
+        "Facial Features: The facial features, such as the contours of the nose and cheekbones, are symmetrically perfect and lack imperfections that would typically appear in natural human faces.",
+        "Eyes and Mouth: The man's eyes and mouth have a very lifelike appearance but also show subtle signs of manipulation. For instance, the lips may not align perfectly with the teeth or might be slightly off-center."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.970795380999789,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_23.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The woman's facial features are smooth and lack the natural variations often seen in real people.",
+        "There is a noticeable symmetry to her facial features, which may not be naturally occurring.",
+        "Her eyes, hair, and skin texture do not match up with each other consistently, indicating that they could be altered or generated."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 74143,
+      "execution_time": 1.2831340889997591,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_24.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "High resolution and clarity in image",
+        "Natural lighting and shadows on the face",
+        "Realistic texture of skin, hair, and clothing",
+        "Consistent and organic facial expressions and micro-expressions",
+        "No visible artifacts or inconsistencies in image quality"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.2217707079998945,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_25.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The individual has a realistic facial structure with a variety of textures and skin tones typical of humans.",
+        "There are no overt signs of artificiality, such as digital artifacts or unnatural textures on the skin.",
+        "The hair looks like it would naturally, with variations in color and style that are common in humans."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.1674259179999353,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_26.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features that are too symmetrical and lack the subtle imperfections of a human face.",
+        "Excessively smooth skin with minimal texture, which is not naturally occurring in humans.",
+        "Overly pronounced lip lines that are uncommon in real people."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.0083372589997452,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_27.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a photograph of a real person, with no clear signs or artifacts typically associated with AI-generated images such as lack of detail in the skin texture, unnatural facial proportions, or symmetrical features that are too perfect. The individual exhibits natural expressions and variations in skin tone and lighting, which is consistent with high-quality photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.210374788000081,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_28.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features such as the unnatural contours of the face and eyes, which often result from manipulation.",
+        "The presence of wrinkles or expressions that are not consistent with natural human behavior in a given context or emotion.",
+        "Abnormal lighting conditions on the face that do not match typical lighting situations, indicative of computer-generated rendering."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.3054184000002351,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_29.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The person's skin texture appears natural and consistent.",
+        "There are no visible signs of digital manipulation, such as unnatural shadows, lighting abnormalities, or reflections inconsistent with the environment."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.0093815830000494,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_30.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features such as skin texture, wrinkles, and pores are very smooth and consistent throughout the face, suggesting that this is not a real human but a digitally created image.",
+        "The individual's head appears to be perfectly aligned with the neck, which can sometimes be an issue in real faces where the neck might vary slightly from the head.",
+        "There may be subtle inconsistencies in lighting and shadows that could indicate the image is not of a real person but rather a digital composite."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.7297868530004052,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_31.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a composite of multiple sources, with some elements that seem out of place or inconsistent with each other.",
+        "The quality of the skin and facial features is highly detailed and realistic, suggesting the use of advanced AI technology."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.1422515389999717,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_32.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The person in the image appears to have a realistic facial expression and makeup that is typical of real people on television screens, which are often used for broadcasts.",
+        "Skin tones appear consistent with human skin tone variations.",
+        "Facial features such as wrinkles, pores, and hair texture are natural-looking.",
+        "The individual's posture and microexpression convey a sense of speaking candidly to an audience, which is common in real broadcasts."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.5711849159997655,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_33.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features that are more pronounced and unnaturally smooth or sharp compared to typical human faces",
+        "Consistency in expression, which may not match the natural variance seen in real people",
+        "Eye contact that is too direct or overly engaging, suggesting a pre-programmed response for a wide audience"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.1655656630000522,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_34.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Skin texture appears realistic with visible pores and fine wrinkles around the eyes.",
+        "The hair appears natural with a slight gloss, suggesting it's not plastic or rendered. It has a volume that is typical of real hair.",
+        "The lighting on the skin looks consistent and natural without any distinct patterns or digital artifacts which are commonly found in deepfake images."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.185660404000373,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_35.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The face appears to have a slight distortion or warping that is typical of deepfakes.",
+        "There may be subtle inconsistencies in the skin texture and facial features, such as wrinkles or the symmetry of the face."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.0361642999996548,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_36.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "facial features that appear too perfect or smoothed out, which is characteristic of deepfake technology",
+        "exaggerated expressions that might seem more dramatic than typical human expressions"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 78042,
+      "execution_time": 1.031198995000068,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_37.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The man's face appears to be digitally manipulated or an AI-generated deepfake. This is evident from the smoothness of the skin, unnaturally perfect features, and the lack of imperfections commonly found on human faces.",
+        "The eyes do not have natural variations in size or shape, which can be indicative of a lack of depth or emotion that would normally occur in real-time photography.",
+        "The hair appears to be perfectly groomed and does not show any signs of real-life growth patterns or aging effects."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.618361516999812,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_38.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The woman's image appears to be a standard photograph with natural variations in lighting and shadows, consistent with real-life photographs.",
+        "Her facial features, such as wrinkles and blemishes, seem consistent with human skin texture. They are not uniform or perfectly aligned, which is common in unedited photos of real people."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.2225263039999845,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_39.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The person's facial features and expression are overly smooth, with unnaturally uniform lighting and skin tones.",
+        "The hair texture and density appear artificial.",
+        "There are subtle inconsistencies in the way the individual's face reflects light, particularly around the eyes and on the forehead."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 77826,
+      "execution_time": 1.1713888569997835,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_40.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features such as skin texture and wrinkles are unnaturally smooth and consistent.",
+        "The eyes have a glossy, unnatural sheen.",
+        "The person's head size in relation to the rest of their body is off."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.1037910140003078,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_41.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is of a man on what appears to be a television show, sitting in front of a backdrop with logos and text. He is wearing a microphone and has an attentive expression on his face. There are no overt signs of AI generation; the lighting, shadows, and overall quality suggest it's a real photograph taken during a live broadcast or interview session."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.380648951999774,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_42.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The symmetry and precision of the hair styling and facial features.",
+        "The unnatural texture of the skin, particularly visible on the face and neck."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 74143,
+      "execution_time": 0.8559196969999903,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_43.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features are consistent with typical human faces, showing natural variations and common skin imperfections.",
+        "The hair appears to have a dynamic texture that is not perfectly uniform, which is characteristic of human hair.",
+        "There is no overt visual anomaly such as distorted proportions or inconsistent shadows."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.2097333780002373,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_44.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be of a person with facial features that are typical for humans, such as eyes, nose, and lips."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 74143,
+      "execution_time": 0.8260119910000867,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_45.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The skin texture appears slightly different from real skin. It has a more uniform and possibly smoother quality than what you would expect to see on a human's face.",
+        "There are subtle inconsistencies in the lighting and shadows around his face, particularly near the hairline and contours of the face that might be expected due to natural light and shadows. ",
+        "The way the person is talking with a slight pause, especially noticeable in the mouth area, could indicate a lack of proper lip synchronization, which may not occur naturally while speaking."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 78042,
+      "execution_time": 1.7778549650001878,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_46.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The face appears to be distorted or altered in a way that is consistent with deepfake technology.",
+        "There are subtle inconsistencies in the texture and lighting on the face, which can be indicative of artificial manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74253,
+      "execution_time": 1.0600032800002737,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_47.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The man's skin texture appears natural and unaltered. The coloration looks consistent with real human skin. The proportions of his facial features, such as the distance between the eyes and the size of the nose, seem typical for a human face. The shadows and highlights on the man's face are consistent with real lighting conditions. No unusual distortions or patterns that might suggest digital manipulation are present."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 78042,
+      "execution_time": 2.4726086040000155,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_48.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There is an inconsistency in the hairline.",
+        "The makeup seems slightly imperfect, with subtle variations in shading and contouring.",
+        "There are subtle variations in texture and tone across the skin."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 81436,
+      "execution_time": 1.0667996339998354,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_49.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a digital rendering of a person that does not match the natural appearance of human skin, especially around the eyes and mouth, indicative of AI manipulation.",
+        "evidence_type_1",
+        "2",
+        "3",
+        "4"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.2424948590000895,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_50.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The person has a realistic facial expression.",
+        "The lighting and shadows appear natural and consistent.",
+        "The background looks like it could be part of an actual event setup, not just a digitally created backdrop."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83904,
+      "execution_time": 1.0811602210001183,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_51.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No visible distortions or alterations in facial features that are typical of deepfakes, such as unnaturally smooth skin, unrealistic symmetry, or inconsistencies in the way light interacts with the face.",
+        "The person's expression and movement are consistent with a normal conversation, which suggests there is no visible discontinuity or anomaly that could be indicative of AI manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.5224991189998036,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_52.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Facial features such as skin texture, eye shadows, and the overall appearance of the face are unnaturally smooth and consistent.",
+        "The man has an exaggeratedly confident facial expression that might be less common in genuine photographs or videos.",
+        "The hair appears to be styled with a certain level of artificiality",
+        "The background is generic and does not match any known setting, suggesting it may have been added later or is part of the AI-generated media."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 52043,
+      "execution_time": 1.519995676000235,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_53.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Inconsistencies in facial features: The images on the left side of the face may have been digitally added or altered, such as the way the hair is parted or the asymmetrical placement of facial hair."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 66542,
+      "execution_time": 1.0825574429995868,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    }
+  ]
+}

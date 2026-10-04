@@ -1,0 +1,23 @@
+{
+  "run": {
+    "run_id": "9b54633484a242b99b5f59302ab580d4",
+    "timestamp": "2026-10-02T11:30:54.539155+00:00",
+    "backend": "ollama",
+    "model": "gemma3:12b",
+    "media_type": "image",
+    "dataset": "human-ai-text",
+    "labels_file": "text/human-ai-text/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 0,
+    "number_failed": 0,
+    "total_execution_time": 10.534507811999902,
+    "model_loading_time": null,
+    "total_duration_ns": null,
+    "load_duration_ns": null,
+    "prompt_eval_count": null,
+    "eval_count": null,
+    "eval_duration_ns": null
+  },
+  "result": []
+}

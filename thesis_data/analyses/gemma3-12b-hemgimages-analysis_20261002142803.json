@@ -1,0 +1,2020 @@
+{
+  "run": {
+    "run_id": "89e6ea175ab44e02ab38ca91ba873d10",
+    "timestamp": "2026-10-02T11:28:03.203572+00:00",
+    "backend": "ollama",
+    "model": "gemma3:12b",
+    "media_type": "image",
+    "dataset": "hemg-images",
+    "labels_file": "image/hemg-images/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 100,
+    "number_failed": 0,
+    "total_execution_time": 293.04432112700033,
+    "model_loading_time": null,
+    "total_duration_ns": 3204325681,
+    "load_duration_ns": 420068243,
+    "prompt_eval_count": 331,
+    "eval_count": 98,
+    "eval_duration_ns": 2014526000
+  },
+  "result": [
+    {
+      "name": "image_001.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye gaze and blinking pattern",
+        "Lack of micro-expressions",
+        "Skin texture appears smoothed/artificial",
+        "Inconsistent lighting or shadows on face"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 73061,
+      "execution_time": 15.104968671000279,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_002.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Consistent lighting on the face with subtle shadows.",
+        "Realistic hair details including individual strands and natural variation.",
+        "Subtle imperfections in facial symmetry."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 96663,
+      "execution_time": 2.8216872709999734,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_003.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture/smoothness.",
+        "Asymmetrical facial features.",
+        "Lack of micro-expressions.",
+        "Blurry or inconsistent background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74710,
+      "execution_time": 2.6550306320004893,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_004.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the face.",
+        "Natural skin texture with visible pores and imperfections.",
+        "Realistic eye reflections and pupil details.",
+        "Subtle, natural hair strands."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 75413,
+      "execution_time": 2.734832365999864,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_005.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail visible.",
+        "Realistic lighting and shadow interaction.",
+        "Consistent eye reflections across the image.",
+        "Lack of noticeable warping or blending artifacts."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 102908,
+      "execution_time": 2.6341178250004305,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_006.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent across the face.",
+        "Eye reflections appear realistic.",
+        "Minor imperfections (e.g., slight asymmetry) present."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 95528,
+      "execution_time": 2.8882510389994422,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_007.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lack of fine detail.",
+        "Asymmetrical features and inconsistencies in facial proportions.",
+        "Blurry or distorted background elements.",
+        "Stiff or unnatural expressions/animation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 70725,
+      "execution_time": 2.7564321310001105,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_008.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic skin texture and pores visible.",
+        "Natural lighting and shadows present on the face.",
+        "Subtle inconsistencies in eye reflections appear genuine.",
+        "Background details are consistent with a real environment."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 69936,
+      "execution_time": 2.9243458770006328,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_009.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Consistent lighting across the face and arm.",
+        "Realistic hand and object interaction observed.",
+        "No immediately noticeable warping or distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 76599,
+      "execution_time": 2.752862382000785,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_010.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Variations in lighting across faces, indicative of a real environment.",
+        "Subtle imperfections in hair and facial features.",
+        "Depth-of-field effects suggest a photographic capture."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 92564,
+      "execution_time": 2.953873702999772,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_011.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Realistic skin texture and pores.",
+        "Consistent eye reflections.",
+        "Normal facial expressions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 102095,
+      "execution_time": 2.4905587580005886,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_012.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent and realistic across the face.",
+        "Subtle imperfections in the eye reflections suggest a photograph.",
+        "Background details appear natural without obvious distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 59865,
+      "execution_time": 2.7911069680003493,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_013.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and imperfections visible on both faces.",
+        "Consistent lighting and shadows across the scene.",
+        "Organic details in background elements (e.g., cafe sign, foliage).",
+        "Subtle variations in facial expressions indicating natural movement."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 106894,
+      "execution_time": 2.9921656830001666,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_014.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent and natural across the face.",
+        "Subtle imperfections and asymmetries are present.",
+        "Eye reflections appear realistic."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 93172,
+      "execution_time": 2.624187682000411,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_015.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail visible.",
+        "Asymmetrical eye spacing and subtle facial imperfections present.",
+        "Lighting appears consistent with a photographic source.",
+        "Hair exhibits natural variation in color and highlights."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 56098,
+      "execution_time": 2.7488317420002204,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_016.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Realistic lighting and shadows present on face.",
+        "Minor imperfections in glasses suggest authentic capture.",
+        "Hair details demonstrate organic variation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83517,
+      "execution_time": 2.7303954030003297,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_017.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Skin texture appears natural with subtle imperfections.",
+        "Lighting and shadows are consistent with a real-world environment.",
+        "Hair exhibits realistic clumping and variation in color/shine.",
+        "Eyes appear to have natural reflections."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 96670,
+      "execution_time": 2.8302439629997025,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_018.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Consistent skin texture.",
+        "Realistic eye reflections.",
+        "Background details appear authentic."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 63076,
+      "execution_time": 2.4921746669997447,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_019.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across face.",
+        "Natural skin texture and pore detail visible.",
+        "Realistic eye reflections.",
+        "Background details (American flag) appear consistent with a photographic environment."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 92094,
+      "execution_time": 2.743459186000109,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_020.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Visible texture on clothing.",
+        "Subtle imperfections in skin tone.",
+        "Blurring typical of photographic lenses."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 83952,
+      "execution_time": 2.611523257999579,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_021.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail are visible.",
+        "Lighting appears consistent with a natural outdoor environment.",
+        "Eye reflections are present and appear realistic.",
+        "Minor imperfections (e.g., slight asymmetry) are observed."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 76224,
+      "execution_time": 2.9831393090007623,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_022.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and detail.",
+        "Inconsistent lighting across faces.",
+        "Blurry or distorted background elements.",
+        "Asymmetry in facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 75759,
+      "execution_time": 2.7308067989997653,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_023.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent with a natural source.",
+        "Eye reflections appear realistic.",
+        "Minor imperfections like slight asymmetry in the face are present."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 48153,
+      "execution_time": 2.6603239180003584,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_024.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture/smoothing.",
+        "Asymmetry in facial features.",
+        "Lack of micro-expressions.",
+        "Blurry or inconsistent background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 65277,
+      "execution_time": 2.5115217919992574,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_025.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Asymmetry in eye shape and pupil size.",
+        "Lack of consistent lighting across the face.",
+        "Digital artifacts/blockiness around the hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 72313,
+      "execution_time": 2.857362039000691,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_026.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Consistent skin texture and pore detail.",
+        "Realistic eye reflections & highlights.",
+        "Subtle imperfections in hair."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 86395,
+      "execution_time": 2.600510545000361,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_027.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Realistic eye reflections and lighting.",
+        "Subtle asymmetry in facial features.",
+        "Consistent hair details."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 86782,
+      "execution_time": 2.6667167190007603,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_028.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting across face.",
+        "Realistic eye reflections.",
+        "Lack of obvious warping or blurring."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 84911,
+      "execution_time": 2.4231343909996212,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_029.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Inconsistent lighting and shadows on the face.",
+        "Grainy/noisy visual artifacts covering the image.",
+        "Lack of fine detail in hair strands."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 131637,
+      "execution_time": 2.878675659999317,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_030.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores.",
+        "Realistic lighting and shadows.",
+        "Consistent background detail, visible in the benches.",
+        "Subtle imperfections in facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 79847,
+      "execution_time": 2.6213856399999713,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_031.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Lack of detail in facial features.",
+        "Blurry or inconsistent textures.",
+        "Unnatural skin tone and shading.",
+        "Limited eye movement/expression."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 23175,
+      "execution_time": 2.7136974020004345,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_032.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the face.",
+        "Natural skin texture detail visible in pores and subtle variations.",
+        "Realistic eye reflections and highlights.",
+        "Bookshelf background appears to have depth of field with varying focus."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 101170,
+      "execution_time": 2.825894239000263,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_033.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail",
+        "Realistic lighting and shadows on the face",
+        "Consistent hair strand details with natural variation",
+        "Background elements appear authentic and blurred naturally"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 90840,
+      "execution_time": 2.8762708200001725,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_034.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting across the face and background.",
+        "Realistic eye reflections and natural iris patterns.",
+        "Subtle inconsistencies in facial features are typical of human variation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 75391,
+      "execution_time": 2.883418182999776,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_035.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Consistent lighting and shadows on face.",
+        "Subtle imperfections and asymmetries in facial features.",
+        "Realistic eye reflections."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 103742,
+      "execution_time": 2.6417288080001526,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_036.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Subtle inconsistencies in lighting across face.",
+        "Realistic eye reflections and detail.",
+        "Consistent background blur indicating depth of field."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 91186,
+      "execution_time": 2.664504149000095,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_037.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture: overly smooth and lacking fine detail.",
+        "Asymmetrical eye appearance: subtle differences in shape, size, or expression.",
+        "Blurry background: inconsistent focus suggesting compositing.",
+        "Unusual lighting/shadows: discrepancies across the face."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 63316,
+      "execution_time": 3.2303418419996888,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_038.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting and shadows across the face.",
+        "Realistic eye reflections and natural iris patterns.",
+        "Subtle, organic asymmetry in facial features."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 90839,
+      "execution_time": 2.910613860000012,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_039.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Consistent lighting across the face.",
+        "Ear shape and placement appear realistic.",
+        "Hair has natural variation in color and highlights."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 88109,
+      "execution_time": 2.8299526150003658,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_040.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "natural skin texture and pore detail",
+        "consistent lighting across face and surroundings",
+        "subtle imperfections in facial features consistent with human variation",
+        "background details appear natural and unedited"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 86020,
+      "execution_time": 2.798518575000344,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_041.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry facial features and lack of sharp detail.",
+        "Inconsistent lighting across the face.",
+        "Unnatural skin texture, appearing overly smooth or waxy.",
+        "Peripheral individuals are blurred and poorly defined."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 69960,
+      "execution_time": 3.1201071249997767,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_042.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pores.",
+        "Asymmetrical facial features.",
+        "Blurry or inconsistent background details.",
+        "Distorted tattoo appearance."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 102877,
+      "execution_time": 2.6830541740000626,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_043.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Realistic eye reflections and lighting.",
+        "Consistent hair strands and natural shadows.",
+        "Subtle imperfections typical of photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 86074,
+      "execution_time": 2.685020644999895,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_044.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail visible.",
+        "Consistent lighting across the face.",
+        "Subtle imperfections in hair suggest organic growth."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 87399,
+      "execution_time": 2.5896529880001253,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_045.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent with a natural source.",
+        "Slight imperfections present in facial features.",
+        "Background details appear genuine, suggesting depth of field."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 78509,
+      "execution_time": 2.779911329999777,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_046.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Consistent lighting and shadows across the face.",
+        "Realistic hair detail with varied curl patterns.",
+        "Absence of obvious digital artifacts."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 98432,
+      "execution_time": 2.818603706000431,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_047.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Blurry image quality, especially around the edges of the face.",
+        "Asymmetrical facial features and inconsistencies in skin texture.",
+        "Unnatural lighting and shadows on the face.",
+        "Lack of fine detail in hair strands or facial hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 64849,
+      "execution_time": 2.971421878000001,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_048.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pores.",
+        "Asymmetry in facial features (e.g., eye spacing).",
+        "Lack of fine detail around the hair line.",
+        "Inconsistent lighting/shadows."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 54775,
+      "execution_time": 2.8603936290001,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_049.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye movements/blinking frequency",
+        "Skin texture appears smoothed and artificial",
+        "Lack of micro-expressions or subtle facial muscle movement",
+        "Slight blurring or inconsistencies in lighting on the face"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 109892,
+      "execution_time": 3.084053597000093,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_050.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail visible.",
+        "Realistic lighting and shadows on faces.",
+        "Consistent eye reflections with environment.",
+        "Minor imperfections (e.g., slight asymmetry) present."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 62036,
+      "execution_time": 2.871795312999893,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_051.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail visible on both faces.",
+        "Consistent lighting across the subjects' faces and clothing.",
+        "Realistic hair rendering with variation in strand thickness and direction.",
+        "Subtle imperfections (e.g., minor blemishes) present, typical of real photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 85142,
+      "execution_time": 3.186838319999879,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_052.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Lack of micro-expressions around eyes.",
+        "Slight asymmetry in facial features.",
+        "Blurry background compared to sharp foreground."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 59829,
+      "execution_time": 2.867909836999388,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_053.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic skin texture and pore detail.",
+        "Consistent lighting across the face and hand.",
+        "Natural-looking hair movement and density.",
+        "Absence of common AI artifacts like warping or tiling."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 48222,
+      "execution_time": 2.929894253999919,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_054.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye closure/lack of blinking.",
+        "Slightly blurred or inconsistent skin texture.",
+        "Asymmetry in facial features.",
+        "Lack of fine details (e.g., pores, subtle skin variations)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 83890,
+      "execution_time": 3.0322163600003478,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_055.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting across the face.",
+        "Realistic eye reflections.",
+        "Lack of obvious artifacts or distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 67354,
+      "execution_time": 2.6246038520002912,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_056.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows on faces.",
+        "Varied skin textures and imperfections visible.",
+        "Consistent eye reflections across individuals.",
+        "Lack of obvious repeating patterns or anomalies."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 108228,
+      "execution_time": 2.75415785199948,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_057.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture: lacks fine detail and pores.",
+        "Inconsistent lighting on faces.",
+        "Slight asymmetry in facial features.",
+        "Eyes lack natural reflections."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 98632,
+      "execution_time": 2.8339300710003954,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_058.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lack of fine detail.",
+        "Asymmetry in facial features (e.g., slight misalignments).",
+        "Inconsistent lighting or shadows on the face.",
+        "Blurry background, suggesting compositing."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 77125,
+      "execution_time": 3.0025059069994313,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_059.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Subtle inconsistencies in lighting appear realistic.",
+        "Eye movements and blinking seem organic.",
+        "Background details (plants, frame) lack the typical artifacts of AI generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 71465,
+      "execution_time": 2.825007336999988,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_060.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting on the face and surrounding environment.",
+        "Realistic eye reflections and subtle imperfections.",
+        "Believable facial expression indicating surprise."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 71042,
+      "execution_time": 2.594908046000455,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_061.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Realistic eye reflections and lighting variations.",
+        "Subtle imperfections in hair and facial features.",
+        "Background details consistent with a real environment."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 75885,
+      "execution_time": 2.8121891760001745,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_062.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting across face.",
+        "Realistic eye reflections.",
+        "Lack of visible artifacts or distortions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 85161,
+      "execution_time": 2.459255359999588,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_063.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting and shadows across face.",
+        "Realistic eye reflections with subtle highlights.",
+        "Hair appears naturally rendered, without repetitive patterns."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 49151,
+      "execution_time": 2.691263304000131,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_064.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture: overly smooth and lacking fine detail.",
+        "Asymmetrical eye closure: One eye is closed more naturally than the other.",
+        "Lack of micro-movements: Facial expressions appear static and lack subtle nuances.",
+        "Inconsistent lighting on faces."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 103066,
+      "execution_time": 3.2629170050004177,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_065.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting and shadows across the face.",
+        "Realistic eye reflections and highlights.",
+        "Subtle imperfections typical of photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 103332,
+      "execution_time": 2.6180527110000185,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_066.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting across the face.",
+        "Subtle inconsistencies in background blur suggesting a natural depth of field."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 87827,
+      "execution_time": 2.674066724000113,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_067.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture: Lacks fine pore detail, appears overly smooth.",
+        "Asymmetrical facial features: Slight inconsistencies in eye spacing/shape.",
+        "Inconsistent lighting: Shadowing and highlights don't align realistically.",
+        "Blurry background artifacts: Suggests composite elements blended poorly."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 98293,
+      "execution_time": 3.3661322620000647,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_068.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows",
+        "Realistic skin texture with pores",
+        "Consistent eye reflections",
+        "Subtle background details indicate real-world environment"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 92242,
+      "execution_time": 2.5576522279998244,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_069.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lighting inconsistencies.",
+        "Asymmetrical or inconsistent facial features.",
+        "Blurry/soft details around edges of the face.",
+        "Color cast suggesting digital manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 79859,
+      "execution_time": 2.723643290999462,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_070.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Realistic lighting and shadows on the face.",
+        "Consistent eye reflections and highlights.",
+        "Minor imperfections in teeth alignment."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 76339,
+      "execution_time": 2.658152541000163,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_071.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture.",
+        "Inconsistent lighting across face.",
+        "Lack of micro-movements (blinking, subtle expressions).",
+        "Slightly blurred facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 58138,
+      "execution_time": 2.7243560430006255,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_072.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lighting inconsistencies.",
+        "Asymmetry in facial features between individuals.",
+        "Blurry or inconsistent background details.",
+        "Lack of micro-movements (e.g., subtle eye twitches)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 95155,
+      "execution_time": 2.9915164650001316,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_073.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lighting inconsistencies.",
+        "Asymmetry or blurring around facial features (eyes, mouth).",
+        "Lack of micro-movements or subtle expressions typically present in natural human faces.",
+        "Artifacts or distortions near edges of the face/hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 73713,
+      "execution_time": 3.194427320999239,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_074.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Pixelation artifacts are present throughout the image.",
+        "Skin texture appears inconsistent and artificial.",
+        "Lack of natural detail around facial features (eyes, mouth).",
+        "The overall image has a digitally-generated feel."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 72970,
+      "execution_time": 2.982174370999928,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_075.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Asymmetrical facial features/details.",
+        "Inconsistent lighting on face vs. background.",
+        "Blurry or distorted edges around the hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 124870,
+      "execution_time": 2.844641695000064,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_076.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Asymmetry in facial features/expressions.",
+        "Lack of micro-details (e.g., realistic hair strands).",
+        "Inconsistent lighting across the image."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 104086,
+      "execution_time": 2.976264763000472,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_077.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Slight inconsistencies in background blur suggest photographic capture.",
+        "Realistic lighting and shadows present.",
+        "Subtle variations in hair strands indicate naturalness."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 78116,
+      "execution_time": 2.748960267000257,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_078.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Pixelation/blockiness throughout the image.",
+        "Unnatural skin texture, grainy appearance.",
+        "Asymmetry in facial features (e.g., eyes).",
+        "Lack of fine detail and inconsistencies in lighting."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 163996,
+      "execution_time": 2.9625489870004458,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_079.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture: overly smooth and lacking fine detail.",
+        "Asymmetry in facial features: subtle inconsistencies in eye shape or lip placement.",
+        "Hair rendering artifacts: unnatural gloss or lack of realistic strand definition.",
+        "Lack of natural imperfections: Absence of pores, blemishes, or minor asymmetries typical of human faces."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 66589,
+      "execution_time": 3.4405569780001315,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_080.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye closure and lack of blinking.",
+        "Skin texture appears overly smooth and lacks detail.",
+        "Asymmetry in facial features, particularly around the eyes.",
+        "Noticeable blending artifacts or inconsistencies near jacket."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 61032,
+      "execution_time": 2.9894796919998043,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_081.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Consistent lighting on faces.",
+        "Realistic eye reflections.",
+        "Subtle imperfections in hair."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 104457,
+      "execution_time": 2.5663530940000783,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_082.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows.",
+        "Realistic skin texture with subtle imperfections.",
+        "Consistent eye movement and blinking (though limited view).",
+        "Organic hair detail."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 82569,
+      "execution_time": 2.587722269000551,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_083.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and imperfections are visible.",
+        "Realistic lighting and shadows on face.",
+        "Minor inconsistencies in background blur suggest a photograph, not a rendered image."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 82084,
+      "execution_time": 2.654854843999601,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_084.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting and shadows suggest a real photo environment.",
+        "Skin texture appears consistent with natural skin pores and imperfections.",
+        "Variations in hair color and strand direction are complex and realistic.",
+        "Subtle, random noise is present which isn't typical of AI generated content."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 85200,
+      "execution_time": 3.1785885259996576,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_085.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Realistic lighting and shadows.",
+        "Subtle inconsistencies in background blur, but consistent with camera focus.",
+        "Facial expressions appear genuine and nuanced."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74236,
+      "execution_time": 2.790406733999589,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_086.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across face.",
+        "Natural skin texture and pores visible.",
+        "Eye reflections appear realistic and consistent.",
+        "Subtle imperfections in hair are present."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 62421,
+      "execution_time": 2.5642323980000583,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_087.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Subtle inconsistencies in lighting across face.",
+        "Realistic eye reflections and pupil movement.",
+        "Lack of obvious, repeating patterns or distortions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 91987,
+      "execution_time": 2.764034408999578,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_088.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic skin texture and pores.",
+        "Consistent lighting and shadows on the face.",
+        "Natural hair details and strand separation.",
+        "Subtle imperfections around the eyes and mouth."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 98916,
+      "execution_time": 2.695691906999855,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_089.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on face.",
+        "Natural skin texture and pore detail visible.",
+        "Glasses appear realistically rendered with reflections.",
+        "Background details (branches, trees) show natural complexity."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 143238,
+      "execution_time": 2.744164599999749,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_090.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows across the face.",
+        "Natural skin texture and pore detail visible.",
+        "Realistic eye reflections and pupil behavior.",
+        "Absence of common AI-generated artifacts (e.g., warping, blurring)."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 100298,
+      "execution_time": 3.0058997010000894,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_091.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye gaze and blinking patterns.",
+        "Skin texture appears overly smooth or plastic-like.",
+        "Lack of fine detail in hair strands.",
+        "Inconsistent lighting on the face."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 88883,
+      "execution_time": 2.804815459000565,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_092.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores are visible.",
+        "Lighting appears consistent with a real-world source.",
+        "Minor imperfections present in the hair/facial features."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 87259,
+      "execution_time": 2.6087111399992864,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_093.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and lighting.",
+        "Asymmetrical features or distortions around the face edges.",
+        "Repetitive patterns in background elements.",
+        "Lack of natural eye reflections/blinking."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 80319,
+      "execution_time": 2.8187186590002966,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_094.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pore detail.",
+        "Realistic eye reflections and pupil shape.",
+        "Subtle variations in hair curl patterns.",
+        "Consistent lighting across the face."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 61342,
+      "execution_time": 2.605874957999731,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_095.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting and shadows on face and uniform.",
+        "Natural skin texture with visible pores and imperfections.",
+        "Realistic eye reflections and detail.",
+        "Fine details in fabric textures (tie, uniform) are present."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 92089,
+      "execution_time": 2.9876008940000247,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_096.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Consistent lighting across the face and background.",
+        "Natural skin texture and pore detail are visible.",
+        "Subtle eye movements suggest organic behavior.",
+        "Realistic reflections in the earrings."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 61307,
+      "execution_time": 2.7095336279999174,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_097.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural skin texture and pores visible.",
+        "Subtle imperfections in facial symmetry.",
+        "Realistic lighting and shadows on face.",
+        "Organic-looking hair details."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 63722,
+      "execution_time": 2.578937293999843,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_098.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Realistic skin texture and pore detail.",
+        "Natural lighting and shadows on the face.",
+        "Consistent eye reflections suggesting real light sources.",
+        "Minor imperfections/noise consistent with camera image quality."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 69232,
+      "execution_time": 2.7073175810000976,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_099.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural eye reflections and blinking patterns.",
+        "Skin texture appears overly smooth and uniform.",
+        "Asymmetry in facial features (e.g., slight misalignment of eyes).",
+        "Lack of subtle micro-movements characteristic of natural expressions."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 70444,
+      "execution_time": 3.070278443999996,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_100.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unnatural skin texture and pore rendering.",
+        "Asymmetrical or inconsistent facial features (e.g., eye spacing, nose shape).",
+        "Lack of micro-movements or subtle details in the eyes/mouth.",
+        "Visibly distorted or blurred edges around the face."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 74138,
+      "execution_time": 3.2065181500001927,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    }
+  ]
+}

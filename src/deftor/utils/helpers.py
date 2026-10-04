@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 from ollama import pull, delete, ResponseError
 from huggingface_hub import errors, snapshot_download, scan_cache_dir
-from ..utils.constants import MEDIA_EXTENSIONS
+from ..utils.constants import MEDIA_EXTENSIONS, LABELS_FILENAME
 from datasets import load_dataset
 import shutil
 import soundfile as sf
@@ -43,7 +43,14 @@ def validate_input_argument(arg: str, subfolders: bool = False, media_type: str 
 
     if path.is_dir():
         iterator = path.rglob("*") if subfolders else path.iterdir()
-        files = [str(f) for f in sorted(iterator) if f.is_file() and f.suffix.lower() in extensions]
+        # LABELS_FILENAME is skipped: for --media-type text the .txt media
+        # extension also matches the labels file, which would otherwise be fed
+        # to the model as an item to analyze.
+        files = [
+            str(f)
+            for f in sorted(iterator)
+            if f.is_file() and f.suffix.lower() in extensions and f.name != LABELS_FILENAME
+        ]
         if not files:
             print(
                 f"No {', '.join(extensions)} files were found, please check that "
@@ -65,6 +72,25 @@ def validate_output_argument(output: str) -> bool:
         )
         return False
     return True
+
+
+def load_labels(path: str | Path) -> dict[str, str]:
+    """Parses a labels file of 'name.ext: label' lines into a name -> raw label mapping.
+
+    Label values are kept as strings on purpose: which value means "deepfake" is a property
+    of the dataset, not of DEFTOR, so the caller states it via --positive-label. Returning
+    strings also avoids silently dropping datasets whose labels are not plain 0/1.
+    """
+    labels: dict[str, str] = {}
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or ":" not in line:
+            continue
+        name, _, value = line.partition(":")
+        name = name.strip()
+        if name:
+            labels[name] = value.strip()
+    return labels
 
 
 # Ollama-related functions

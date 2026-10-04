@@ -1,0 +1,1850 @@
+{
+  "run": {
+    "run_id": "ba7f69c4f9bb4becacc5d5d084c21a8f",
+    "timestamp": "2026-10-02T11:14:53.502859+00:00",
+    "backend": "ollama",
+    "model": "llava",
+    "media_type": "image",
+    "dataset": "cifake",
+    "labels_file": "image/cifake/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 100,
+    "number_failed": 0,
+    "total_execution_time": 150.61547342299946,
+    "model_loading_time": null,
+    "total_duration_ns": 1966482916,
+    "load_duration_ns": 25915930,
+    "prompt_eval_count": 649,
+    "eval_count": 155,
+    "eval_duration_ns": 1702314000
+  },
+  "result": [
+    {
+      "name": "image_001.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image displays a natural scene with an animal.",
+        "There is no visible text or overt digital artifacts that suggest AI generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2470,
+      "execution_time": 8.692218348000097,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_002.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to show a real van, which has no overt signs of AI generation.",
+        "There are slight distortions around the edges of the photo that might be indicative of a digital editing process or an optical illusion."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2541,
+      "execution_time": 1.3162537930002145,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_003.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The wheels of the truck appear to be disproportionately small in comparison to its size.",
+        "There is an unusual glare on the back window, suggesting the image might have been digitally manipulated.",
+        "The overall quality of the photograph, such as graininess and lack of detail, suggests it could be a digital creation rather than a real-world photo."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2542,
+      "execution_time": 1.7467136099994605,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_004.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be of a real person on a real horse in an outdoor setting with buildings in the background, suggesting this is not digitally generated media.",
+        "The quality and resolution of the image do not exhibit any signs of low-quality or digital artifacts that are typically associated with AI-generated images. The colors and details look naturalistic."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2537,
+      "execution_time": 2.135279957000421,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_005.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Text visible on the vehicle",
+        "The image is clear and well-composed with natural lighting and shadows"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2313,
+      "execution_time": 1.0136654299994916,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_006.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The background appears blurry and lacks depth, which is common in deepfake images to mimic a real photograph's quality.",
+        "There are noticeable discrepancies in the lighting and shadows that do not match a typical photograph's natural variations.",
+        "Some of the details like the texture of the tree bark and the colors on the wall seem unnatural or overly uniform, which can be an indication of digital manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1803,
+      "execution_time": 1.663436165999883,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_007.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The lighting and shadows on the objects in the image appear consistent with natural light, which is typical for a real image.",
+        "The texture of the grass and other elements show variations that suggest an organic, non-digital origin."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2299,
+      "execution_time": 1.3781136820007305,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_008.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "patterns in the fur that are unnatural or don't follow typical feline patterns, especially around the eyes and ears where there might be artifacts from a template, such as a pixelated texture that is not consistent with natural cat fur.",
+        "the eyes have an unnaturally smooth texture, which could indicate digital manipulation to match specific characteristics of other photos in a dataset to create this image."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2269,
+      "execution_time": 1.6290508450001653,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_009.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a collage of three different photos, each depicting a person walking on what looks like an icy surface. The first and third images show the same individual from different angles, which is common for deepfake detection as the AI may reuse images from other parts of the media collection.",
+        "The image in the middle has a slight distortion and artificial quality to the skin texture, facial features, and hair that suggests manipulation with AI technology. This could be an indicator that at least some part of this image is generated by AI."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2321,
+      "execution_time": 2.234706911000103,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_010.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Highly stylized and unrealistic fur pattern on the animal's body",
+        "The deer appears to have an artificial quality to its form and facial features",
+        "The background is blurred with streaks, which suggests that this image may have been generated by an AI for artistic or illustrative purposes"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2253,
+      "execution_time": 1.3771982450007272,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_011.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There are no obvious signs of AI generation in the image. It appears to be a standard photograph of a horse in an indoor arena, with the focus being on the horse and its stance rather than any textual or graphical elements that might be indicative of digital manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2357,
+      "execution_time": 1.3717795370002932,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_012.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The truck's shadow is cast accurately and realistically on the ground, indicating that it's not an image with a flat surface and no shadows.",
+        "There are natural variations in lighting and reflections on the truck's exterior and surrounding objects, such as the building facade, which do not appear to be artificially created or too consistent for AI-generated media."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1933,
+      "execution_time": 1.679541712000173,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_013.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dogs appear to be real, with natural fur texture and shadows consistent with real animals."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2682,
+      "execution_time": 0.9388617180002257,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_014.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is in color with clear visibility of the airplane, sky, and ground below.",
+        "There are no overt signs of digital manipulation or unusual visual distortions.",
+        "No visible text or logos that might indicate a watermark or digital alteration."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1914,
+      "execution_time": 1.5983565309998085,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_015.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Natural lighting on puppy's fur and skin",
+        "The focus appears to be a typical shallow depth of field often found in real images",
+        "There is no visible texture that resembles the characteristic pixelation commonly associated with deepfakes"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2685,
+      "execution_time": 1.4458256849993631,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_016.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is a high-resolution photograph of a boat on the water.",
+        "There are no visible signs of AI generation, such as distortions or abnormalities in the lighting and shadows, which can sometimes be indicative of digital manipulation. ",
+        "There's a natural perspective distortion due to the camera angle, which is typical when taking a picture from the shore looking out at the water.",
+        "The ocean waves and the reflections on the surface of the water look realistic."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1596,
+      "execution_time": 2.0087675039994792,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_017.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a dog with noticeable eyes that are larger than the norm, which could be an effect of AI enhancement or alteration to create a striking appearance.  ",
+        "There is no clear indication of distortion or artifact typically found in deepfake images."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2419,
+      "execution_time": 1.4113592200001221,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_018.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dog's fur is consistent and does not display any obvious texture anomalies that are common in AI-generated images.",
+        "There are no visual artifacts, such as unusual lighting, shadows, or reflections that would suggest the image has been manipulated by an AI."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2564,
+      "execution_time": 1.3784026280000035,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_019.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The facial features are unnatural and exaggerated, not typical of a real human."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2662,
+      "execution_time": 0.8641933600001721,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_020.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The bird appears to be of the type commonly found in nature.",
+        "The bird's feathers are detailed and look natural, suggesting they have been generated by an AI with high fidelity.",
+        "The background is consistent with a natural environment, without any obvious signs of being digitally created or manipulated."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2526,
+      "execution_time": 1.4273791109999365,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_021.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be of low quality and lacks the usual sharpness often associated with real photographs.",
+        "The lighting seems uneven, which is common in images that are not genuine but created artificially.",
+        "There's a noticeable blurriness around the edges of the figure, suggesting an attempt at a realistic effect but with a lack of precision typically found in actual photos."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2166,
+      "execution_time": 1.7168312439998772,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_022.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No visible signs of AI generation such as text, distortions, or unrealistic visual elements in the image."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2403,
+      "execution_time": 0.9184092959994814,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_023.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be of a real car parked in a lot.",
+        "There are no overt signs of AI generation, such as digital distortions or anatomical inconsistencies."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2693,
+      "execution_time": 1.0559942560003037,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_024.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image has a consistent lighting and shadow pattern that suggests artificial illumination, but it does not have the typical over-saturation or texture commonly associated with AI-generated images.",
+        "The frogs exhibit natural textures and patterns on their skin, which are realistic and not idealized in a way that might be indicative of AI generation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2621,
+      "execution_time": 1.5386092640001152,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_025.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a photograph with high resolution and sharp focus on the horses and riders, which suggests that it was likely taken with a camera.",
+        "The horses are not visually distorted or overly stylized, indicating that there is no obvious AI manipulation in the scene. ,"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2069,
+      "execution_time": 1.4852536210000835,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_026.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The frog's skin texture appears natural and consistent with real-life frogs.",
+        "The background features realistic plant textures, which look like real leaves and stems.",
+        "There is no visible sign of AI generation, such as digital artifacts or a repetitive pattern that suggests a low-resolution image or a tiled structure that could be indicative of a grid-based AI system."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2684,
+      "execution_time": 1.8760082569997394,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_027.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a real photograph with a focus on a person in the background and some object in the foreground. There are no clear signs of AI manipulation, such as stylized distortions or anachronisms that are commonly associated with deepfake images."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1931,
+      "execution_time": 1.365929149999829,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_028.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a group of five model airplanes, each resembling different types of war planes with varying designs and markings, indicating that they may be from different historical periods. The airplanes are arranged in a way that suggests they are flying in formation, which is often associated with military display or historical significance."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2582,
+      "execution_time": 1.490000568999676,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_029.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The frogs appear naturalistic and detailed, suggesting high-quality photography or computer graphics."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2365,
+      "execution_time": 1.0301022570001805,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_030.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There is no apparent pattern or repetition that would suggest AI generation in this particular section of the image.",
+        "The overall quality and graininess indicate a photograph rather than digital artwork, which could suggest realism but not direct evidence of AI generation.",
+        "The lighting and shadows cast on the objects do not seem artificial, as they mimic natural light patterns."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2656,
+      "execution_time": 1.7065339660002792,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_031.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The cat's fur texture appears natural and consistent with real-world feline hair.",
+        "The reflections on the surface in the background seem to mimic a typical outdoor setting with an actual light source, suggesting a real environment."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2205,
+      "execution_time": 1.2811168560001533,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_032.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a visible license plate on the police vehicle.",
+        "There are no obvious textures or patterns that look artificial."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2365,
+      "execution_time": 1.06060873000024,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_033.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The car has a reflection on the water, which would be expected in a real image but could potentially be added or removed for AI purposes.",
+        "There are no textual elements that seem out of place, such as unnatural fonts or unusual capitalization."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2528,
+      "execution_time": 1.4827270719997614,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_034.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Anomalies in the image quality such as distortions, unusual patterns or textures that do not align with natural photography.",
+        "A lack of context and environment typical for a car photograph (e.g., no surrounding details like people or buildings that could indicate an authentic scene).",
+        "The image appears to be digitally manipulated or artificially generated, as the quality and consistency are inconsistent with real-world photography."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2247,
+      "execution_time": 1.7587045239997678,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_035.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dog appears to be generated with a certain level of detail, but the eyes and nose are not aligned in a natural way, which is often a sign of AI generation.",
+        "The texture and lighting on the dog's coat seem consistent across the image, suggesting a uniform application of techniques typically used in digital art."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2475,
+      "execution_time": 1.5852233530004014,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_036.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dog's fur appears smooth and slightly glossy, suggesting it might be real."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2544,
+      "execution_time": 0.9469448709996868,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_037.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a commercial airplane in flight against a clear blue sky."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2226,
+      "execution_time": 0.9082142150000436,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_038.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The photo quality appears to be quite low, with graininess and pixelation that are common in digital media but could also be due to a photo's age or quality.",
+        "There is no text present in the image which is unusual for images generated by AI as they often come with accompanying text."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2421,
+      "execution_time": 1.5053974789998392,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_039.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There is no text present in the image that suggests AI generation.",
+        "The image appears to be a natural photograph without any visual cues typically associated with artificial imagery such as digital artifacts, pixelation, or unusual lighting effects. The boats and water look realistic, and there are no obvious signs of manipulation or alteration.",
+        "No parts of the image exhibit an unnatural or surreal quality that would be expected in AI-generated media."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2094,
+      "execution_time": 1.9615033240006596,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_040.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows an indoor scene with a cat and what appears to be a human figure, which suggests this is a real environment.",
+        ""
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2310,
+      "execution_time": 1.1160618450003312,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_041.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is a composite of multiple elements that are blended together, which indicates that this might be an AI-generated creation. The presence of various colors and shapes without context suggests that these could be random digital creations.",
+        "There appears to be a pattern or texture overlaying the image, which is not natural to photographic images and resembles a digital rendering."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2553,
+      "execution_time": 1.675325721000263,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_042.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No text is present on the image to indicate AI manipulation.",
+        "The lighting and shadows appear natural, consistent with real-life photography.",
+        "There are no obvious signs of digital artifacts such as pixelation or distortion that might suggest image manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2449,
+      "execution_time": 1.421650518000206,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_043.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is blurry and low resolution",
+        "The image has a grainy texture that is often associated with AI-generated media to make it look more authentic",
+        "There are slight inconsistencies in the skin tones and facial features of the individuals in the photo, which could be indicative of AI alteration"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2594,
+      "execution_time": 1.5400876419998895,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_044.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is a photograph of a truck with the characteristics of real trucks, such as reflections and shadows that are consistent with natural lighting."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2636,
+      "execution_time": 1.0948449830002573,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_045.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is clear and well-defined, allowing for detailed observation.",
+        "The image has a high level of detail that suggests it was created with a lot of care and attention to detail.",
+        "There are no obvious signs of AI manipulation, such as digital glitches or inconsistencies in the lighting or shadows."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2447,
+      "execution_time": 1.9857306969997808,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_046.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "1. Natural lighting and shadows on the plane, which appear consistent with real-world conditions.",
+        "2. The reflection of light off the airplane's surface, which suggests a realistic material texture and ambient lighting.",
+        "3. The flight path appears to be consistent with an actual bird in flight, and there is no indication that it was digitally added or manipulated."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1291,
+      "execution_time": 1.4359570130000066,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_047.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The frog's skin texture is consistent and realistic.",
+        "The ripples around the frog are consistent with natural water effects.",
+        "The overall lighting and coloring appear to be a result of natural outdoor light, which may suggest realism in the image."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2264,
+      "execution_time": 1.2949303290006355,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_048.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is presented as a photograph, which is commonly associated with real images. There are no obvious visual cues that suggest AI manipulation, such as digital artifacts or unrealistic lighting conditions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2295,
+      "execution_time": 1.1586606129994834,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_049.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Textures of the image appear to be consistent and lack the usual signs of a photo's age, such as graininess or a loss in sharpness over time.",
+        "The image appears too clear and well-defined for a real photograph, especially in the detailing the cat's fur texture.",
+        "There is an unnatural quality to the image, which suggests it has been generated by an AI rather than taken as a photograph."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1936,
+      "execution_time": 1.5608697229999962,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_050.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No visible sign of manipulation or alteration in the natural elements of the scene. The colors and patterns appear consistent with typical bird behavior and habitat. There are no overt signs of distortion, symmetry, or repetition that would suggest an AI-generated element. Additionally, there is a coherent background that does not seem out of place."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2492,
+      "execution_time": 1.431261736000124,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_051.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The facial features and expressions are very consistent and realistic across the three cats.",
+        "The coloration and patterns on the fur are identical, suggesting a single image has been manipulated to create multiple instances."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2392,
+      "execution_time": 1.068025266999939,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_052.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be an actual photograph with natural lighting, shadows, and reflections that align with realistic conditions.",
+        "There are no overt visual artifacts such as unusual pixelation or textures that could indicate digital manipulation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1870,
+      "execution_time": 1.1953846859996702,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_053.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a real photograph of an object with detailed textures and shadows, which are typical characteristics of natural objects or materials.",
+        "There is no visible watermark or overt artificial elements that would suggest AI generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2383,
+      "execution_time": 1.1066152780003904,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_054.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Anomalies in the consistency of the background. There are two distinct sections that do not align seamlessly, suggesting a composite or edited together.",
+        "The sky is unusually smooth and lacks the typical clouds or variations, which may indicate artificial manipulation to create this effect."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1493,
+      "execution_time": 1.2740507019998404,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_055.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a natural photograph with visible light reflections on surfaces and shadows that are consistent with the lighting conditions in real environments.",
+        "2",
+        "REAL IMAGE",
+        "evidence: The image shows a realistic depiction of a person, their reflection, and shadowing that is consistent with typical human anatomy and lighting.",
+        "3",
+        "AI-GENERATED MEDIA",
+        "evidence: The image has an unnatural quality to the facial features that suggests it might be a representation of an individual using deepfake technology or another AI-based editing method."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2068,
+      "execution_time": 2.032195167000282,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_056.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The lighting and shadows on the horse suggest natural light, but there are no visible sources of light that would cast these shadows. This could indicate artificial lighting or post-processing."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2439,
+      "execution_time": 1.2367083199997069,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_057.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Deer's eyes are slightly out of focus and do not seem to match the clarity expected in a real photograph.",
+        "The background appears to be a blend of natural elements, which may suggest that the image is staged or manipulated.",
+        "There is a slight artificiality to the animal's pose and expression."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2309,
+      "execution_time": 1.3615517349999209,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_058.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The horse's movement appears natural and lifelike, with no visible pixelation or stuttering that is often associated with AI-generated media.",
+        "The background features are consistent with real outdoor scenery, which could be used for training an AI to mimic reality but are not necessarily AI-generated.",
+        "There are no obvious signs of text or markings on the image that would suggest manipulation by AI tools."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2368,
+      "execution_time": 1.6799367459998393,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_059.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image displays a real scene with sailboats on the water, which is consistent with natural occurrences.",
+        "There are reflections on the water's surface that match the expected behavior of light reflecting off water in a natural setting.",
+        "The image shows a clear and bright day with good lighting conditions, which is typical for outdoor photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2332,
+      "execution_time": 1.5224559170001157,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_060.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is of a horse, which is a complex subject with realistic textures and lighting. However, the horse appears to have an unusual amount of red coloration throughout its body. This could be due to digital alteration rather than natural variation in the horse's appearance.",
+        "There may be some subtle inconsistencies or repetitions in the patterns on the horse's coat, which could suggest an AI-generated pattern."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2649,
+      "execution_time": 1.6858281639997585,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_061.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The texture of the object appears smooth and consistent with a CGI or AI-generated rendering rather than an organic material.",
+        "There is no visible background, which might be expected for a real artifact.",
+        "The surface has an unnatural sheen that does not match the typical appearance of a naturally occurring treasure."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2588,
+      "execution_time": 1.3472340099997382,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_062.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Texture of the image is smooth and uniform, which might indicate a lack of natural variations found in real images.",
+        "The eyes appear to be too large for the head, which could be a result of AI manipulation for an exaggerated effect.",
+        "The dog's fur texture looks artificial and unnatural, devoid of the natural variation that would be present in a real pet."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2419,
+      "execution_time": 1.3927017749992956,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_063.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Quality of the car image is too sharp and realistic, which is unusual for a typical advertisement or media.",
+        "The reflections and shadows on the car are too perfect and well-lit, indicating it may have been generated to look like a real photograph."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2139,
+      "execution_time": 1.1294103769996582,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_064.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The car has a realistic reflection on its surface.",
+        "There are no visible digital artifacts or anatomical inconsistencies that are typical of AI-generated images."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2309,
+      "execution_time": 1.0306507799996325,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_065.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is in color, which indicates it might have been taken with a modern camera or edited to be in color.",
+        "There are no overt signs of AI generation such as blurriness, distortion, or an unnatural quality to the image.",
+        "There are no texts or logos that would indicate AI manipulation, and the textures and patterns in the image appear natural for a photograph.",
+        "The perspective and lighting appear consistent with typical photography without any obvious artifacts such as digital glitches or distortions. The resolution and sharpness suggest it is of good quality."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2508,
+      "execution_time": 1.975277857999572,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_066.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The presence of a large body of water that covers the majority of the image, which is consistent with what one would expect to see if this were a real image."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2284,
+      "execution_time": 1.0174261709998973,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_067.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The deer's size is inconsistent with a real animal standing at the end of a tunnel. This suggests that it could be an AI-generated or photoshopped image intended to create an illusion.",
+        "The lighting in the photo appears artificial, casting soft light on the subject and surroundings without creating harsh shadows or highlights, which could indicate a studio setting. The shadows and highlights do not match those typically seen in natural environments or photographs taken outdoors."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1816,
+      "execution_time": 1.586138796999876,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_068.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a high-resolution photograph with clear visibility of the textures and shadows typical of realistic dog figures, which suggests that it is not generated by an AI. The dogs are also posed in a way that is consistent with realistic depictions, such as a sitting position for one dog and a standing position for another, and there is no visible distortion or artifact that would indicate AI generation. The image does not contain any overt signs of digital manipulation, which is common in images generated by AI systems."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2354,
+      "execution_time": 1.7533564659997865,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_069.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "no visible signs of AI manipulation or watermark in the image such as text overlay, repetitive patterns, or altered proportions.",
+        "the bird appears to be a real bird with natural colors and patterns consistent with its species.",
+        "there is no detectable pixelation or unusual lighting conditions that could indicate digital alteration.",
+        "the background has no signs of being artificially constructed or digitally manipulated."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2224,
+      "execution_time": 1.543089499999951,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_070.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The helicopter appears to be in flight and at a high altitude, as suggested by the clear sky and no landmarks visible.",
+        "There are no obvious signs of digital artifacts or distortions that would indicate AI generation."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1895,
+      "execution_time": 1.2576386299997466,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_071.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image is of high resolution and appears to be a photograph. There are no overt signs of being AI-generated, such as text or logos that would typically indicate manipulation. The lighting and shadows appear natural, with no artificial or uniform appearance that might suggest the use of AI in its creation. The cat's fur and skin texture are consistent with typical animal photos. The overall quality of the image looks realistic, without any obvious flaws or distortions commonly associated with AI-generated media."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2436,
+      "execution_time": 1.713635023000279,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_072.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The frog's eyes are too large and have a glossy finish that does not match the look of real frogs.",
+        "There is an unnatural smoothness to the skin texture on the frog, which is not typical for frogs in real life."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2578,
+      "execution_time": 1.1565679640007147,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_073.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "Unusual facial features on the cat that may look more human-like than natural, especially around the nose and mouth.",
+        "The cat appears to have a slightly unusual texture of fur, which can be indicative of digital manipulation.",
+        "The cat's eyes seem to have an unnatural intensity or expression, which is not typically seen in natural cats."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2310,
+      "execution_time": 1.3982499599997027,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_074.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The textures and patterns of the fur are consistent with those seen in real animals.",
+        "The dog's facial features are typical of breed characteristics found in living dogs.",
+        "The lighting and shadow cast on the ground align with natural lighting conditions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2402,
+      "execution_time": 1.3546439579995422,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_075.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a real boat on the water.",
+        "The water has a slight ripple effect, which is consistent with natural water conditions."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2177,
+      "execution_time": 1.019537223000043,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_076.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The frog's skin texture is consistent and smooth, typical of real-life images.",
+        "The post the frog is sitting on has natural shadows and lighting that match what one would expect in a photograph of a natural setting."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2517,
+      "execution_time": 1.168608258999484,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_077.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The truck appears to be stationary and there is no visible motion blur.",
+        "The reflections on the windows of other vehicles suggest they are made of glass and not digital surfaces.",
+        "There are natural elements like trees in the background, which could be part of a larger scene that doesn't look artificial."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2449,
+      "execution_time": 1.4197017030001007,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_078.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The images have a consistent quality that is often associated with deepfake technology, such as very high resolutions and smooth, natural lighting.",
+        "There are visible differences in the positioning of some facial features between the two horses, which can sometimes be an indicator of digital manipulation.",
+        "The hair patterns on the mane and tail of the horses appear to be consistent across all three images. This could indicate that these elements were either digitally added or modified."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2427,
+      "execution_time": 1.695898472999943,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_079.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be a digital creation or an AI-generated image, as it exhibits characteristics that are commonly associated with Deepfake imagery. These may include the following: 1) The level of detail and realism in the photo suggests advanced AI capabilities; 2) The absence of any text or distinguishing marks that could indicate a specific location or event; 3) The overall composition of the image, including the positioning and lighting, seem artificial and not consistent with typical photography. "
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2009,
+      "execution_time": 1.8641141699999935,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_080.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "no visible text on image that suggests AI creation or manipulation.",
+        "image has a natural appearance consistent with typical photography, without obvious visual artifacts such as pixelation or distortion which are sometimes indicative of AI generation.",
+        "there is no apparent context within the image itself that would suggest an AI-generated environment, like a virtual reality background."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2594,
+      "execution_time": 1.3457497230001536,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_081.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The background of the image is static and lacks context which suggests a studio or digitally created setting.",
+        "The deer have an unnatural pose, with their heads looking to the side and no motion blur which indicates that they are posed rather than in natural movement.",
+        "There is an artificial feel to the image, such as the texture of the grass, which appears more uniform and less organic compared to real-life grass."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2278,
+      "execution_time": 1.4772970410003836,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_082.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "There are no visible texts on the image that provide context or information that could suggest artificial generation. The image appears to be of natural quality with typical lighting and shadows one would expect in a photograph of an outdoor scene featuring an animal.",
+        "confidence_score_of_classification_as_deepfake_artificial_intelligence_generated_media: 0.85"
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2628,
+      "execution_time": 2.714383775999522,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_083.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The truck has a realistically rendered design and texture.",
+        "There is no overt text that appears out of place or unnatural."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2624,
+      "execution_time": 0.898784556999999,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_084.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The lighting and shadows are consistent with natural lighting conditions, such as during the day.",
+        "The motion blur in the horse's legs indicates that it is indeed moving at high speed, which could be captured by a camera with fast shutter speeds.",
+        "There are no obvious digital artifacts or signs of manipulation visible in the image."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2454,
+      "execution_time": 1.5409124859997974,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_085.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No visible text or logos that would indicate AI-generation",
+        "No signs of digital artifacts, such as pixelation or glitches typically associated with AI",
+        "The lighting and shadows are consistent with a photograph, suggesting natural rather than digitally-rendered light",
+        "There is no evidence of AI-related features within the image"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2054,
+      "execution_time": 1.3824894480003422,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_086.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "No visible signs of digital manipulation or pixelation that would indicate a photo was taken with an AI-generated camera.",
+        "The reflections and lighting on the ship's surface are consistent with traditional photography, which is not yet able to create such lifelike reflections artificially.",
+        "There are no visible watermarks or textual elements that typically indicate AI generation in a photo."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 1512,
+      "execution_time": 1.5556134529997507,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_087.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a real bus in motion on a road. The reflection of the trees and sky on the windshield suggests movement. There is no text or clear sign that the image has been generated artificially."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2493,
+      "execution_time": 1.06406187399989,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_088.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The lighting and shadows on the water suggest natural light conditions, which might be consistent with real water scenes.",
+        "There is no apparent text or image manipulation that would indicate AI generation. The lighting and reflections on the water look naturalistic."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2085,
+      "execution_time": 1.391655792000165,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_089.png",
+      "classification": "DEEPFAKE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to have an unrealistic quality to the textures and lighting, giving it a polished, almost plastic-like appearance that could indicate artificial creation.",
+        "There are no noticeable flaws in the image, such as graininess or pixelation, which might suggest that it has been artificially created."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2461,
+      "execution_time": 1.4490094909997424,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_090.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dog's natural appearance and behavior, such as its coat texture, facial expressions, and movement in a typical outdoor setting, do not exhibit any signs of being an AI-generated image. There are no visible digital artifacts, unrealistic lighting, or distortions that could suggest manipulation.",
+        "The image is clear and well-lit, with no apparent anomalies or visual inconsistencies that would point to AI generation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2327,
+      "execution_time": 2.5331707219993405,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_091.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The bird's realistic plumage",
+        "The bird exhibits natural motion and posture",
+        "The sky and its reflection on the water are consistent with a real scene"
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2180,
+      "execution_time": 1.1375345399992511,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_092.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The truck appears to have an unusual quality in its lighting and shadowing compared to typical photography."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2551,
+      "execution_time": 0.8289431200000763,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_093.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a real boat in water. There are no text, objects, or other elements that suggest the photo has been altered or generated by AI.",
+        "The colors and lighting are consistent with what one would expect from a photograph of a boat on water."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2378,
+      "execution_time": 1.1226774370006751,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_094.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The dog's motion blur is consistent with real-life movement.",
+        "There are no clear signs of digital artifacts or distortions indicative of AI manipulation.",
+        "The quality and resolution appear typical for a high-resolution photograph."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2239,
+      "execution_time": 1.3171873239998604,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_095.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a natural landscape with greenery, indicating that it could be an actual photograph.",
+        "There are no visible textures or patterns that would suggest an AI-generated environment, such as pixelation or grid patterns."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2232,
+      "execution_time": 1.3522339210003338,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_096.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image appears to be taken from a security or surveillance camera, which often captures real-world scenes without any clear signs of AI generation.",
+        "There are no unusual distortions or visual artifacts that would suggest the image has been digitally altered or generated by an AI."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2549,
+      "execution_time": 1.2753202869998859,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_097.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The airplanes appear to be realistic with no overtly visible textures or distortions that are commonly associated with AI-generated images.",
+        "There is no unusual text or pattern in the image that would suggest manipulation, such as an overlay or a digital signature of AI manipulation."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 2142,
+      "execution_time": 1.3930406460003724,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_098.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The image shows a car, and the presence of a person in the car suggests it is indeed a real photograph. There are no visible AI-related markings or distortions that indicate digital manipulation.",
+        "No further evidence can be confidently derived from this description."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2497,
+      "execution_time": 1.152461872999993,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_099.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The pattern of the tree leaves in the background has a natural and organic look, not a stylized digital pattern."
+      ],
+      "label": "0",
+      "file_size_in_bytes": 2374,
+      "execution_time": 1.0172543369999403,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    },
+    {
+      "name": "image_100.png",
+      "classification": "REAL IMAGE",
+      "fake_score": null,
+      "confidence": null,
+      "raw_label": null,
+      "media_type": "image",
+      "evidence": [
+        "The birds appear to be in motion, which could suggest natural movement, but it's not entirely clear if the background is real or digitally manipulated.",
+        "There are no obvious AI-generated artifacts such as pixelation or repetitive patterns, and the overall appearance of the birds seems consistent with what one would expect from a photograph of flying birds.",
+        "However, without more information on the image's origin or quality, it is not possible to definitively conclude whether this image was generated by an AI or not."
+      ],
+      "label": "1",
+      "file_size_in_bytes": 1803,
+      "execution_time": 1.9685288979999314,
+      "success": true,
+      "finish_reason": "stop",
+      "error": null
+    }
+  ]
+}

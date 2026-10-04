@@ -13,6 +13,11 @@ MEDIA_EXTENSIONS: dict[Literal["image", "audio", "video", "text"], set[str]] = {
     "text": {".txt"},
 }
 
+# Name of the labels file that sits alongside the media in a dataset folder.
+# Under --media-type text this matches the .txt media extension, so it must be
+# excluded when collecting the files to analyze.
+LABELS_FILENAME = "labels.txt"
+
 # Task type map for Hugging Face pipeline
 TASK_TYPE: dict[Literal["image", "audio", "video"], str] = {
     "image": "image-classification",
@@ -31,30 +36,62 @@ Provide:
 
 Do not explain your reasoning outside these fields."""
 
+# Default text prompt for Ollama models
+DEFAULT_TEXT_PROMPT = """DEEPFAKE / AI-GENERATED MEDIA DETECTION
+
+Analyze the following text after "***input***" for evidence of AI generation.
+
+Provide:
+- classification
+- evidence: 2-4 concise, specific, observable details
+
+Do not explain your reasoning outside these fields.
+***input***"""
+
 # Default options for Ollama models
 DEFAULT_OPTIONS = {"num_predict": 8192}
 
 # ... syntax allows >=1 items in a tuple
-FAKE_KEYWORDS: tuple[str, ...] = ("fake", "deepfake", "synthetic", "generated", "spoof", "ai")
+# NOTE: matched against whole words of the model's label (see prompter.normalize_label),
+# so "ai" only matches the standalone word AI and never e.g. "Blizzard".
+FAKE_KEYWORDS: tuple[str, ...] = (
+    "ai",
+    "artificial",
+    "deepfake",
+    "fake",
+    "generated",
+    "spoof",
+    "synthetic",
+)
 
 DEFAULT_OUTPUT_DIR = Path.cwd() / "analyses"
-STATISTIC_LOG_PATH = Path.cwd() / "statistics.csv"
+STATISTIC_LOG_FILENAME = "statistics.csv"
+STATISTIC_LOG_PATH = Path.cwd() / STATISTIC_LOG_FILENAME
 
+# One row per run. Per-item data lives in the analysis output files.
 STATISTIC_LOG_FIELDS = [
-    # Run statistic fields
+    "run_id",
     "timestamp",
     "backend",
     "model",
     "media_type",
+    "dataset",
+    "labels_file",
+    "positive_label",
     "number_of_items",
+    "number_succeeded",
+    "number_failed",
     "total_execution_time",
     "model_loading_time",
-    # Item statistic fields
-    "file_name",
-    "file_size_in_bytes",
-    "execution_time",
-    "success",
-    "error",
+    "mean_item_execution_time",
+    "p95_item_execution_time",
+    "throughput_items_per_sec",
+    # Ollama-native timings/token counts, empty for other backends
+    "total_duration_ns",
+    "load_duration_ns",
+    "prompt_eval_count",
+    "eval_count",
+    "eval_duration_ns",
 ]
 
 # Spinner animation sequence

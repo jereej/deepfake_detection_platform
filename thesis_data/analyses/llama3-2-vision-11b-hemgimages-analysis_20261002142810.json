@@ -1,0 +1,23 @@
+{
+  "run": {
+    "run_id": "75f16e000d5d45a390e1b531ed2e7764",
+    "timestamp": "2026-10-02T11:28:10.206505+00:00",
+    "backend": "ollama",
+    "model": "llama3.2-vision:11b",
+    "media_type": "image",
+    "dataset": "hemg-images",
+    "labels_file": "image/hemg-images/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 0,
+    "number_failed": 0,
+    "total_execution_time": 4.45125796100001,
+    "model_loading_time": null,
+    "total_duration_ns": null,
+    "load_duration_ns": null,
+    "prompt_eval_count": null,
+    "eval_count": null,
+    "eval_duration_ns": null
+  },
+  "result": []
+}

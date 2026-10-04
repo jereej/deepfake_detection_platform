@@ -1,0 +1,23 @@
+{
+  "run": {
+    "run_id": "b4d9ca332b0f426b9e34197a232765f8",
+    "timestamp": "2026-10-02T11:11:14.975342+00:00",
+    "backend": "ollama",
+    "model": "llama3.2-vision:11b",
+    "media_type": "image",
+    "dataset": "dataset_100",
+    "labels_file": "image/dataset_100/labels.txt",
+    "positive_label": "1",
+    "number_of_items": 100,
+    "number_succeeded": 0,
+    "number_failed": 0,
+    "total_execution_time": 4.496098672999324,
+    "model_loading_time": null,
+    "total_duration_ns": null,
+    "load_duration_ns": null,
+    "prompt_eval_count": null,
+    "eval_count": null,
+    "eval_duration_ns": null
+  },
+  "result": []
+}

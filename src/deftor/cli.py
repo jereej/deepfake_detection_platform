@@ -15,10 +15,10 @@ from .utils.helpers import (
     download_hf_model,
     list_local_hf_models,
     delete_hf_model,
+    load_labels,
 )
 from .lib.prompter import prompt_model
-
-# from .lib.reporter import create_report, simple_report
+from .lib.reporter import write_report
 import json
 
 
@@ -106,6 +106,26 @@ def run_cli() -> None:
         help="Type of media to be analyzed, either text, image, audio or video. Image by default",
     )
 
+    analyze_parser.add_argument(
+        "--labels",
+        type=str.strip,
+        required=False,
+        help="Path to a labels file ('name.ext: label' per line). Embedded in the analysis output.",
+    )
+    analyze_parser.add_argument(
+        "--positive-label",
+        type=str.strip,
+        required=False,
+        default="1",
+        help="Label value that counts as DEEPFAKE (positive class). Default: 1",
+    )
+    analyze_parser.add_argument(
+        "--dataset",
+        type=str.strip,
+        required=False,
+        help="Dataset name to embed in the run block of the analysis output.",
+    )
+
     # Model subcommands
     model_parser = subparsers.add_parser("model", help="Manage local models (pull, delete, list)")
     model_subparsers = model_parser.add_subparsers(dest="model_command", required=True)
@@ -141,18 +161,28 @@ def run_cli() -> None:
     # Reporter stuff
     report_parser = subparsers.add_parser(
         "report",
-        help="Create a report based on statistics.csv",
+        help="Generate a dataset-wise model performance report from the analysis files",
     )
-    report_parser.add_argument("analysis_file", type=str.strip, help="Name of the analysis file to be given")
-    report_parser.add_argument("label_file", type=str.strip, help="Name of the label file to be given")
+    report_parser.add_argument(
+        "-a",
+        "--analyses",
+        type=str.strip,
+        required=False,
+        help="Folder holding the analysis files (default: ./analyses)",
+    )
+    report_parser.add_argument(
+        "-o", "--output", type=str.strip, required=False, help="Output markdown file (default: ./report.md)"
+    )
+    report_parser.add_argument("--title", type=str.strip, required=False, help="Report title")
 
     args = parser.parse_args()
     # Logic block for arguments
     if args.command == "analyze":
-        # get_dataset("Hemg/Deepfakeaudio", name_prefix="audio", split="train")
-        # return
         images = validate_input_argument(args.input, args.subfolders, args.media_type)
         if not images:
+            return
+        labels = load_labels(args.labels) if args.labels else None
+        if args.labels and labels is None:
             return
         # DEFTOR supports both ollama and huggingface equally, so both are handled here.
         # This means that ALL LOGIC needs to be handled in parallel
@@ -174,29 +204,34 @@ def run_cli() -> None:
             if not validate_output_argument(args.output):
                 return
         # MAIN FUNCTION
+        run_context = {
+            "dataset": args.dataset,
+            "labels_file": args.labels,
+            "positive_label": args.positive_label,
+        }
         ai_analysis_result, stats_result = prompt_model(
-            backend, model=args.model, image_paths=images, options=args.model_options
+            backend, model=args.model, image_paths=images, options=args.model_options, run_context=run_context
         )
         # AFTER WHICH SPECIFY HOW TO OUTPUT RESULTS
-        if ai_analysis_result:
-            if args.output:
-                fmt = ""
-                if not args.format:
-                    fmt = "txt"
-                timestamp = f"_{datetime.now().strftime('%Y%m%d%H%M%S')}"
-                if args.no_timestamp:
-                    timestamp = ""
-                output_filename = f"{args.output}{timestamp}.{args.format or fmt}"
-                write_analysis_output(
-                    output_filename=output_filename,
-                    stats_result=stats_result,
-                    analysis_result=ai_analysis_result,
-                    extension=args.format,
-                    destination=args.destination,
-                )
-                return
-            else:
-                write_output_to_stdout(ai_analysis_result, args.raw)
+        if args.output:
+            fmt = ""
+            if not args.format:
+                fmt = "txt"
+            timestamp = f"_{datetime.now().strftime('%Y%m%d%H%M%S')}"
+            if args.no_timestamp:
+                timestamp = ""
+            output_filename = f"{args.output}{timestamp}.{args.format or fmt}"
+            write_analysis_output(
+                output_filename=output_filename,
+                stats_result=stats_result,
+                analysis_result=ai_analysis_result,
+                extension=args.format,
+                destination=args.destination,
+                labels=labels,
+            )
+            return
+        else:
+            write_output_to_stdout(ai_analysis_result, stats_result, args.destination, args.raw)
     if args.command == "model":
         if args.model_command == "list":
             ollama_models = list_models()
@@ -215,6 +250,5 @@ def run_cli() -> None:
                 delete_model(args.name)
             elif backend == "huggingface":
                 delete_hf_model(args.name)
-    # if args.command == "report":
-    # create_report()
-    # simple_report(args.analysis_file, args.label_file)
+    if args.command == "report":
+        write_report(analyses_dir=args.analyses, output_path=args.output, title=args.title)

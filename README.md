@@ -108,3 +108,7 @@ Claude sonnet 5 with Medium effort has been used for the following tasks:
 
 OpenAI's GPT-5.6 Luna model was used for:
 - Generating the `deftor_icon.png` through the image-generation tool
+
+OpenCode's Big Pickle model was used for:
+- Improving the data collection methods
+- Updating the report-writing methods
