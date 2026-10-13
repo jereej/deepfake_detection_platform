@@ -1,8 +1,5 @@
 __pycache__
 .venv
-test_folder
-analyses
-images
 .mypy_cache
 .pytest_cache
 .ruff_cache
@@ -13,6 +10,8 @@ thesis_data/**/*.mp4
 thesis_data/**/*.png
 thesis_data/**/*.txt
 !thesis_data/analyses
+!thesis_data/report.md
+!thesis_data/analyses/statistics.csv
 .python-versionthesis_data/audio/
 thesis_data/image/
 thesis_data/video/
