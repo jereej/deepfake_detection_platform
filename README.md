@@ -19,10 +19,7 @@ During the installation, DEFTOR asks the user whether they want to install some 
 | :-- | :--- | :------ | :--- | :-- |
 | llava | image | Ollama | 4.7GB | [website](https://ollama.com/library/llava) |
 | gemma3:12b | image | Ollama | 8.1GB | [website](https://ollama.com/library/gemma3:12b) |
-| qwen3.6 | image | Ollama | 22.0GB | [website](https://ollama.com/library/qwen3.6) |
-| minicpm-v4.6 | image | Ollama | 1.6GB | [website](https://ollama.com/library/minicpm-v4.6) |
 | llama3.2-vision:11b | image | Ollama | 7.8GB | [website](https://ollama.com/library/llama3.2-vision:11b) |
-| moondream | image | Ollama | 1.7GB | [website](https://ollama.com/library/moondream)
 | dima806/deepfake_vs_real_image_detection | image | Hugging Face | 3.78GB | [website](https://huggingface.co/dima806/deepfake_vs_real_image_detection) |
 | prithibMLmods/Deep-Fake-Detector-v2-Model | image | Hugging Face | 1.37GB | [website](https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model) |
 | Organika/sdxl-detector | image | Hugging Face | 1.74GB | [website](https://huggingface.co/Organika/sdxl-detector) |
@@ -86,9 +83,24 @@ The DEFTOR repository also contains a `thesis_data` folder, which contains the f
 - `statistics.csv`
   - `.csv` file of all the runs under `analyses`
 
-<!--**Tähän jotain tuosta thesis data osiosta, miten data on hankittu, mistä lähteistä ymstms** + miten voi zipata ja unzipata ymstms-->
-[dataset53](https://huggingface.co/datasets/saakshigupta/deepfake-detection-dataset-v3)
-[dataset100](https://huggingface.co/datasets/itsLeen/deepfake_vs_real_image_detection)
+The datasets that have been used for testing are listed below:
+
+| Name                                                        | Modality | URL |
+| :---------------------------------------------------------- | :------: | :-: |
+| saakshigupta/deepfake-detection-dataset-v3                  | Image    | [URL](https://huggingface.co/datasets/saakshigupta/deepfake-detection-dataset-v3) |
+| itsLeen/deepfake_vs_real_image_detection                    | Image    | [URL](https://huggingface.co/datasets/itsLeen/deepfake_vs_real_image_detection) |
+| dragonintelligence/CIFAKE-image-dataset                     | Image    | [URL](https://huggingface.co/datasets/dragonintelligence/CIFAKE-image-dataset) |
+| Hemg/deepfake-and-real-images                               | Image    | [URL](https://huggingface.co/datasets/Hemg/deepfake-and-real-images) |
+| garystafford/deepfake-audio-detection                       | Audio    | [URL](https://huggingface.co/datasets/garystafford/deepfake-audio-detection) |
+| Hemg/Deepfakeaudio                                          | Audio    | [URL](https://huggingface.co/datasets/Hemg/Deepfakeaudio) |
+| DeepFake-Audio-Rangers/Arabic_Audio_Deepfake                | Audio    | [URL](https://huggingface.co/datasets/DeepFake-Audio-Rangers/Arabic_Audio_Deepfake) |
+| Hemgg/SDFVD-video-dataset                                   | Video    | [URL](https://huggingface.co/datasets/Hemgg/SDFVD-video-dataset) |
+| Hemgg/deep-fake-detection-dfd-entire-original-dataset       | Video    | [URL](https://huggingface.co/datasets/Hemgg/deep-fake-detection-dfd-entire-original-dataset) |
+| dmitva/human_ai_generated_text                              | Text     | [URL](https://huggingface.co/datasets/dmitva/human_ai_generated_text) |
+
+If a dataset has more than 100 items, a random subset of 100 items with a goal of 50 deepfake and 50 real items was taken and used in the analysis. DEFTOR is not necessarily designed to analyze thousands of images at a time (even though it supports it as well as the model-at-hand does), 100 images was deemed a good sample size for the analysis.
+
+To run the tests with the files under `thesis_data`, all you have to do is first `unzip` the contents, and then run `./thesis_test.sh` from the `thesis_data` folder.
 
 ## AI-usage disclosure
 AI has been used during the development of DEFTOR.

@@ -41,17 +41,13 @@ analyze() {
 
 # Image analysis section
 echo "=== Image analysis ==="
-# minicpm-v4.6
-for model in qwen3.6; do
-    analyze image/qwen_dataset/ \
-        qwen_dataset \
-        image/qwen_dataset/labels.txt \
-        "$(echo "$model" | tr ':.' '--')-qwendataset-analysis" \
+for model in llava gemma3:12b llama3.2-vision:11b; do
+    analyze image/dataset_53/ \
+        dataset_53 \
+        image/dataset_53/labels.txt \
+        "$(echo "$model" | tr ':.' '--')-dataset53-analysis" \
         "$model"
 done
-
-# NOTE: moondream is excluded. It truncated its output on 107 of the 153 dataset_53
-# items and returns no usable logprobs, so it cannot contribute AUROC/AUPRC/TPR@FPR.
 
 for model in \
     dima806/deepfake_vs_real_image_detection \
@@ -64,7 +60,6 @@ for model in \
         "$model"
 done
 
-# minicpm-v4.6
 for model in llava gemma3:12b  llama3.2-vision:11b; do
     analyze image/dataset_100/ \
         dataset_100 \
@@ -85,7 +80,6 @@ for model in \
         "$model"
 done
 
-# minicpm-v4.6
 for model in llava gemma3:12b  llama3.2-vision:11b; do
     analyze image/cifake/ \
         cifake \
@@ -106,7 +100,6 @@ for model in \
         "$model"
 done
 
-# minicpm-v4.6
 for model in llava gemma3:12b  llama3.2-vision:11b; do
     analyze image/hemg-images/ \
         hemg-images \
@@ -159,7 +152,7 @@ echo "=== Text analysis ==="
 # image/audio/video), so text is Ollama-only. These are the text-capable LLMs
 # that are already pulled locally. labels.txt is excluded from the items by
 # DEFTOR itself, since it shares the .txt media extension.
-for model in gemma3:12b qwen3.6 llama3.2-vision:11b; do
+for model in gemma3:12b llama3.2-vision:11b; do
     analyze text/human-ai-text/ \
         human-ai-text \
         text/human-ai-text/labels.txt \

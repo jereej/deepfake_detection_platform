@@ -132,39 +132,12 @@ DEFAULT_MODELS: list[dict] = [
         },
     },
     {
-        "name": "qwen3.6",
-        "info": {
-            "size": 22.0,  # GB
-            "input": "image",
-            "backend": "ollama",
-            "link": "https://ollama.com/library/qwen3.6",
-        },
-    },
-    {
-        "name": "minicpm-v4.6",
-        "info": {
-            "size": 1.6,  # GB
-            "input": "image",
-            "backend": "ollama",
-            "link": "https://ollama.com/library/minicpm-v4.6",
-        },
-    },
-    {
         "name": "llama3.2-vision:11b",
         "info": {
             "size": 7.8,  # GB
             "input": "image",
             "backend": "ollama",
             "link": "https://ollama.com/library/llama3.2-vision:11b",
-        },
-    },
-    {
-        "name": "moondream",
-        "info": {
-            "size": 1.7,  # GB
-            "input": "image",
-            "backend": "ollama",
-            "link": "https://ollama.com/library/moondream",
         },
     },
     {
