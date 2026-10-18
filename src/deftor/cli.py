@@ -198,7 +198,7 @@ def run_cli() -> None:
                 if not download_hf_model(args.model):
                     return
         if args.format and not args.output:
-            print("-f given without -o, please specify a filename to write output into a file. Outputting into stdout")
+            print("-f given without -o, please specify a filename to write output into a file.")
             return
         if args.output:
             if not validate_output_argument(args.output):
