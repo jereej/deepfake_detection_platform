@@ -46,7 +46,7 @@ def run_cli() -> None:
         "--output",
         type=str.strip,
         required=False,
-        help="Output filename without file extension. Without this parameter, output is directed to stdout."
+        help="Output filename without file extension. Without this parameter, output is directed to stdout. "
         "Also includes a timestamp in the YYYYMMDDHHMMSS format",
     )
     analyze_parser.add_argument(
@@ -143,7 +143,7 @@ def run_cli() -> None:
         required=False,
         help="Force the model backend through this argument. Usually it is automatically detected"
         " from the model name (e.g. 'llava' or 'llava:latest' -> ollama, 'user/model-name' -> huggingface)"
-        ". Some HF models might not use / and that is when this argument should be givenSome Ollama "
+        ". Some HF models might not use / and that is when this argument should be given. Some Ollama "
         "models also support / in the name so it works there as well.",
     )
 
