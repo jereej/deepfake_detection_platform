@@ -21,7 +21,7 @@ During the installation, DEFTOR asks the user whether they want to install some 
 | [gemma3:12b](https://ollama.com/library/gemma3:12b) | image | Ollama | 8.1GB |
 | [llama3.2-vision:11b](https://ollama.com/library/llama3.2-vision:11b) | image | Ollama | 7.8GB |
 | [dima806/deepfake_vs_real_image_detection](https://huggingface.co/dima806/deepfake_vs_real_image_detection) | image | Hugging Face | 3.78GB |
-| [prithibMLmods/Deep-Fake-Detector-v2-Model](https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model) | image | Hugging Face | 1.37GB |
+| [prithivMLmods/Deep-Fake-Detector-v2-Model](https://huggingface.co/prithivMLmods/Deep-Fake-Detector-v2-Model) | image | Hugging Face | 1.37GB |
 | [Organika/sdxl-detector](https://huggingface.co/Organika/sdxl-detector) | image | Hugging Face | 1.74GB |
 | [mo-thecreator/Deepfake-audio-detection](https://huggingface.co/mo-thecreator/Deepfake-audio-detection) | audio | Hugging Face | 0.379GB |
 | [Hemgg/Deepfake-audio-detection](https://huggingface.co/Hemgg/Deepfake-audio-detection) | audio | Hugging Face | 0.378GB |
