@@ -1,6 +1,6 @@
 # None
 
-_Generated 2026-10-28 15:35 UTC_
+_Generated 2026-10-28 15:52 UTC_
 
 DEEPFAKE is the positive class. One table per dataset follows; use those to compare
 models. Repeat runs of the same model on the same dataset are pooled into one row, so
@@ -100,7 +100,7 @@ _image, 100 item(s) (50 DEEPFAKE / 50 REAL), 5 model(s). Repeat runs of a model 
 | dima806/deepfake_vs_real_image_detection  |        1 | 100 |   50 |   49 |    1 |    0 | 99.0%      | 98.0%       | 100.0%   | 99.0% | 99.6%   | 99.6%   | 100.0%        | 100.0%       |
 | gemma3:12b                                |        1 | 100 |   23 |   39 |   11 |   27 | 62.0%      | 67.6%       | 46.0%    | 54.8% | n/a     | n/a     | n/a           | n/a          |
 | llava                                     |        1 | 100 |   26 |   31 |   19 |   24 | 57.0%      | 57.8%       | 52.0%    | 54.7% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |    3 |    1 |   49 |   47 | 4.0%       | 5.8%        | 6.0%     | 5.9%  | 0.9%    | 31.2%   | 0.0%          | 0.0%         |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   49 |   47 |    3 |    1 | 96.0%      | 94.2%       | 98.0%    | 96.1% | 99.1%   | 99.0%   | 98.0%         | 98.0%        |
 
 ## Models per media type
 
@@ -116,7 +116,7 @@ better than one evaluated everywhere. Use the per-dataset tables above for compa
 | dima806/deepfake_vs_real_image_detection  | huggingface | all (4)   | image        |            4 |        4 | 353 |   74 |  145 |   14 |  120 | 62.0%      | 84.1%       | 38.1%    | 52.5% | 71.1%   | 78.1%   | 30.4%         | 39.7%        |
 | gemma3:12b                                | ollama      | all (4)   | image        |            4 |        4 | 353 |  130 |   79 |   80 |   64 | 59.2%      | 61.9%       | 67.0%    | 64.4% | n/a     | n/a     | n/a           | n/a          |
 | llava                                     | ollama      | all (4)   | image        |            4 |        4 | 353 |   76 |  109 |   50 |  118 | 52.4%      | 60.3%       | 39.2%    | 47.5% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  145 |    5 |  154 |   49 | 42.5%      | 48.5%       | 74.7%    | 58.8% | 36.8%   | 48.0%   | 0.0%          | 3.6%         |
+| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  191 |   51 |  108 |    3 | 68.6%      | 63.9%       | 98.5%    | 77.5% | 80.2%   | 84.8%   | 42.3%         | 45.9%        |
 | Vansh180/VideoMae-ffc23-deepfake-detector | huggingface | all (2)   | video        |            2 |        2 | 206 |   66 |   39 |   64 |   37 | 51.0%      | 50.8%       | 64.1%    | 56.7% | 50.0%   | 50.2%   | 2.9%          | 9.7%         |
 
 ## Coverage
