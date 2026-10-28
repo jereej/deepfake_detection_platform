@@ -7,7 +7,7 @@
     "media_type": "image",
     "dataset": "dataset_100",
     "labels_file": "image/dataset_100/labels.txt",
-    "positive_label": "1",
+    "positive_label": "0",
     "number_of_items": 100,
     "number_succeeded": 100,
     "number_failed": 0,
@@ -170,7 +170,7 @@
       "evidence": [
         "Unnatural smoothness of petals and textures.",
         "Lack of fine detail on the stamen/center of the flower.",
-        "Slightly uniform lighting across the flower\u2019s surface.",
+        "Slightly uniform lighting across the flower’s surface.",
         "Leaves appear overly symmetrical/idealized."
       ],
       "label": "0",
@@ -269,7 +269,7 @@
       "media_type": "image",
       "evidence": [
         "Unnatural fur texture - repetitive and uniform brushstrokes.",
-        "Lack of realistic eye detail \u2013 appears flat and lacks subtle reflections.",
+        "Lack of realistic eye detail – appears flat and lacks subtle reflections.",
         "Inconsistent lighting across the face, hinting at composite elements.",
         "Slightly softened or blurred edges around the facial features."
       ],
@@ -887,7 +887,7 @@
       "raw_label": null,
       "media_type": "image",
       "evidence": [
-        "Unnatural lighting and shadows across the ship\u2019s hull.",
+        "Unnatural lighting and shadows across the ship’s hull.",
         "Lack of detail in distant shoreline details.",
         "Repetitive textures on containers suggest AI upscaling/generation.",
         "Overall image appears overly smooth and lacking micro-detail characteristic of real photographs."
@@ -1509,7 +1509,7 @@
       "evidence": [
         "Unnatural water surface reflection - lacks realistic distortion and detail.",
         "Irregularities in shark skin texture - inconsistent scale rendering.",
-        "Anatomical anomalies around the mouth \u2013 overly-perfect teeth alignment, unnatural gum color.",
+        "Anatomical anomalies around the mouth – overly-perfect teeth alignment, unnatural gum color.",
         "Lack of natural light scattering within the water volume - appears uniformly lit."
       ],
       "label": "0",

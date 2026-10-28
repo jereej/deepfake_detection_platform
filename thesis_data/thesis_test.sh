@@ -25,6 +25,16 @@ analyze() {
     local model="$5"
     shift 5
 
+    local positive_label="0"
+    case "$dataset_name" in
+        deepfake-audio-detection|dfd-video)
+            positive_label="1"
+            ;;
+        *)
+            positive_label="0"
+            ;;
+    esac
+
     echo "${dataset_name} analysis with ${model}"
 
     deftor analyze "$dataset_dir" \
@@ -34,7 +44,7 @@ analyze() {
         -d "$DESTINATION" \
         --dataset "$dataset_name" \
         --labels "$labels_file" \
-        --positive-label 1 \
+        --positive-label "$positive_label" \
         "$@"
 }
 

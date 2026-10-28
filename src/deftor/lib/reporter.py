@@ -89,23 +89,23 @@ def iter_analyses(analyses_dir: str | Path) -> list[dict[str, Any]]:
 
 
 def label_to_binary(raw_label: Any, positive_label: Any) -> int | None:
-    """Maps a ground-truth label onto 1 (DEEPFAKE) / 0 (REAL).
+    """Maps a ground-truth label onto 1 (DEEPFAKE/positive) / 0 (REAL/negative).
 
     The positive label is whatever --positive-label said for that dataset, which may be a
-    number ("1") or a word ("fake"). Exact match wins; anything unrecognised returns None so
-    the item is excluded rather than silently counted as REAL.
+    number ("1") or a word ("fake"). Exact match wins; fallbacks only apply relative to
+    the declared positive_label so inverted numeric conventions are handled correctly.
     """
     if raw_label is None or positive_label is None:
         return None
     raw = str(raw_label).strip()
     positive = str(positive_label).strip()
-    if not raw:
+    if not raw or not positive:
         return None
-    if positive and raw.casefold() == positive.casefold():
+    if raw.casefold() == positive.casefold():
         return 1
-    if raw == "1":
-        return 1
-    if raw == "0":
+    if positive == "1" and raw == "0":
+        return 0
+    if positive == "0" and raw == "1":
         return 0
     return None
 

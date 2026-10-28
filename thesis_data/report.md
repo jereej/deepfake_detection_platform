@@ -1,6 +1,6 @@
-# None
+# DEFTOR Model Performance Report
 
-_Generated 2026-10-04 08:36 UTC_
+_Generated 2026-10-28 13:27 UTC_
 
 DEEPFAKE is the positive class. One table per dataset follows; use those to compare
 models. Repeat runs of the same model on the same dataset are pooled into one row, so
@@ -14,7 +14,7 @@ _video, 106 item(s) (53 DEEPFAKE / 53 REAL). Repeat runs of a model are pooled i
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Vansh180/VideoMae-ffc23-deepfake-detector |        1 | 106 |   44 |    5 |   48 |    9 | 46.2%      | 47.8%       | 83.0%    | 60.7% | 51.3%   | 51.6%   | 5.7%          | 9.4%         |
+| Vansh180/VideoMae-ffc23-deepfake-detector |        1 | 106 |   48 |    9 |   44 |    5 | 53.8%      | 52.2%       | 90.6%    | 66.2% | 48.7%   | 51.3%   | 3.8%          | 11.3%        |
 
 ### arad-audio
 
@@ -22,9 +22,9 @@ _audio, 100 item(s) (50 DEEPFAKE / 50 REAL), 3 model(s). Repeat runs of a model 
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Hemgg/Deepfake-audio-detection            |        1 | 100 |   41 |    5 |   45 |    9 | 46.0%      | 47.7%       | 82.0%    | 60.3% | 41.2%   | 43.5%   | 0.0%          | 2.0%         |
-| MelodyMachine/Deepfake-audio-detection-V2 |        1 | 100 |   26 |   37 |   13 |   24 | 63.0%      | 66.7%       | 52.0%    | 58.4% | 64.6%   | 67.1%   | 16.0%         | 30.0%        |
-| mo-thecreator/Deepfake-audio-detection    |        1 | 100 |   34 |   15 |   35 |   16 | 49.0%      | 49.3%       | 68.0%    | 57.1% | 51.4%   | 53.0%   | 4.0%          | 12.0%        |
+| Hemgg/Deepfake-audio-detection            |        1 | 100 |   45 |    9 |   41 |    5 | 54.0%      | 52.3%       | 90.0%    | 66.2% | 58.8%   | 62.8%   | 18.0%         | 28.0%        |
+| MelodyMachine/Deepfake-audio-detection-V2 |        1 | 100 |   13 |   24 |   26 |   37 | 37.0%      | 33.3%       | 26.0%    | 29.2% | 35.4%   | 40.7%   | 0.0%          | 4.0%         |
+| mo-thecreator/Deepfake-audio-detection    |        1 | 100 |   35 |   16 |   34 |   15 | 51.0%      | 50.7%       | 70.0%    | 58.8% | 48.6%   | 49.2%   | 2.0%          | 8.0%         |
 
 ### cifake
 
@@ -32,35 +32,35 @@ _image, 100 item(s) (50 DEEPFAKE / 50 REAL), 5 model(s). Repeat runs of a model 
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Organika/sdxl-detector                    |        1 | 100 |   13 |   46 |    4 |   37 | 59.0%      | 76.5%       | 26.0%    | 38.8% | 68.7%   | 70.8%   | 22.0%         | 26.0%        |
-| dima806/deepfake_vs_real_image_detection  |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 45.7%   | 50.0%   | 8.0%          | 10.0%        |
-| gemma3:12b                                |        1 | 100 |   45 |    0 |   50 |    5 | 45.0%      | 47.4%       | 90.0%    | 62.1% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     |        1 | 100 |   17 |   40 |   10 |   33 | 57.0%      | 63.0%       | 34.0%    | 44.2% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   50 |    2 |   48 |    0 | 52.0%      | 51.0%       | 100.0%   | 67.6% | 47.3%   | 50.6%   | 4.0%          | 8.0%         |
+| Organika/sdxl-detector                    |        1 | 100 |    4 |   37 |   13 |   46 | 41.0%      | 23.5%       | 8.0%     | 11.9% | 31.3%   | 39.2%   | 0.0%          | 0.0%         |
+| dima806/deepfake_vs_real_image_detection  |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 54.3%   | 53.1%   | 4.0%          | 12.0%        |
+| gemma3:12b                                |        1 | 100 |   50 |    5 |   45 |    0 | 55.0%      | 52.6%       | 100.0%   | 69.0% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     |        1 | 100 |   10 |   33 |   17 |   40 | 43.0%      | 37.0%       | 20.0%    | 26.0% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   48 |    0 |   50 |    2 | 48.0%      | 49.0%       | 96.0%    | 64.9% | 52.7%   | 52.9%   | 6.0%          | 12.0%        |
 
 ### dataset_100
 
-_image, 100 item(s) (47 DEEPFAKE / 53 REAL), 5 model(s). Repeat runs of a model are pooled into one row._
+_image, 100 item(s) (53 DEEPFAKE / 47 REAL), 5 model(s). Repeat runs of a model are pooled into one row._
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Organika/sdxl-detector                    |        1 | 100 |   10 |    8 |   45 |   37 | 18.0%      | 18.2%       | 21.3%    | 19.6% | 9.0%    | 30.0%   | 0.0%          | 0.0%         |
-| dima806/deepfake_vs_real_image_detection  |        1 | 100 |    7 |   39 |   14 |   40 | 46.0%      | 33.3%       | 14.9%    | 20.6% | 48.2%   | 48.0%   | 6.4%          | 10.6%        |
-| gemma3:12b                                |        1 | 100 |   12 |   25 |   28 |   35 | 37.0%      | 30.0%       | 25.5%    | 27.6% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     |        1 | 100 |    9 |   37 |   16 |   38 | 46.0%      | 36.0%       | 19.1%    | 25.0% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   45 |    0 |   53 |    2 | 45.0%      | 45.9%       | 95.7%    | 62.1% | 43.0%   | 45.8%   | 4.3%          | 14.9%        |
+| Organika/sdxl-detector                    |        1 | 100 |   45 |   37 |   10 |    8 | 82.0%      | 81.8%       | 84.9%    | 83.3% | 91.0%   | 92.9%   | 64.2%         | 69.8%        |
+| dima806/deepfake_vs_real_image_detection  |        1 | 100 |   14 |   40 |    7 |   39 | 54.0%      | 66.7%       | 26.4%    | 37.8% | 51.8%   | 55.4%   | 1.9%          | 9.4%         |
+| gemma3:12b                                |        1 | 100 |   28 |   35 |   12 |   25 | 63.0%      | 70.0%       | 52.8%    | 60.2% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     |        1 | 100 |   16 |   38 |    9 |   37 | 54.0%      | 64.0%       | 30.2%    | 41.0% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   53 |    2 |   45 |    0 | 55.0%      | 54.1%       | 100.0%   | 70.2% | 57.0%   | 57.4%   | 7.5%          | 7.5%         |
 
 ### dataset_53
 
-_image, 53 item(s) (12 DEEPFAKE / 41 REAL), 5 model(s). Repeat runs of a model are pooled into one row._
+_image, 53 item(s) (41 DEEPFAKE / 12 REAL), 5 model(s). Repeat runs of a model are pooled into one row._
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Organika/sdxl-detector                    |        1 |  53 |    2 |   16 |   25 |   10 | 34.0%      | 7.4%        | 16.7%    | 10.3% | 43.1%   | 41.7%   | 16.7%         | 16.7%        |
-| dima806/deepfake_vs_real_image_detection  |        1 |  53 |    2 |   35 |    6 |   10 | 69.8%      | 25.0%       | 16.7%    | 20.0% | 81.7%   | 64.3%   | 16.7%         | 16.7%        |
-| gemma3:12b                                |        1 |  53 |   12 |   12 |   29 |    0 | 45.3%      | 29.3%       | 100.0%   | 45.3% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     |        1 |  53 |    5 |   17 |   24 |    7 | 41.5%      | 17.2%       | 41.7%    | 24.4% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 |  53 |   10 |    0 |   41 |    2 | 18.9%      | 19.6%       | 83.3%    | 31.7% | 0.0%    | 20.1%   | 0.0%          | 0.0%         |
+| Organika/sdxl-detector                    |        1 |  53 |   25 |   10 |    2 |   16 | 66.0%      | 92.6%       | 61.0%    | 73.5% | 56.9%   | 82.9%   | n/a           | 0.0%         |
+| dima806/deepfake_vs_real_image_detection  |        1 |  53 |    6 |   10 |    2 |   35 | 30.2%      | 75.0%       | 14.6%    | 24.5% | 18.3%   | 71.1%   | n/a           | 0.0%         |
+| gemma3:12b                                |        1 |  53 |   29 |    0 |   12 |   12 | 54.7%      | 70.7%       | 70.7%    | 70.7% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     |        1 |  53 |   24 |    7 |    5 |   17 | 58.5%      | 82.8%       | 58.5%    | 68.6% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 |  53 |   41 |    2 |   10 |    0 | 81.1%      | 80.4%       | 100.0%   | 89.1% | 100.0%  | 100.0%  | n/a           | 100.0%       |
 
 ### deepfake-audio-detection
 
@@ -82,13 +82,13 @@ _video, 100 item(s) (50 DEEPFAKE / 50 REAL). Repeat runs of a model are pooled i
 
 ### hemg-deepfakeaudio
 
-_audio, 100 item(s) (51 DEEPFAKE / 49 REAL), 3 model(s). Repeat runs of a model are pooled into one row._
+_audio, 100 item(s) (49 DEEPFAKE / 51 REAL), 3 model(s). Repeat runs of a model are pooled into one row._
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1   | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:-----|:--------|:--------|:--------------|:-------------|
-| Hemgg/Deepfake-audio-detection            |        1 | 100 |    0 |   49 |    0 |   51 | 49.0%      | n/a         | 0.0%     | n/a  | 54.2%   | 58.1%   | 5.9%          | 19.6%        |
-| MelodyMachine/Deepfake-audio-detection-V2 |        1 | 100 |    0 |   49 |    0 |   51 | 49.0%      | n/a         | 0.0%     | n/a  | 57.5%   | 55.8%   | 0.0%          | 9.8%         |
-| mo-thecreator/Deepfake-audio-detection    |        1 | 100 |    0 |   49 |    0 |   51 | 49.0%      | n/a         | 0.0%     | n/a  | 77.2%   | 74.7%   | 29.4%         | 37.3%        |
+| Hemgg/Deepfake-audio-detection            |        1 | 100 |    0 |   51 |    0 |   49 | 51.0%      | n/a         | 0.0%     | n/a  | 45.8%   | 45.9%   | 4.1%          | 6.1%         |
+| MelodyMachine/Deepfake-audio-detection-V2 |        1 | 100 |    0 |   51 |    0 |   49 | 51.0%      | n/a         | 0.0%     | n/a  | 42.5%   | 48.4%   | 6.1%          | 8.2%         |
+| mo-thecreator/Deepfake-audio-detection    |        1 | 100 |    0 |   51 |    0 |   49 | 51.0%      | n/a         | 0.0%     | n/a  | 22.8%   | 36.9%   | 2.0%          | 2.0%         |
 
 ### hemg-images
 
@@ -96,11 +96,11 @@ _image, 100 item(s) (50 DEEPFAKE / 50 REAL), 5 model(s). Repeat runs of a model 
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Organika/sdxl-detector                    |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 53.3%   | 56.4%   | 2.0%          | 26.0%        |
-| dima806/deepfake_vs_real_image_detection  |        1 | 100 |   50 |   49 |    1 |    0 | 99.0%      | 98.0%       | 100.0%   | 99.0% | 99.6%   | 99.6%   | 100.0%        | 100.0%       |
-| gemma3:12b                                |        1 | 100 |   23 |   39 |   11 |   27 | 62.0%      | 67.6%       | 46.0%    | 54.8% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     |        1 | 100 |   26 |   31 |   19 |   24 | 57.0%      | 57.8%       | 52.0%    | 54.7% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |    3 |    1 |   49 |   47 | 4.0%       | 5.8%        | 6.0%     | 5.9%  | 0.9%    | 31.2%   | 0.0%          | 0.0%         |
+| Organika/sdxl-detector                    |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 46.7%   | 47.9%   | 6.0%          | 8.0%         |
+| dima806/deepfake_vs_real_image_detection  |        1 | 100 |    1 |    0 |   50 |   49 | 1.0%       | 2.0%        | 2.0%     | 2.0%  | 0.4%    | 31.2%   | 0.0%          | 0.0%         |
+| gemma3:12b                                |        1 | 100 |   11 |   27 |   23 |   39 | 38.0%      | 32.4%       | 22.0%    | 26.2% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     |        1 | 100 |   19 |   24 |   26 |   31 | 43.0%      | 42.2%       | 38.0%    | 40.0% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   49 |   47 |    3 |    1 | 96.0%      | 94.2%       | 98.0%    | 96.1% | 99.1%   | 99.0%   | 98.0%         | 98.0%        |
 
 ## Models per media type
 
@@ -109,15 +109,15 @@ better than one evaluated everywhere. Use the per-dataset tables above for compa
 
 | model                                     | backend     | dataset   | media_type   |   n_datasets |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|:------------|:----------|:-------------|-------------:|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Hemgg/Deepfake-audio-detection            | huggingface | all (3)   | audio        |            3 |        3 | 300 |   78 |   76 |   70 |   76 | 51.3%      | 52.7%       | 50.6%    | 51.7% | 50.8%   | 49.7%   | 1.3%          | 4.5%         |
-| MelodyMachine/Deepfake-audio-detection-V2 | huggingface | all (3)   | audio        |            3 |        3 | 300 |   30 |  130 |   16 |  124 | 53.3%      | 65.2%       | 19.5%    | 30.0% | 55.8%   | 58.4%   | 9.7%          | 18.2%        |
-| mo-thecreator/Deepfake-audio-detection    | huggingface | all (3)   | audio        |            3 |        3 | 300 |   71 |   98 |   48 |   83 | 56.3%      | 59.7%       | 46.1%    | 52.0% | 61.8%   | 60.1%   | 11.0%         | 18.8%        |
-| Organika/sdxl-detector                    | huggingface | all (4)   | image        |            4 |        4 | 353 |   29 |  116 |   78 |  130 | 41.1%      | 27.1%       | 18.2%    | 21.8% | 37.0%   | 36.1%   | 0.0%          | 0.0%         |
-| dima806/deepfake_vs_real_image_detection  | huggingface | all (4)   | image        |            4 |        4 | 353 |   63 |  169 |   25 |   96 | 65.7%      | 71.6%       | 39.6%    | 51.0% | 75.9%   | 74.8%   | 34.6%         | 39.0%        |
-| gemma3:12b                                | ollama      | all (4)   | image        |            4 |        4 | 353 |   92 |   76 |  118 |   67 | 47.6%      | 43.8%       | 57.9%    | 49.9% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     | ollama      | all (4)   | image        |            4 |        4 | 353 |   57 |  125 |   69 |  102 | 51.6%      | 45.2%       | 35.8%    | 40.0% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  108 |    3 |  191 |   51 | 31.4%      | 36.1%       | 67.9%    | 47.2% | 19.8%   | 30.7%   | 0.0%          | 0.0%         |
-| Vansh180/VideoMae-ffc23-deepfake-detector | huggingface | all (2)   | video        |            2 |        2 | 206 |   62 |   35 |   68 |   41 | 47.1%      | 47.7%       | 60.2%    | 53.2% | 50.7%   | 50.2%   | 4.9%          | 7.8%         |
+| Hemgg/Deepfake-audio-detection            | huggingface | all (3)   | audio        |            3 |        3 | 300 |   82 |   82 |   66 |   70 | 54.7%      | 55.4%       | 53.9%    | 54.7% | 55.7%   | 57.2%   | 10.5%         | 16.4%        |
+| MelodyMachine/Deepfake-audio-detection-V2 | huggingface | all (3)   | audio        |            3 |        3 | 300 |   17 |  119 |   29 |  135 | 45.3%      | 37.0%       | 11.2%    | 17.2% | 46.6%   | 46.7%   | 1.3%          | 3.3%         |
+| mo-thecreator/Deepfake-audio-detection    | huggingface | all (3)   | audio        |            3 |        3 | 300 |   72 |  101 |   47 |   80 | 57.7%      | 60.5%       | 47.4%    | 53.1% | 55.4%   | 55.9%   | 4.6%          | 11.8%        |
+| Organika/sdxl-detector                    | huggingface | all (4)   | image        |            4 |        4 | 353 |   78 |  130 |   29 |  116 | 58.9%      | 72.9%       | 40.2%    | 51.8% | 63.0%   | 71.4%   | 19.1%         | 25.3%        |
+| dima806/deepfake_vs_real_image_detection  | huggingface | all (4)   | image        |            4 |        4 | 353 |   25 |   96 |   63 |  169 | 34.3%      | 28.4%       | 12.9%    | 17.7% | 24.1%   | 40.6%   | 0.0%          | 0.0%         |
+| gemma3:12b                                | ollama      | all (4)   | image        |            4 |        4 | 353 |  118 |   67 |   92 |   76 | 52.4%      | 56.2%       | 60.8%    | 58.4% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     | ollama      | all (4)   | image        |            4 |        4 | 353 |   69 |  102 |   57 |  125 | 48.4%      | 54.8%       | 35.6%    | 43.1% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  191 |   51 |  108 |    3 | 68.6%      | 63.9%       | 98.5%    | 77.5% | 80.2%   | 84.8%   | 42.3%         | 45.9%        |
+| Vansh180/VideoMae-ffc23-deepfake-detector | huggingface | all (2)   | video        |            2 |        2 | 206 |   66 |   39 |   64 |   37 | 51.0%      | 50.8%       | 64.1%    | 56.7% | 50.0%   | 50.2%   | 2.9%          | 9.7%         |
 
 ## Coverage
 

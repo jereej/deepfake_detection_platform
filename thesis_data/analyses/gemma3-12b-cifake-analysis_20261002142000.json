@@ -7,7 +7,7 @@
     "media_type": "image",
     "dataset": "cifake",
     "labels_file": "image/cifake/labels.txt",
-    "positive_label": "1",
+    "positive_label": "0",
     "number_of_items": 100,
     "number_succeeded": 100,
     "number_failed": 0,
@@ -1148,7 +1148,7 @@
         "Blurry texture and lack of fine detail across the image.",
         "Unnatural color palette; deer's fur appears overly saturated/artificial.",
         "Inconsistent background depth-of-field suggesting a composite image.",
-        "Slight warping or distortions in the animal\u2019s form."
+        "Slight warping or distortions in the animal’s form."
       ],
       "label": "1",
       "file_size_in_bytes": 2309,
