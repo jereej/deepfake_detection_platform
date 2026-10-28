@@ -1,6 +1,6 @@
-# DEFTOR Model Performance Report
+# None
 
-_Generated 2026-10-28 13:27 UTC_
+_Generated 2026-10-28 15:35 UTC_
 
 DEEPFAKE is the positive class. One table per dataset follows; use those to compare
 models. Repeat runs of the same model on the same dataset are pooled into one row, so
@@ -96,11 +96,11 @@ _image, 100 item(s) (50 DEEPFAKE / 50 REAL), 5 model(s). Repeat runs of a model 
 
 | model                                     |   n_runs |   n |   tp |   tn |   fp |   fn | accuracy   | precision   | recall   | f1    | auroc   | auprc   | tpr@fpr0.05   | tpr@fpr0.1   |
 |:------------------------------------------|---------:|----:|-----:|-----:|-----:|-----:|:-----------|:------------|:---------|:------|:--------|:--------|:--------------|:-------------|
-| Organika/sdxl-detector                    |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 46.7%   | 47.9%   | 6.0%          | 8.0%         |
-| dima806/deepfake_vs_real_image_detection  |        1 | 100 |    1 |    0 |   50 |   49 | 1.0%       | 2.0%        | 2.0%     | 2.0%  | 0.4%    | 31.2%   | 0.0%          | 0.0%         |
-| gemma3:12b                                |        1 | 100 |   11 |   27 |   23 |   39 | 38.0%      | 32.4%       | 22.0%    | 26.2% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     |        1 | 100 |   19 |   24 |   26 |   31 | 43.0%      | 42.2%       | 38.0%    | 40.0% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |   49 |   47 |    3 |    1 | 96.0%      | 94.2%       | 98.0%    | 96.1% | 99.1%   | 99.0%   | 98.0%         | 98.0%        |
+| Organika/sdxl-detector                    |        1 | 100 |    4 |   46 |    4 |   46 | 50.0%      | 50.0%       | 8.0%     | 13.8% | 53.3%   | 56.4%   | 2.0%          | 26.0%        |
+| dima806/deepfake_vs_real_image_detection  |        1 | 100 |   50 |   49 |    1 |    0 | 99.0%      | 98.0%       | 100.0%   | 99.0% | 99.6%   | 99.6%   | 100.0%        | 100.0%       |
+| gemma3:12b                                |        1 | 100 |   23 |   39 |   11 |   27 | 62.0%      | 67.6%       | 46.0%    | 54.8% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     |        1 | 100 |   26 |   31 |   19 |   24 | 57.0%      | 57.8%       | 52.0%    | 54.7% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model |        1 | 100 |    3 |    1 |   49 |   47 | 4.0%       | 5.8%        | 6.0%     | 5.9%  | 0.9%    | 31.2%   | 0.0%          | 0.0%         |
 
 ## Models per media type
 
@@ -112,11 +112,11 @@ better than one evaluated everywhere. Use the per-dataset tables above for compa
 | Hemgg/Deepfake-audio-detection            | huggingface | all (3)   | audio        |            3 |        3 | 300 |   82 |   82 |   66 |   70 | 54.7%      | 55.4%       | 53.9%    | 54.7% | 55.7%   | 57.2%   | 10.5%         | 16.4%        |
 | MelodyMachine/Deepfake-audio-detection-V2 | huggingface | all (3)   | audio        |            3 |        3 | 300 |   17 |  119 |   29 |  135 | 45.3%      | 37.0%       | 11.2%    | 17.2% | 46.6%   | 46.7%   | 1.3%          | 3.3%         |
 | mo-thecreator/Deepfake-audio-detection    | huggingface | all (3)   | audio        |            3 |        3 | 300 |   72 |  101 |   47 |   80 | 57.7%      | 60.5%       | 47.4%    | 53.1% | 55.4%   | 55.9%   | 4.6%          | 11.8%        |
-| Organika/sdxl-detector                    | huggingface | all (4)   | image        |            4 |        4 | 353 |   78 |  130 |   29 |  116 | 58.9%      | 72.9%       | 40.2%    | 51.8% | 63.0%   | 71.4%   | 19.1%         | 25.3%        |
-| dima806/deepfake_vs_real_image_detection  | huggingface | all (4)   | image        |            4 |        4 | 353 |   25 |   96 |   63 |  169 | 34.3%      | 28.4%       | 12.9%    | 17.7% | 24.1%   | 40.6%   | 0.0%          | 0.0%         |
-| gemma3:12b                                | ollama      | all (4)   | image        |            4 |        4 | 353 |  118 |   67 |   92 |   76 | 52.4%      | 56.2%       | 60.8%    | 58.4% | n/a     | n/a     | n/a           | n/a          |
-| llava                                     | ollama      | all (4)   | image        |            4 |        4 | 353 |   69 |  102 |   57 |  125 | 48.4%      | 54.8%       | 35.6%    | 43.1% | n/a     | n/a     | n/a           | n/a          |
-| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  191 |   51 |  108 |    3 | 68.6%      | 63.9%       | 98.5%    | 77.5% | 80.2%   | 84.8%   | 42.3%         | 45.9%        |
+| Organika/sdxl-detector                    | huggingface | all (4)   | image        |            4 |        4 | 353 |   78 |  130 |   29 |  116 | 58.9%      | 72.9%       | 40.2%    | 51.8% | 65.0%   | 72.4%   | 19.1%         | 25.8%        |
+| dima806/deepfake_vs_real_image_detection  | huggingface | all (4)   | image        |            4 |        4 | 353 |   74 |  145 |   14 |  120 | 62.0%      | 84.1%       | 38.1%    | 52.5% | 71.1%   | 78.1%   | 30.4%         | 39.7%        |
+| gemma3:12b                                | ollama      | all (4)   | image        |            4 |        4 | 353 |  130 |   79 |   80 |   64 | 59.2%      | 61.9%       | 67.0%    | 64.4% | n/a     | n/a     | n/a           | n/a          |
+| llava                                     | ollama      | all (4)   | image        |            4 |        4 | 353 |   76 |  109 |   50 |  118 | 52.4%      | 60.3%       | 39.2%    | 47.5% | n/a     | n/a     | n/a           | n/a          |
+| prithivMLmods/Deep-Fake-Detector-v2-Model | huggingface | all (4)   | image        |            4 |        4 | 353 |  145 |    5 |  154 |   49 | 42.5%      | 48.5%       | 74.7%    | 58.8% | 36.8%   | 48.0%   | 0.0%          | 3.6%         |
 | Vansh180/VideoMae-ffc23-deepfake-detector | huggingface | all (2)   | video        |            2 |        2 | 206 |   66 |   39 |   64 |   37 | 51.0%      | 50.8%       | 64.1%    | 56.7% | 50.0%   | 50.2%   | 2.9%          | 9.7%         |
 
 ## Coverage

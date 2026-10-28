@@ -27,7 +27,7 @@ analyze() {
 
     local positive_label="0"
     case "$dataset_name" in
-        deepfake-audio-detection|dfd-video)
+        deepfake-audio-detection|dfd-video|hemg-images)
             positive_label="1"
             ;;
         *)
